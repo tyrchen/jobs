@@ -1,0 +1,24 @@
+extends layouts/layout
+
+block title
+  title=page.metadata.name
+
+block content
+  include layouts/mixins/ad_widgets
+
+  - var data = page.metadata;
+  - var ad = data.carousels;
+
+  +showcase(ad.img, ad.title, ad.subtitle)
+
+
+  .main
+    .container
+      +feature_blocks(data.features)
+
+      h2: span I've seen the future, it's in my browser
+
+      .row
+        .span12
+          h4
+            i.icon.icon

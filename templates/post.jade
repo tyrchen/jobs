@@ -1,0 +1,49 @@
+extends layouts/layout
+
+- page.metadata.which = 'posts';
+block prepend title
+  | #{ page.title } -
+
+block content
+  - var dt = moment(page.date).fromNow();
+  .main
+    .container
+      .row
+        .span12
+
+          h2
+            span= page.title
+
+          if page.metadata.subtitle
+            h1: a(href=page.url)= page.metadata.subtitle
+      .row
+        .span9
+          article.row
+            .span2
+              img.pull-left.avatar(src="/assets/img/user-2.png", alt="user")
+              strong 作者:
+              p Tyr Chen
+              div(style="clear:both;")
+
+              if page.metadata.tags
+
+                p 标签：
+                ul.tags
+                  - for tag in page.metadata.tags
+                    li= tag
+
+            .span7
+              != page.html
+          hr
+        aside.span3
+          .well
+            h4 博文分类
+            hr
+            ul.categories
+              - for category in page.metadata.categories
+                li: a(href="#")
+                  i.icon.icon-circle-arrow-right
+                  = category
+            hr
+            p Don't miss the chance to visit our headquarter from monday through friday from 9am to 5pm. Best regards from the whole Venture Team.
+

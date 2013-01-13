@@ -1,0 +1,28 @@
+body {
+    position: relative;
+}
+
+.switcher {
+    position: fixed;
+    z-index: 300;
+    width: 150px;
+    height: 60px;
+    padding: 10px 10px 11px 20px;
+    top: 107px;
+    left: 15px;
+    margin-top: 15px;
+    background-color: #000;
+    zoom: 1;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+}
+.switcher a {
+    color: #FFF;
+}
+
+.switcher .green {color: green;}
+.switcher .blue {color: #0066CC;}
+.switcher .red {color: red;}

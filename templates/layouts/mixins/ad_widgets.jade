@@ -1,0 +1,40 @@
+mixin showcase(carousels, title, description)
+  .showcase
+    .container
+      .row
+        .span8.offset2
+          #myCarousel.carousel.slide
+            - if (carousels)
+              .carousel-inner
+                - each carousel, i in carousels
+                  - if (i == 0)
+                    .active.item: img(src="#{carousel}")
+                  - else
+                    .item: img(src="#{carousel}")
+              a.carousel-control.left(href="#myCarousel", data-slide="prev") &lsaquo;
+              a.carousel-control.right(href="#myCarousel", data-slide="next") &rsaquo;
+
+          h1 #{title}
+          p #{description}
+
+mixin feature_block(f)
+  .span3
+    h3
+      i.icon(class="#{f.icon}")
+      | #{f.title}
+    p #{f.description}
+    a.btn(href="#{f.action.url}")
+      i.icon(class="icon-info-sign")
+      | 进一步阅读
+
+mixin feature_blocks(features)
+  .row.feature-blocks
+    - for feature in features
+      +feature_block(feature)
+
+mixin strip(description, action)
+  .strip
+    .container
+      .row
+        p #{description}
+          a.btn.btn-primary(href="#{action.url}") #{action.title}

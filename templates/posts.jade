@@ -1,0 +1,59 @@
+extends layouts/layout
+
+block prepend title
+  | #{page.title} -
+
+block content
+  .main
+    .container
+      .row
+        .span12
+          h2
+            span 举世誉之而不加劝，举世非之而不加沮
+      .row
+        .span9
+          //- underscore helps us filter and sort our posts
+          - var posts = _.chain(contents.posts).map(function(item) {
+          -   return item
+          - }).sortBy(function(item) {
+          -   // sort them by date
+          -   return -item.date
+          - }).first(5).value() // and finally take the first 5
+          each post in posts
+            - var dt = moment(post.date).fromNow();
+            article.row
+              .span2
+                img.pull-left.avatar(src="/assets/img/user-2.png", alt="user")
+                strong 作者:
+                p Tyr Chen
+                div(style="clear:both;")
+
+                if post.metadata.tags
+
+                  p 标签：
+                  ul.tags
+                    - for tag in post.metadata.tags
+                      li= tag
+
+              .span7
+                p= dt
+                h1: a(href=post.url)= post.title
+                if post.image
+                  a(href=post.url): img.post-image(src=post.image, alt=post.title)
+                != post.intro
+                if post.hasMore
+                  a(href=post.url) 继续阅读  &raquo;
+
+            hr
+        aside.span3
+          .well
+            h4 博文分类
+            hr
+            ul.categories
+              - for category in page.metadata.categories
+                li: a(href="#")
+                  i.icon.icon-circle-arrow-right
+                  = category
+            hr
+            p Don't miss the chance to visit our headquarter from monday through friday from 9am to 5pm. Best regards from the whole Venture Team.
+

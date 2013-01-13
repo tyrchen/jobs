@@ -1,0 +1,102 @@
+
+/************* navbar ********************/
+
+.navbar-inverse .navbar-inner {
+	background: #2F353E;
+}
+
+.sub-navbar {
+	background: #97BA0C;
+}
+
+/************* strip ********************/
+
+.strip {
+	background: #2F353E;
+}
+
+/************* default button ********************/
+
+.btn {
+	background-color: #2F353E;
+}
+.btn:hover,
+.btn:active,
+.btn .active,
+.btn .disabled,
+.btn[disabled] {
+	background-color: #5F686F;
+}
+
+/************* utility buttons ********************/
+
+.btn-info {
+    background-color: #01A9DB;
+}
+.btn-info:hover {
+    background-color: #58D3F7;
+}
+
+.btn-success {
+    background-color: #0B610B;
+}
+.btn-success:hover {
+    background-color: #088A08;
+}
+
+.btn-warning {
+    background-color: #FF8000;
+}
+.btn-warning:hover {
+    background-color: #FACC2E;
+}
+
+.btn-danger {
+    background-color: #B40404;
+}
+.btn-danger:hover {
+    background-color: #FF0000;
+}
+
+.btn-inverse {
+    background-color: #1C1C1C;
+}
+.btn-inverse:hover {
+    background-color: #424242;
+}
+
+/************* custom buttons ********************/
+
+.btn-login {
+    background-color: #B9DC2F;
+}
+.btn-login:hover {
+	background-color: #EEE;
+}
+
+.btn-primary {
+    background-color: #85A506;
+}
+.btn-primary:hover {
+	background-color: #B9DC2F;
+}
+
+.btn-facebook { 
+    background-color: #3B5998;
+}
+.btn-facebook:hover {
+	background-color: #4682B4;
+}
+
+.btn-twitter {
+    background-color: #00A0D1;
+}
+.btn-twitter:hover {
+	background-color: #22C2F3;
+}
+
+/************* footer ********************/
+
+footer {
+	background: #2F353E;
+}
