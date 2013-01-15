@@ -2,22 +2,22 @@
   "locals": {
     "title": "陈天的个人网站",
     "topnav": [{
-      "href": "/posts.html",
+      "href": "/pages/posts.html",
       "title": "博客"
     }, {
-      "href": "/articles.html",
+      "href": "/pages/articles.html",
       "title": "系列文章"
     }, {
-      "href": "/slides.html",
+      "href": "/pages/slides.html",
       "title": "演示文稿"
     }, {
-      "href": "/photos.html",
+      "href": "/pages/photos.html",
       "title": "个人照片"
     }, {
-      "href": "/about.html",
+      "href": "/pages/aboutme.html",
       "title": "关于作者"
     }, {
-      "href": "/faq.html",
+      "href": "/pages/faq.html",
       "title": "常见问题"
     }]
   }
