@@ -1,0 +1,21 @@
+mixin thumbnail(url, title)
+	.thumbnail
+		a(href="#")
+			img.photo(src="#{url}", alt="#{title}")
+		h4.title= title
+		p.exif
+	
+
+mixin thumbnails(items)
+	.span4
+		ul.thumbnails
+			for item in items
+				- var stat = item.stat
+				if stat
+					-	var url = item.url;
+					li.span4
+						+thumbnail(url, '')
+
+
+
+
