@@ -1,6 +1,6 @@
 mixin thumbnail(url, title)
 	.thumbnail
-		a(href="#")
+		a.js-fancybox(rel="album", href="#{url}")
 			img.photo(src="#{url}", alt="#{title}")
 		h4.title= title
 		p.exif
