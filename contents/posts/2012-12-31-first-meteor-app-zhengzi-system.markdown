@@ -1,5 +1,5 @@
 ---
-layout: post
+template: post.jade
 title: "第一个Meteor App"
 subtitle: "正字系统"
 date: 2012-12-31 08:46
@@ -33,5 +33,5 @@ published: false
 * 集满正字后，可以兑现雪糕减正字
 * 正字的添加及删除有日志可依
 
-
+[未完待续]
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+template: post.jade
 title: "Atanasoff实现摘要"
 date: 2013-01-01 21:46
 comments: true
@@ -11,7 +11,7 @@ published: false
 ## 搭建环境
 
 ### Scaffold
-虽然express可以直接生成项目的scafford代码，但我需要一套支持jade，less和coffeescript的bolerplate tool。在github上找到一个 [skeleton](https://github.com/EtienneLem/skeleton)，恰好满足我的需要。
+虽然express可以直接生成项目的scafford代码，但我需要一套支持 ```jade```，```less``` 和 ```coffeescript``` 的bolerplate tool。在github上找到一个 [skeleton](https://github.com/EtienneLem/skeleton)，恰好满足我的需要。
 
 ```
 $ skeleton --renderer jade --css less --js coffee atanasoff
@@ -21,7 +21,7 @@ $ skeleton --renderer jade --css less --js coffee atanasoff
 
 修改下package.json，添加mocha和should的支持。
 
-``` json
+```
 {
     "name": "atanasoff"
   , "description": "easy blogging with octopress for non-hackers."
@@ -68,7 +68,7 @@ Express server listening on port 3000 in development mode
 
 创建一个测试文件 ```test/test.coffee```，看看mocha能否正常运行：
 
-``` coffeescript
+```
 require "should"
 
 describe "feature", ->
@@ -118,8 +118,8 @@ $ bower install ace
 先把 ```"i18n": "*"``` 添加到 ```package.json```，然后运行 ```npm install``` 安装。
 
 
+[未完待续]
 
-
-{% comment %}
+<!--
 开启一个新的项目时，代码结构非常重要。不合理的结构会让一个项目在代码规模逐渐趋于庞大的时候变得举步维艰，难以修改，之前做过的几个django项目我就走过不少弯路。可惜，现在但凡tutorial，都尽量保持简单，
-{% endcomment %}
+-->

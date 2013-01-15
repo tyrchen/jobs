@@ -1,5 +1,5 @@
 ---
-layout: post
+template: post.jade
 title: "Octopress支持reveal.js撰写slides"
 date: 2012-12-26 21:10
 comments: true
@@ -30,13 +30,13 @@ $ curl http://sh.tchen.me/install/octopress_reveal.sh | sh
 
 就说明安装成功了。
 
-<!--more -->
+<!--more-->
 
 ## Slide layout
 
 在 ```source/_layouts``` 下，创建一个新的slides.html做为presentation页面的layout（代码有点长）:
 
-{% codeblock slides.html %}
+```
 <!doctype html>
 <html lang="en">
 
@@ -112,7 +112,7 @@ $ curl http://sh.tchen.me/install/octopress_reveal.sh | sh
   </body>
 </html>
 
-{% endcodeblock %}
+```
 
 具体代码我就不解释了，大部分内容源自reveal.js repo的index.html，我只是对于octopress做了必要的修改。注意，要使layout中的css/js生效，请将reveal.js下的相应文件拷到octopress对应的目录下。
 
@@ -124,7 +124,7 @@ $ curl http://sh.tchen.me/install/octopress_reveal.sh | sh
 
 对比着new_page，依葫芦画瓢，在Rakefile里添加代码如下：
 
-{% codeblock Rakefile.rb %}
+```
 # usage rake new_slide[my-new-slide] or rake new_slide[my-new-slide.html] or rake new_slide (defaults to "new-slide.markdown")
 desc "Create a new slide in #{source_dir}/#{slide_dir}/(filename)/index.#{new_page_ext}"
 task :new_slide, :filename do |t, args|
@@ -161,7 +161,7 @@ task :new_slide, :filename do |t, args|
     puts "Syntax error: #{args.filename} contains unsupported characters"
   end
 end
-{% endcodeblock %}
+```
 
 运行这条命令，会在slides目录下自动生成指定的presentation的skeleton。接下来要做的就是在正文中填写一个个section了。注意：section里的代码可以是markdown，因为octopress在编译时会自动扫描markdown并编译成对应的html。
 
@@ -175,7 +175,7 @@ end
 
 这个究竟该怎么做？其实很简单，写个plugin就能搞定。在 ```plugin``` 目录下创建 ```reveal_tag.rb```，填入以下代码：
 
-{% codeblock reveal_tag.rb %}
+```
 # Title: Simple Reveal presentation tag for Jekyll
 # Author: Tyr Chen http://tchen.me
 # Description: output embedd tag for reveal js presentation
@@ -217,7 +217,7 @@ module Jekyll
 end
 
 Liquid::Template.register_tag('reveal', Jekyll::RevealTag)
-{% endcodeblock %}
+```
 
 就可以在博文中使用 ```reveal``` 很方便地嵌入做好地presentation了。具体怎么写，看代码注释。
 
@@ -227,4 +227,4 @@ Liquid::Template.register_tag('reveal', Jekyll::RevealTag)
 
 依旧例，放上小宝今日照片一张：
 
-{% img /images/photos/baby20121226.jpg %}
+![小宝](/assets/img/photos/baby20121226.jpg)

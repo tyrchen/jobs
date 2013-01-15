@@ -18,7 +18,7 @@ block content
           - }).sortBy(function(item) {
           -   // sort them by date
           -   return -item.date
-          - }).first(5).value() // and finally take the first 5
+          - }).first(page.metadata.post_per_page).value()
           each post in posts
             - var dt = moment(post.date).fromNow();
             article.row

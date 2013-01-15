@@ -42,9 +42,10 @@ tags: [automation]
 
 celery实现一个异步任务（无与伦比的简洁与优雅）：
 
-``` python
+```
 # caller
-async_task.deplay(a, b)
+async_task.delay(a, b)
+
 # task
 @task
 def async_task(a, b):
@@ -53,7 +54,7 @@ def async_task(a, b):
 
 kue做为后起之秀在语法上稍逊一筹：
 
-``` javascript
+```
 # caller
 jobs.create('async_task', data).priority('high').save();
 
@@ -67,14 +68,14 @@ jobs.process('async_task', function(job, done) { ... });
 
 假定我们在Github上注册的webhook地址为：http://tukeq.com/deploy （一个虚拟的地址，不必当真），则我们的主要任务就是实现 ```deploy``` 路由。首先定义之：
 
-``` javascript
+```
 var hook = require('./routes/githubhook')
 app.post('/deploy', hook.githubhook);
 ```
 
 接下来就是实现githubhook的逻辑了。我们先定义主逻辑：
 
-``` javascript
+```
 exports.githubhook = function(req, res){
     var payload;
     // ensure paylaod is a object
@@ -109,7 +110,7 @@ var repos = [
 
 我们再看看deploy做什么：
 
-``` javascript
+```
 var kue = require('kue')
     , jobs = kue.createQueue()
 function deploy(repo, ref, data) {
@@ -129,7 +130,7 @@ function deploy(repo, ref, data) {
 
 由于我们使用了job queue，必然需要一个job server来pull queue中的job并进行处理，于是我们单开一个脚本做任务处理：
 
-``` javascript
+```
 var kue = require('kue')
     , jobs = kue.createQueue()
     ,exec = require('child_process').exec;
@@ -169,7 +170,7 @@ $ http POST localhost:3000/deploy < test.json
 
 这条命令所见即所得：把test.json做为body POST到localhost:3000/deploy。test.json是用于测试的数据：
 
-``` json
+```
 {
   "before": "5aef35982fb2d34e9d9d4502f6ede1072793222d",
   "repository": {
@@ -278,4 +279,4 @@ server {
 
 小宝笑了，依旧是那么天真无邪。看到她，我的苦闷阴霾一下子就没了。
 
-{% img /images/photos/baby20130109.jpg %}
+![小宝](/assets/img/photos/baby20130109.jpg)

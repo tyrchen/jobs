@@ -1,5 +1,5 @@
 ---
-layout: post
+template: post.jade
 title: "有意思的Io语言（一）"
 date: 2013-01-06 23:05
 comments: true
@@ -30,7 +30,7 @@ $ brew install io
 
 接下来在命令行中运行 ```io``` 即可进入到交互界面。我们先拿个hello world练练手：
 
-``` io
+```
 $ io
 Io 20110905
 Io> "hello world!" println
@@ -38,7 +38,7 @@ hello world!
 ==> hello world!
 ```
 
-<!-- more -->
+<!--more-->
 
 ## 冷盘
 
@@ -46,7 +46,7 @@ hello world!
 
 通过hello world，我们初窥Io的门径。println做为消息被发送给对象，消息接受者（object）在左，消息（method）在右。我们看看Io的对象创建：
 
-``` io
+```
 Io> Animal := Object clone
 ==>  Animal_0x7fbdd1e19490:
   type             = "Animal"
@@ -54,7 +54,7 @@ Io> Animal := Object clone
 
 了解javascript的同学都知道，原型语言无所谓类，一些皆对象。新的对象由老对象克隆而成，生生息息、永不停息。对象一般都有其数据和方法。例如Animal对象可以有name（数据），和talk(方法)，在Io中，由于一切皆消息，所以对象的数据和方法有个应景的名字：消息槽（slot）。我们为Animal定义其slot：
 
-``` io
+```
 Io> Animal name := "Animal"
 ==> Animal
 Io> Animal talk := method("Wow" println)
@@ -123,7 +123,7 @@ Hello animal
 
 这是每种语言几乎都有的类型，也几乎是每种语言最重要的东西。因为懂得人多，代码一看就能通，这里就不详细说。
 
-``` io
+```
 Io> languages := list("Ruby", "Python", "C", "Javascript", "Io")
 ==> list(Ruby, Python, C, Javascript, Io)
 Io> languages size
@@ -179,7 +179,7 @@ Io> hobby size
 
 我们先看看整数：
 
-``` io
+```
 Io> 1 proto
 ==> 0
 Io> 1 type
@@ -211,7 +211,7 @@ Io> 2 days ago
 
 list是对象，clone自List对象；List对象来源于Object对象。看上去list做了些有趣的事情使得它更像是个语法糖。不知道为何对于Map，Io不提供类似的快速生成对象的语法。
 
-``` io
+```
 Io> list() type
 ==> List
 Io> List proto
@@ -220,7 +220,7 @@ Io> List proto
 
 自己尝试着实现了个list的Python的语法糖：
 
-``` io
+```
 Io> squareBrackets := method(  arr := list();  call message arguments foreach(arg, arr push(call sender doMessage(arg)));  arr)
 Io> l := [1,2]
 ==> list(1, 2)
@@ -272,7 +272,7 @@ To add a new assign operator: OperatorTable addAssignOperator("=", "updateSlot")
 
 在结束本次大餐之前，我们再吃点有意思的东西：
 
-``` io
+```
 Io> Number oldDiv := Number getSlot("/")
 ==> Number_/()
 Io> Number / := method(x, if(x==0, 0, self oldDiv(x))
@@ -292,4 +292,4 @@ Io> (10 / 0) print
 
 依旧是小宝的照片：
 
-{% img /images/photos/baby20130107.jpg %}
+![小宝](/assets/img/photos/baby20130107.jpg)

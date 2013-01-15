@@ -16,7 +16,7 @@ Meteor的官网( http://meteor.com )这样介绍这个框架：
 
 **top-quality web apps** 我们放下不表，**fraction of the time** 的提法很新颖，看来这个框架的目标是解放程序猿，少花时间多办事。虽然具体的演化路径我不得而知，但从网络上的各种蛛丝马迹来看，Meteor吸收了google wave, asana等平台背后的开发工具的精髓，逐渐演进出了目前的版本。Meteor的幕后团队相当强悍：他们大多毕业于MIT，是成功的创业家，也是一流的工程师，其中一个开发者还是神器 [etherpad]( http://etherpad.net) 的作者。
 
-<!-- more -->
+<!--more-->
 
 ### Meteor究竟有什么NB的地方？
 
@@ -57,11 +57,83 @@ Simplicity Equals Productivity. The best way to make something seem simple is to
 
 废话说那么多，是骡子是马，不如拿出来溜溜。以下是meteor create --example leaderboard产生的代码，很好懂，借花献佛。先看DOM结构，meteor目前仅支持 [handlebar](http://http://handlebarsjs.com/) 做为template engine。
 
-{% include_code leaderboard.html %}
+```
+<head>
+  <title>Leaderboard</title>
+</head>
+<body>
+  <div id="outer">
+    {{> leaderboard}}
+  </div>
+</body>
+<template name="leaderboard">
+  <div class="leaderboard">
+    {{#each players}}
+      {{> player}}
+    {{/each}}
+  </div>
+  {{#if selected_name}}
+  <div class="details">
+    <div class="name">{{selected_name}}</div>
+    <input type="button" class="inc" value="Give 5 points" />
+  </div>
+  {{/if}}
+  {{#unless selected_name}}
+  <div class="none">Click a player to select</div>
+  {{/unless}}
+</template>
+<template name="player">
+  <div class="player {{selected}}">
+    <span class="name">{{name}}</span>
+    <span class="score">{{score}}</span>
+  </div>
+</template>
+```
 
 可以看到html被简化了不少，不用显式应用js/css。这段代码很好懂。再看看javascript，也是leaderboard的核心功能。javascript文件主要实现了template的事件及数据的CRUD。
 
-{% include_code leaderboard.js %}
+```
+// Set up a collection to contain player information. On the server,
+// it is backed by a MongoDB collection named "players".
+Players = new Meteor.Collection("players");
+if (Meteor.isClient) {
+  Template.leaderboard.players = function () {
+    return Players.find({}, {sort: {score: -1, name: 1}});
+  };
+  Template.leaderboard.selected_name = function () {
+    var player = Players.findOne(Session.get("selected_player"));
+    return player && player.name;
+  };
+  Template.player.selected = function () {
+    return Session.equals("selected_player", this._id) ? "selected" : '';
+  };
+  Template.leaderboard.events({
+    'click input.inc': function () {
+      Players.update(Session.get("selected_player"), {$inc: {score: 5}});
+    }
+  });
+  Template.player.events({
+    'click': function () {
+      Session.set("selected_player", this._id);
+    }
+  });
+}
+// On server startup, create some players if the database is empty.
+if (Meteor.isServer) {
+  Meteor.startup(function () {
+    if (Players.find().count() === 0) {
+      var names = ["Ada Lovelace",
+                   "Grace Hopper",
+                   "Marie Curie",
+                   "Carl Friedrich Gauss",
+                   "Nikola Tesla",
+                   "Claude Shannon"];
+      for (var i = 0; i < names.length; i++)
+        Players.insert({name: names[i], score: Math.floor(Math.random()*10)*5});
+    }
+  });
+}
+```
 
 不到50行代码，提供了从model创建与fixture setup，到渲染模版和事件处理。想想用现有的任何一个框架，实现同样的功能，需要多少代码？
 
@@ -96,5 +168,6 @@ $ meteor
 
 依旧例，还是上一张小宝的当天照片以飨读者。
 
-{% img /images/photos/baby20121216-1.jpg %}
+![小宝](/assets/img/photos/baby20121216-1.jpg)
+
 

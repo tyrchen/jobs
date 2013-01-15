@@ -14,7 +14,7 @@ tags: [octopress]
 
 免责声明：如果你不知道什么是shell, github, 不能很快地掌握一种非常简单的标记语言(markdown)，那么本文不适合你。类似于 [wordpress](http://wordpress.com) 所见即所得的博客系统对你更有价值。[octopress][1]适合于黑客。
 
-<!-- more -->
+<!--more-->
 
 ## 什么是github pages? 
 
@@ -204,8 +204,7 @@ $ rake generate
 
 首先在 ```source/post/``` 下创建duoshuo.html:
 
-{% raw %}
-``` html duoshuo.html
+```
 {% if site.duoshuo_name %}
 <!-- Duoshuo Comment BEGIN -->
 	<div class="ds-thread"></div>
@@ -223,12 +222,10 @@ $ rake generate
 <!-- Duoshuo Comment END -->
 {% endif %}
 ```
-{% endraw %}
 
 然后在 ```source/_layouts/post.html```，将对应的disqus代码改为：
 
-{% raw %}
-``` html
+```
 {% if site.duoshuo_name and page.comments == true %}
   <section id="comment">
     <h1>发表评论</h1>
@@ -236,11 +233,10 @@ $ rake generate
   </section>
 {% endif %}
 ```
-{% endraw %}
 
 在 ```source/_config.yml``` 里，添加：
 
-``` yaml
+```
 # Duoshuo comments
 duoshuo_name: your_duoshuo_name
 ```
@@ -264,7 +260,8 @@ $ rake preview
 
 断断续续写了两个小时，期间还哄了下满月的小宝，拍下了一堆她满月的照片，选一张出来，算是对你耐心读完本文的奖励：
 
-{% img /images/photos/baby20121216.jpg %}
+![小宝](/assets/img/photos/baby20121216.jpg)
+
 
 
 [1]: http://octopress.org 'Octopress'

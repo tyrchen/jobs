@@ -1,5 +1,5 @@
 ---
-layout: post
+template: post.jade
 title: "2013要做的事"
 date: 2012-12-29 21:07
 comments: true
@@ -105,7 +105,8 @@ __小蟹与母蟹__
 
 依旧例，上小宝今日特写一张：
 
-{% img /images/photos/baby20121230.jpg %}
+![小宝](/assets/img/photos/baby20121230.jpg)
+
 
 
 

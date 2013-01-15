@@ -1,5 +1,5 @@
 ---
-layout: post
+template: post.jade
 title: "Retrospect of the year 2012"
 date: 2012-12-28 14:56
 comments: true
@@ -17,7 +17,7 @@ If you ask what the biggest lesson I've learned, I would say - the only thing un
 * We built a series of city guide apps, which got passionate responses from our users. One of the apps, Hong Kong Travel Guide, held a position of No. 1 in travel leaderboard of Hong Kong app market for a period, which was a wonderful thing considering that we spent __$0__ to market it.
 * We successfully built our next gen software and would launch it formally early next year.
 
-<!-- more -->
+<!--more-->
 
 There were several great changes on me:
 
@@ -75,7 +75,7 @@ $ git shortlog --numbered --summary
 ### Habits I acquired or maintained
 
 * Get up at 5:30a.m. Monday to Friday; 7:00a.m. Saturday to Sunday.
-* Read [36kr](http://36kr.com) and [hacker news](http://news.ycombinator.com) every morning for about an hour (mostly from 7:00-8:00a.m.)
+* Read [36kr](http://36kr.com) and [hacker news](http://news.ycombinator.com) (here's a great client tool: [pyhn](http://pypi.python.org/pypi/pyhn))every morning for about an hour (mostly from 7:00-8:00a.m.)
 * Sweep github repos by languages ([python](https://github.com/languages/Python) and [javascript](https://github.com/languages/JavaScript) most of the time) to find interesting repos around 12:30-13:00p.m. every day.
 * Try to have a sleep at noon.
 * Record the product inspirations and find interesting and realizable ones to carry out (that's why teamspark came out).
@@ -164,5 +164,6 @@ You may ask why I wrote this in English, is it a kind of show-off? No. There are
 
 As usual, here's lingxi's latest photo:
 
-{% img /images/photos/baby20121227.jpg %}
-{% img /images/photos/baby20121228.jpg %}
+![小宝](/assets/img/photos/baby20121227.jpg)
+
+![小宝](/assets/img/photos/baby20121228.jpg)

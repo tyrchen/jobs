@@ -7,5 +7,6 @@
     "产品·技术",
     "思考·人生"
   ],
-  "which": "posts"
+  "which": "posts",
+  "post_per_page": 14
 }

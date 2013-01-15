@@ -1,5 +1,5 @@
 ---
-layout: post
+template: post.jade
 title: "Meteor基础入门"
 subtitle: "安装，包管理及基本元素"
 date: 2012-12-21 08:55
@@ -15,7 +15,7 @@ published: true
 
 可以通过```brew install nodejs``` 或 ```sudo apt-get install nodejs``` 安装。不过版本也许不是最新的，所以建议到 [http://nodejs.org/download/](http://nodejs.org/download/) 直接下载对应系统下的安装包。如果你是windows的用户，我想说，接下来的旅程对你而言将是无尽的折腾，我要是你，要么合上笔记本，远离这篇文章；要么咬咬牙，卖半个肾，去搞台mbp回来。
 
-<!-- more -->
+<!--more-->
 
 安装完成后， 测试一下版本号：
 
@@ -215,7 +215,7 @@ underscore: Collection of small helper functions: _.map, _.each, ...
 
 打开项目目录下的meteor-example.html，我们给它加上bootstrap的标准菜单，并添加loginButtons这个widget（是accounts-ui中定义的）：
 
-``` html
+```
 <body>
   <div class="navbar">
     <div class="navbar-inner">
@@ -300,7 +300,7 @@ __proto__: Object
 
 Meteor的Collection一旦定义后，在client/server端都可以访问。在meteor-example.js里输入如下代码创建collection：
 
-``` javascript
+```
 var Messages = new Meteor.Collection('messages');
 ```
 
@@ -317,7 +317,7 @@ var Messages = new Meteor.Collection('messages');
 
 在meteor-example.html中我们加入一个新的template：
 
-``` html
+```
 <template name="message">
   <div class="hero-unit">
     <h1>Messages</h1>
@@ -333,7 +333,7 @@ var Messages = new Meteor.Collection('messages');
 然后在body中引用它，在 **{ { >hello } }** 后，加入 **{ { >message } }**。
 
 有了显示message的template，我们还需要提供数据的controller。在meteor-example.js中 if(...client)的scope中，加入新的message的controller：
-``` javascript
+```
 Template.message.messages = function() {
     return Messages.find()
 }
@@ -348,7 +348,7 @@ Template.message.messages = function() {
 
 奇迹出现了，不仅仅是当前窗口得到了更新，另外一个浏览器有了最新的消息！我们仅仅写了几行代码，就已经见到一个实时聊天系统的雏形了！
 
-{% img /images/snapshots/meteor-realtime.jpg %}
+![meteor实时聊天](/assets/img/snapshots/meteor-realtime.jpg)
 
 ### Live Update
 
@@ -370,9 +370,10 @@ Meteor不算是标准的MVC framework。如果非要往上套，Collection算是
 
 依旧例，送上小宝今日照片。
 
-{% img /images/photos/baby20121222-1.jpg %}
+![小宝](/assets/img/photos/baby20121222-1.jpg)
 
-{% img /images/photos/baby20121222-2.jpg %}
+![小宝](/assets/img/photos/baby20121222-2.jpg)
+
 
 
 

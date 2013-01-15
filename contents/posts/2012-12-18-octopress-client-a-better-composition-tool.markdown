@@ -1,5 +1,5 @@
 ---
-layout: post
+template: post.jade
 title: "产品随想：octopress客户端 —— Atanasoff"
 subtitle: "解放程序猿的那双懒惰的手"
 date: 2012-12-18 08:26
@@ -19,7 +19,7 @@ tags: [atanasoff]
 于是就有了接下来的思考：一个Octopress客户端。
 为了行文方便，我暂且将这个产品称之为 **Atanasoff** [1]。我喜欢命名，因为一旦一个产品有了名字，它就有了血肉，有了生命。
 
-<!-- more -->
+<!--more-->
 
 ## Atanasoff
 
@@ -113,5 +113,5 @@ python / django对我而言是最佳的选择，但我会考虑尝试nodejs。
 
 昨日小宝洗完澡，躺着就睡着了。
 
-{% img /images/photos/baby20121217.jpg %}
+![小宝](/assets/img/photos/baby20121217.jpg)
 

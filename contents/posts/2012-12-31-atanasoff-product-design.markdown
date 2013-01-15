@@ -1,5 +1,5 @@
 ---
-layout: post
+template: post.jade
 title: "进一步思考Atanasoff (Octopress client) (2)"
 subtitle: "交互，设计，数据结构和技术方案"
 date: 2012-12-31 09:53
@@ -13,13 +13,12 @@ tags: [atanasoff]
 ## 交互
 
 ### 整站结构
-
-{% img /images/charts/atanasoff-pages.jpg %}
+![atanasoff整站结构](/assets/img/charts/atanasoff-pages.jpg)
 
 <!--more-->
 ### 主要页面元素
 
-{% img /images/charts/atanasoff-widgets.jpg %}
+![atanasoff主要页面元素](/assets/img/charts/atanasoff-widgets.jpg)
 
 ## 设计
 
@@ -110,5 +109,5 @@ Url                 | parameters             | Functionality
 元旦开工，但基本只有清晨和晚上有时间。争取3天下来做个能用的雏形。
 
 依旧例，上小宝照片一张。
+![小宝](/assets/img/photos/baby20121231.jpg)
 
-{% img /images/photos/baby20121231.jpg %}

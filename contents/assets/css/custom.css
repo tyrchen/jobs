@@ -1,0 +1,39 @@
+article img, article video, article .flash-video {
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -ms-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  border-radius: 0.3em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
+  -moz-box-shadow: rgba(0,0,0,0.15) 0 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: white 0.5em solid;
+}
+
+article table tr {
+  border-top: 1px solid #CCC;
+  background-color: white;
+}
+
+article table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+article table td, article table th {
+  border: 1px solid #CCC;
+  padding: 6px 13px;
+}
+
+article table th {
+  font-weight: bold;
+}
+
+article .avatar { 
+  border: 0px;
+  -webkit-box-shadow: none;
+  --moz-box-shadow: none;
+  box-shadow: none;
+}
