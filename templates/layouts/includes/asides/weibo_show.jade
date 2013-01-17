@@ -1,0 +1,6 @@
+if locals.weibo
+  section
+    h1 新浪微博
+    ul#weibo
+      li
+        iframe.share_self(width="100%", height="#{locals.weibo.height}", frameborder="0", scrolling="no", src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=250&fansRow=1&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=#{locals.weibo.uid}&verifier=#{locals.weibo.verifier}}&dpc=1")

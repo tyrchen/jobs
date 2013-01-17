@@ -19,10 +19,11 @@ block content
           if page.metadata.subtitle
             h1: a(href=page.url)= page.metadata.subtitle
       .row
-        .span9
+        .span10
           article.row
             .span2
-              img.pull-left.avatar(src="/assets/img/user-2.png", alt="user")
+            // .span2
+              img.pull-left.avatar(src="/assets/img/tyr.png", alt="Tyr Chen")
               strong 作者:
               p Tyr Chen
               div(style="clear:both;")
@@ -34,10 +35,10 @@ block content
                   - for tag in page.metadata.tags
                     li= tag
 
-            .span7
+            .span8
               != page.html
           hr
-        aside.span3
+        aside.span2.hide
           .well
             h4 博文分类
             hr

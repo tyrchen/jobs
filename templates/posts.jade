@@ -11,7 +11,7 @@ block content
           h2
             span 举世誉之而不加劝，举世非之而不加沮
       .row
-        .span9
+        .span10
           //- underscore helps us filter and sort our posts
           - var posts = _.chain(contents.posts).map(function(item) {
           -   return item
@@ -23,7 +23,8 @@ block content
             - var dt = moment(post.date).fromNow();
             article.row
               .span2
-                img.pull-left.avatar(src="/assets/img/user-2.png", alt="user")
+              // .span2
+                img.pull-left.avatar(src="/assets/img/tyr.png", alt="Tyr Chen")
                 strong 作者:
                 p Tyr Chen
                 div(style="clear:both;")
@@ -35,7 +36,7 @@ block content
                     - for tag in post.metadata.tags
                       li= tag
 
-              .span7
+              .span8
                 p= dt
                 h1: a(href=post.url)= post.title
                 if post.image
@@ -45,7 +46,7 @@ block content
                   a(href=post.url) 继续阅读  &raquo;
 
             hr
-        aside.span3
+        aside.span2.hide
           .well
             h4 博文分类
             hr

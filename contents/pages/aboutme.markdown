@@ -1,5 +1,6 @@
 ---
 template: resume.jade
+title: 关于我
 name: "陈天（Tyr Chen）"
 description: "我不是凡客，我是geek"
 avatar: "/assets/img/photos/baby20130109.jpg"
