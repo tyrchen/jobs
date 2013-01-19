@@ -1,0 +1,51 @@
+doctype 5
+html
+  head
+    meta(charset="utf-8")
+    title #{page.title} - #{locals.title}
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
+    link(rel="stylesheet", href="/assets/reveal/css/reveal.min.css")
+    link(rel="stylesheet", href="/assets/reveal/css/theme/beige.css", id="theme")
+    link(rel="stylesheet", href="/assets/css/code/github.css")
+    link(rel="stylesheet", href="/assets/css/style.css")
+    
+    // if lt IE 9
+        script(src="/assets/reveal/lib/js/html5shiv.js")
+
+  body.reveal
+    .reveal
+      .slides
+        != page.html
+
+      
+      a.back(href="/slides.html", title="返回")
+        i.icon.icon-arrow-left
+        | 返回
+
+    script(src="/assets/reveal/lib/js/head.min.js")
+    script(src="/assets/reveal/js/reveal.min.js")
+    script
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '/assets/reveal/plugin/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '/assets/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '/assets/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '/assets/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '/assets/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '/assets/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: '/assets/reveal/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+

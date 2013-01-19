@@ -1,0 +1,28 @@
+extends layouts/layout
+
+block prepend title
+  | #{page.title} -
+
+block content
+  .main
+    .container
+      .row
+        .span12
+          h2
+            span 举世誉之而不加劝，举世非之而不加沮
+      
+      //- underscore helps us filter and sort our posts
+      - var posts = _.chain(contents.slides).map(function(item) {
+      -   return item
+      - }).sortBy(function(item) {
+      -   // sort them by date
+      -   return -item.date
+      - }).first(page.metadata.items_per_page).value()
+      ul.thumbnails.portfolio
+        each post in posts
+          - var dt = moment(post.date).fromNow();
+          li.span3
+            .thumbnail
+              a(href="#{post.url}", title="#{post.title}")
+                h5= post.title
+                p= post.description

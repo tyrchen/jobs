@@ -52,3 +52,26 @@ article h2, article h3 {
 span.small {
   font-size: 80%;
 }
+
+.portfolio .thumbnail {
+  height: 300px;
+}
+
+body.reveal {
+  padding: 0px;
+}
+
+body.reveal a.back {
+  font-size: 12px;
+  cursor: pointer;
+
+}
+
+body.reveal h2 {
+  background: none;
+}
+
+.reveal {
+  text-align: left;
+}
+

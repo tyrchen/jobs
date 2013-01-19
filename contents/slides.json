@@ -1,0 +1,6 @@
+{
+  "title": "演示文稿",
+  "template": "slides.jade",
+  "which": "slides",
+  "items_per_page": 20
+}
