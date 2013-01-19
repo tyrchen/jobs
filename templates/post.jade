@@ -44,8 +44,8 @@ block content
           .well
             include layouts/includes/asides/series_posts
             include layouts/includes/asides/related_posts
-            +series_posts(page.metadata.series)
-            +related_posts(page.metadata.tags)
+            +series_posts(page)
+            +related_posts(page)
             include layouts/includes/asides/recent_posts
 
 

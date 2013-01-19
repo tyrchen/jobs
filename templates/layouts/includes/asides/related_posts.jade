@@ -1,9 +1,9 @@
 mixin related_posts(post)
   section
     - var posts;
-    - if (post.tags) {
+    - if (post.metadata.tags) {
     -   posts = _.chain(contents.posts).filter(function(item) {
-    -     return item.title != post.title && _.intersection(post.tags, item.metadata.tags).length > 0
+    -     return item.title != post.title && _.intersection(post.metadata.tags, item.metadata.tags).length > 0
     -   }).sortBy(function(item) {
     -     return -item.date
     -   }).value()

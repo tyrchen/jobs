@@ -1,9 +1,9 @@
-mixin series_posts(series)
+mixin series_posts(post)
   section
     - var posts;
-    - if (series) {
+    - if (post.metadata.series) {
     -   posts = _.chain(contents.posts).filter(function(item) {
-    -     return series == item.metadata.series
+    -     return post.metadata.series == item.metadata.series
     -   }).sortBy(function(item) {
     -     return item.date
     -   }).value()
