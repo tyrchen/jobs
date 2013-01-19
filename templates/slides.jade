@@ -9,11 +9,11 @@ block content
       .row
         .span12
           h2
-            span 举世誉之而不加劝，举世非之而不加沮
+            span #{page.metadata.say}
       
       //- underscore helps us filter and sort our posts
-      - var posts = _.chain(contents.slides).map(function(item) {
-      -   return item
+      - var posts = _.chain(contents.slides).filter(function(item) {
+      -   return !(item.metadata.published === false)
       - }).sortBy(function(item) {
       -   // sort them by date
       -   return -item.date
@@ -23,6 +23,5 @@ block content
           - var dt = moment(post.date).fromNow();
           li.span3
             .thumbnail
-              a(href="#{post.url}", title="#{post.title}")
-                h5= post.title
-                p= post.description
+              a(href="#{post.url}", title="#{post.title}", class="#{post.metadata.theme}")
+                != post.intro

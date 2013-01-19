@@ -1,6 +1,0 @@
-{
-  "title": "近期博文",
-  "template": "posts.jade",
-  "which": "posts",
-  "items_per_page": 20
-}

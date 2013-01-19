@@ -1,12 +1,7 @@
 {
   "title": "近期博文",
   "template": "posts.jade",
-  "categories": [
-    "实用工具",
-    "开源软件",
-    "产品·技术",
-    "思考·人生"
-  ],
   "which": "posts",
-  "items_per_page": 20
+  "items_per_page": 20,
+  "say": "举世誉之而不加劝，举世非之而不加沮"
 }

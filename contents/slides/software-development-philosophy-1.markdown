@@ -1,17 +1,19 @@
 ---
 template: slide.jade
 title: "software development philosophy 1"
-description: 
 date: 2013-01-11 08:17
 theme: beige
+published: false
 ---
 
-   # Software Development Philosophy
-   <br/>
+   # Software Development Philosophy(1)
+   
    ### Brought to you by Tyr Chen
-   Stay hungry, stay foolish.
 
    2013-01-11
+
+
+<!--more-->
 
 
    ## Agenda (1)

@@ -6,7 +6,7 @@ html
     meta(name="apple-mobile-web-app-capable", content="yes")
     meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
     link(rel="stylesheet", href="/assets/reveal/css/reveal.min.css")
-    link(rel="stylesheet", href="/assets/reveal/css/theme/beige.css", id="theme")
+    link(rel="stylesheet", href="/assets/reveal/css/theme/#{page.metadata.theme}.css", id="theme")
     link(rel="stylesheet", href="/assets/css/code/github.css")
     link(rel="stylesheet", href="/assets/css/style.css")
     
@@ -19,9 +19,9 @@ html
         != page.html
 
       
-      a.back(href="/slides.html", title="返回")
+      a.back(href="/pages/slides.html", title="返回")
         i.icon.icon-arrow-left
-        | 返回
+        | 演示文稿列表
 
     script(src="/assets/reveal/lib/js/head.min.js")
     script(src="/assets/reveal/js/reveal.min.js")

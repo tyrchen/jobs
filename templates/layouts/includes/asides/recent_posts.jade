@@ -1,8 +1,8 @@
 section
   h4 最新文章
   ul
-    - var posts = _.chain(contents.posts).map(function(item) {
-    -   return item
+    - var posts = _.chain(contents.posts).filter(function(item) {
+    -   return !(item.metadata.published === false)
     - }).sortBy(function(item) {
     -   return -item.date
     - }).first(8).value()

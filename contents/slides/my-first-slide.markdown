@@ -1,9 +1,8 @@
 ---
 template: slide.jade
 title: 我的第一篇演示稿
-description: 测试reveal.js的表现能力
 date: 2012-12-26 20:50
-theme: beige
+theme: serif
 ---
 
    # 我的第一篇演示稿

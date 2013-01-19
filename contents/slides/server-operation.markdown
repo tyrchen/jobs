@@ -1,9 +1,17 @@
 ---
 template: slide.jade
 title: "server operation"
-date: 2013-01-11 08:18
-theme: beige
+date: 2013-01-11 07:18
+theme: sky
 ---
+
+   # Supervisor and Nginx
+   ### Tyr Chen
+
+   2013-01-11
+
+
+<!--more-->
 
 
    ## Supervisor Conf

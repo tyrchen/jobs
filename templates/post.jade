@@ -12,32 +12,22 @@ block content
     .container
       .row
         .span12
-
           h2
             span
               | #{page.title}
-
               if page.metadata.subtitle
-                span.small - #{page.metadata.subtitle}
+                span.small  - #{page.metadata.subtitle}
       .row
         .span9
           article.row
             .span2
               .toc(data-spy="affix", data-offset-top="185", style="width:140px;")
-            // .span2
-              img.pull-left.avatar(src="/assets/img/tyr.png", alt="Tyr Chen")
-              strong 作者:
-              p Tyr Chen
-              div(style="clear:both;")
 
-              if page.metadata.tags
-
-                p 标签：
-                ul.tags
-                  - for tag in page.metadata.tags
-                    li= tag
 
             .span7
+              - moment.lang('zh-cn')
+              - var dt = moment(page.date).fromNow()
+              p #{dt} 
               != page.html
           hr
         aside.span3
