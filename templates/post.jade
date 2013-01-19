@@ -14,10 +14,11 @@ block content
         .span12
 
           h2
-            span= page.title
+            span
+              | #{page.title}
 
-          if page.metadata.subtitle
-            h1: a(href=page.url)= page.metadata.subtitle
+              if page.metadata.subtitle
+                span.small - #{page.metadata.subtitle}
       .row
         .span9
           article.row

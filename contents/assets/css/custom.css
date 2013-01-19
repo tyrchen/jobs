@@ -44,8 +44,11 @@ article h2, article h3 {
    */
   margin-top: -60px;
   padding-top: 60px;
-  display: inline-block; /* required for webkit browsers */
+  /*display: inline-block;  required for webkit browsers */
 }
 .affix {
   top: 60px; 
+}
+span.small {
+  font-size: 80%;
 }
