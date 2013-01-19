@@ -74,6 +74,9 @@ body.reveal h2 {
 }
 
 
+.portfolio.thumbnails {
+  min-height: 460px;
+}
 
 .portfolio .thumbnail a {
   width: 100%;

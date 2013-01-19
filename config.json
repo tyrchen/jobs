@@ -2,11 +2,12 @@
   "locals": {
     "title": "陈天的个人网站",
     "topnav": [{
-      "href": "/pages/posts.html",
+      "href": "/index.html",
       "title": "博客"
     }, {
       "href": "/pages/articles.html",
-      "title": "系列文章"
+      "title": "系列文章",
+      "published": false
     }, {
       "href": "/pages/slides.html",
       "title": "演示文稿"
@@ -15,10 +16,12 @@
       "title": "个人照片"
     }, {
       "href": "/pages/aboutme.html",
-      "title": "关于作者"
+      "title": "关于作者",
+      "published": false
     }, {
       "href": "/pages/faq.html",
-      "title": "常见问题"
+      "title": "常见问题",
+      "published": false
     }],
     "weibo": {
       "uid": "1737931304",

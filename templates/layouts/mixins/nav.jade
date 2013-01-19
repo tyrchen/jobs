@@ -8,8 +8,9 @@ mixin topnav(which)
         a.brand(href="/index.html") 觅珠人 Pearl-finder
         .nav-collapse.collapse
           ul.nav
-            - for item in locals.topnav
-              if item.href.indexOf(which) >= 0
-                li.active: a(href="#{item.href}") #{item.title}
-              else
-                li: a(href="#{item.href}") #{item.title}
+            for item in locals.topnav
+              if item.published !== false 
+                if item.href.indexOf(which) >= 0
+                  li.active: a(href="#{item.href}") #{item.title}
+                else
+                  li: a(href="#{item.href}") #{item.title}
