@@ -1,12 +1,17 @@
 mixin series_posts(series)
   section
-    h1 #{series}
-    ul.posts
-      - var posts = _.chain(contents.posts).filter(function(item) {
-      -   return series == item.metadata.series
-      - }).sortBy(function(item) {
-      -   // sort them by date
-      -   return item.date
-      - }).value()
-      each post in posts
-        li: a(href="#{post.url}") #{post.title}
+    - var posts;
+    - if (series) {
+    -   posts = _.chain(contents.posts).filter(function(item) {
+    -     return series == item.metadata.series
+    -   }).sortBy(function(item) {
+    -     return item.date
+    -   }).value()
+    - } else {
+    -   posts = []
+    - }
+    if posts.length
+      h4 #{series}
+      ul.posts
+        each post in posts
+          li: a(href="#{post.url}") #{post.title}

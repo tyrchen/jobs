@@ -22,8 +22,8 @@
     }],
     "weibo": {
       "uid": "1737931304",
-      "weibo_verifier": "58571e1f",
-      "height": "250px"
+      "verifier": "58571e1f",
+      "height": "250"
 
     }
   }

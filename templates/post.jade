@@ -19,9 +19,10 @@ block content
           if page.metadata.subtitle
             h1: a(href=page.url)= page.metadata.subtitle
       .row
-        .span10
+        .span9
           article.row
             .span2
+              .toc(data-spy="affix", data-offset-top="185", style="width:140px;")
             // .span2
               img.pull-left.avatar(src="/assets/img/tyr.png", alt="Tyr Chen")
               strong 作者:
@@ -35,18 +36,40 @@ block content
                   - for tag in page.metadata.tags
                     li= tag
 
-            .span8
+            .span7
               != page.html
           hr
-        aside.span2.hide
+        aside.span3
           .well
-            h4 博文分类
-            hr
-            ul.categories
-              - for category in page.metadata.categories
-                li: a(href="#")
-                  i.icon.icon-circle-arrow-right
-                  = category
-            hr
-            p Don't miss the chance to visit our headquarter from monday through friday from 9am to 5pm. Best regards from the whole Venture Team.
+            include layouts/includes/asides/series_posts
+            include layouts/includes/asides/related_posts
+            +series_posts(page.metadata.series)
+            +related_posts(page.metadata.tags)
+            include layouts/includes/asides/recent_posts
+
+
+block js
+  script
+    window.onload = function () {
+      // Looks for an element with the class "toc" and appends an empty list
+      $(".toc").append("<ol id='toc'></ul>");
+      var TOC = $("ol#toc");
+      
+      $.each($('article h2'), function(k, v) {
+        var heading = $(v); // get the heading
+        var headingText = $(v).text(); // get the value of the heading
+        // make a URI-friendly id for the heading
+        var headingID = encodeURIComponent(headingText);
+        $(v).attr("id", headingID); //assign the new id
+        // change the heading text to include a number for prettier headings
+        heading.text((k+1) +". " + headingText);
+        // create a link in the list for the heading
+        TOC.append("<li><a href=\"#" + headingID +"\">" + headingText + "</a></li>" );
+      });
+      // Put a title on the table of contents
+      $(".toc").prepend("<h2>目录</h2>");
+      //$('body').data('spy', 'scroll').data('target', '#toc');
+    }
+
+
 

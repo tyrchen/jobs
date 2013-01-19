@@ -1,10 +1,9 @@
 section
-  h1 最新文章
+  h4 最新文章
   ul
     - var posts = _.chain(contents.posts).map(function(item) {
     -   return item
     - }).sortBy(function(item) {
-    -   // sort them by date
     -   return -item.date
     - }).first(8).value()
     each post in posts

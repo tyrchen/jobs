@@ -1,12 +1,17 @@
-mixin related_posts(tags)
+mixin related_posts(post)
   section
-    h1 相关文章
-    ul.posts
-      - var posts = _.chain(contents.posts).filter(function(item) {
-      -   return _.intersection(tags, item.metadata.tags)
-      - }).sortBy(function(item) {
-      -   // sort them by date
-      -   return -item.date
-      - }).value()
-      each post in posts
-        li: a(href="#{post.url}") #{post.title}
+    - var posts;
+    - if (post.tags) {
+    -   posts = _.chain(contents.posts).filter(function(item) {
+    -     return item.title != post.title && _.intersection(post.tags, item.metadata.tags).length > 0
+    -   }).sortBy(function(item) {
+    -     return -item.date
+    -   }).value()
+    - } else {
+    -   posts = []
+    - }
+    if posts.length
+      h4 相关文章
+      ul.posts
+        each post in posts
+          li: a(href="#{post.url}") #{post.title}

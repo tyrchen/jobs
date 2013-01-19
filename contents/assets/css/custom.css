@@ -37,3 +37,15 @@ article .avatar {
   --moz-box-shadow: none;
   box-shadow: none;
 }
+
+article h2, article h3 {
+  /* for fixing fix-top anchor issue see: 
+   * http://stackoverflow.com/questions/9047703/fixed-position-navbar-obscures-anchors; 
+   */
+  margin-top: -60px;
+  padding-top: 60px;
+  display: inline-block; /* required for webkit browsers */
+}
+.affix {
+  top: 60px; 
+}
