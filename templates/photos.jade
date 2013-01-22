@@ -15,7 +15,7 @@ block content
         - var photos = _.chain(contents.assets.img.photos).map(function(item) {
         -   return item;
         - }).sortBy(function(item) {
-        -   return -(new Date(item.stat.ctime)).getTime();
+        -   return -(new Date(item.stats.ctime)).getTime();
         - }).first(page.metadata.items_per_page).groupBy(function(item, i){
         -   return i%3;
         - }).toArray(photos).value();

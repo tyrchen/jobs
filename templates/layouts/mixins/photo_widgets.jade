@@ -10,8 +10,8 @@ mixin thumbnails(items)
 	.span4
 		ul.thumbnails
 			for item in items
-				- var stat = item.stat
-				if stat
+				- var stats = item.stats
+				if stats
 					-	var url = item.url;
 					li.span4
 						+thumbnail(url, '')
