@@ -1,7 +1,7 @@
 {
   "title": "近期博文",
   "template": "posts.jade",
-  "which": "posts",
+  "which": "index",
   "items_per_page": 20,
   "say": "举世誉之而不加劝，举世非之而不加沮"
 }
