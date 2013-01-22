@@ -19,9 +19,8 @@ block content
           -   // sort them by date
           -   return -item.date
           - }).first(page.metadata.items_per_page).value()
-          - moment.lang('zh-cn')
           each post in posts
-            - var dt = moment(post.date).fromNow()
+            - var dt = moment(post.date).format('YYYY年M月D日')
             article.row
               .span2
               // .span2

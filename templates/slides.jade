@@ -20,7 +20,6 @@ block content
       - }).first(page.metadata.items_per_page).value()
       ul.thumbnails.portfolio
         each post in posts
-          - var dt = moment(post.date).fromNow();
           li.span3
             .thumbnail
               a(href="#{post.url}", title="#{post.title}", class="#{post.metadata.theme}")

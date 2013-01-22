@@ -24,8 +24,7 @@ block content
 
 
             .span7
-              - moment.lang('zh-cn')
-              - var dt = moment(page.date).fromNow()
+              - var dt = moment(page.date).format('YYYY年M月D日')
               p #{dt} 
               != page.html
           hr
