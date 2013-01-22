@@ -6,7 +6,7 @@ theme: default
 published: false
 ---
 
-   # 换个角度看编程语言(1)
-   ### Tyr Chen
+    # 换个角度看编程语言(1)
+    ### Tyr Chen
 
-   2013-11-11
+    2013-11-11

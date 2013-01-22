@@ -6,132 +6,133 @@ theme: default
 transition: cube
 ---
 
-   # Nodejs Basics
-   ### Tyr Chen
-   2013-01-20
+    # Nodejs Basics
+    ### Tyr Chen
+    2013-01-20
 
 
 <!--more-->
 
 
-   ## What is Node?
-   * server side javascript
-   * Driven by V8 engine
-   * Non blocking
-   * Event driven
-   * Single thread
+    ## What is Node?
+    * server side javascript
+    * Driven by V8 engine
+    * Non blocking
+    * Event driven
+    * Single thread
 
 
 
-   ## Non blocking?
+    ## Non blocking?
 
-   ```
-   data = open('very-big-file.younameit').read()
-   complexOperation(data)
-   ```
+    ```
+    data = open('very-big-file.younameit').read()
+    complexOperation(data)
+    ```
 
-   #### I/O blocking, poor performance
-   #### Python, ruby, java is I/O blocking by default
-
-
-
-   ## The Node Way
-
-   ```
-   fs.read('very-big-file.younameit', function(data) {
-     complexOperation(data);
-   });
-
-   // you can do a lot when waiting for data
-   doOtherStuff();
-   ```
-
-   #### Do a lot more while waiting for I/O
+    #### I/O blocking, poor performance
+    #### Python, ruby, java is I/O blocking by default
 
 
 
-   ## Event Driven?
+    ## The Node Way
 
-   ```
-   while not deployed:
-     deploy()
+    ```
+    fs.read('very-big-file.younameit', function(data) {
+    complexOperation(data);
+    });
 
-   # deployed, now we can do auto test
-   run_test()
-   ```
+    // you can do a lot when waiting for data
+    doOtherStuff();
+    ```
 
-   ### ugly
-
-
-
-   ## The Node Way
-
-   ```
-   deploy(function() {
-     run_test();
-   });
-   ```
-
-   ### elegant code, different way of thinking
+    #### Do a lot more while waiting for I/O
 
 
 
-   ## Single Thread
-   ### Node runs on single thread
+    ## Event Driven?
 
-   ```
-   fs.read('very-big-file.younameit', function(data) {
-     complexOperation(data); // never fired
-   });
+    ```
+    deploy()
+    while not deployed:
+    pass
 
-   // you can do a lot when waiting for data
-   while(true) {
-     doOtherStuff(); // hogging the CPU
-   }
-   ```
+    # deployed, now we can do auto test
+    run_test()
+    ```
 
-
-   ## The Node Way
-   * Frontend node farm
-     * for providing great user experience
-     * e.g. dealing with image uploading
-   * Backend node workers
-     * for dealing with heavy processing
-     * e.g. dealing with image encoding
+    ### ugly
 
 
 
-   ## Node Package Manager (NPM)
-   
-   * Ship with nodejs since v0.6.x
-   * Help with the package management
-     * gem for ruby, pip for python
-   * Resolve the dependencies for you
-   * package.json
+    ## The Node Way
+
+    ```
+    deploy(function() {
+    run_test();
+    });
+    ```
+
+    ### elegant code, different way of thinking
 
 
 
-   ## An example of package.json
-   ```
-   {
-     "name": "barr",
-     "description": "",
-     "version": "0.1.0",
-     "dependencies": {
-      "wrench": "latest"
-     },
-     "engines": {
-       "node": "0.8.16",
-       "npm": "1.1.x"
-     },
-     "devDependencies" : {
-       "coffee-script": "latest",
-       "simple-http-server": "latest",
-       "jade": "latest",
-       "jake": "latest"
-     }
-   }
-   ```
+    ## Single Thread
+    ### Node runs on single thread
+
+    ```
+    fs.read('very-big-file.younameit', function(data) {
+    complexOperation(data); // never fired
+    });
+
+    // you can do a lot when waiting for data
+    while(true) {
+    doOtherStuff(); // hogging the CPU
+    }
+    ```
 
 
-   ## Not The End - To Be Con...
+    ## The Node Way
+    * Frontend node farm
+    * for providing great user experience
+    * e.g. dealing with image uploading
+    * Backend node workers
+    * for dealing with heavy processing
+    * e.g. dealing with image encoding
+
+
+
+    ## Node Package Manager (NPM)
+
+    * Ship with nodejs since v0.6.x
+    * Help with the package management
+    * gem for ruby, pip for python
+    * Resolve the dependencies for you
+    * package.json
+
+
+
+    ## An example of package.json
+    ```
+    {
+      "name": "barr",
+      "description": "",
+      "version": "0.1.0",
+      "dependencies": {
+        "wrench": "latest"
+      },
+      "engines": {
+        "node": "0.8.16",
+        "npm": "1.1.x"
+      },
+      "devDependencies" : {
+        "coffee-script": "latest",
+        "simple-http-server": "latest",
+        "jade": "latest",
+        "jake": "latest"
+      }
+    }
+    ```
+
+
+    ## Not The End - To Be Con...

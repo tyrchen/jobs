@@ -5,20 +5,20 @@ date: 2013-01-11 07:18
 theme: sky
 ---
 
-   # Supervisor and Nginx
-   ### Tyr Chen
+    # Supervisor and Nginx
+    ### Tyr Chen
 
-   2013-01-11
+    2013-01-11
 
 
 <!--more-->
 
 
-   ## Supervisor Conf
+    ## Supervisor Conf
 
-   /et/supervisor/supervisor.conf
+    /et/supervisor/supervisor.conf
 
-   ```
+    ```
     [program:babble]
     directory=/home/tchen/deployment/babble
     user=tchen
@@ -29,11 +29,11 @@ theme: sky
     stdout_logfile=/var/log/supervisor/babble.log
     autostart=true
     autorestart=true
-   ```
+    ```
 
 
-   ## Supervisor command
-   ```
+    ## Supervisor command
+    ```
     $ supervisorctl
     babble                           RUNNING    pid 11486, uptime 39 days, 10:42:25
     blog:celeryd                     RUNNING    pid 17088, uptime 47 days, 8:59:25
@@ -44,5 +44,5 @@ theme: sky
     $ rearead
     $ update
     $ restart babble
-   ```
+    ```
 

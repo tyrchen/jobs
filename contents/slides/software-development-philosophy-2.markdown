@@ -6,9 +6,9 @@ theme: simple
 published: false
 ---
 
-   # Software Development Philosophy(2)
-   <br/>
-   ### Brought to you by Tyr Chen
-   Stay hungry, stay foolish.
+    # Software Development Philosophy(2)
+    <br/>
+    ### Brought to you by Tyr Chen
+    Stay hungry, stay foolish.
 
-   2013-01-11
+    2013-01-11
