@@ -81,7 +81,7 @@ tags: [node]
 
 
 
-    I like HTTP, how about a TCP server?
+    __I like HTTP, how about a TCP server?__
 
 
 
@@ -98,7 +98,7 @@ tags: [node]
 
 
 
-    I would like to make it more interactive...
+    __I would like to make it more interactive...__
 
 
 
@@ -119,7 +119,32 @@ tags: [node]
 
 
 
-    Let's writing something a bit complicated
+    __What about UDP and Raw Socket?__
+
+
+
+    ## Well this is a good question
+    * Node support UDP in dgram module
+    * Node doesn't support raw socket (you can't do Ping directly)
+    
+    *Maybe joyent thought it is a poor choice for you to choose javascript to do raw socket...*
+
+
+    # A simple UDP Server
+
+    ```
+    var dgram = require('dgram');
+    var message = new Buffer("Hello world");
+    var client = dgram.createSocket("udp4");
+    client.send(message, 0, message.length, 12345, "localhost", function(err, bytes) {
+      client.close();
+    });
+    ```
+
+
+
+
+    __Let's writing something a bit complicated__
 
 
 
