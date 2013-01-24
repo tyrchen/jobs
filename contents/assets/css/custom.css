@@ -165,3 +165,28 @@ body.reveal h2 {
   background: radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
   background-color: #f7fbfc;
 }
+
+ul.bar {
+  list-style: none;
+  margin: 0px;
+}
+
+ul.bar li {
+  height: 35px;
+  color: #FFF;
+  text-align: left;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 35px;
+  padding: 0px 20px;
+  margin-bottom: 1px;
+}
+
+ul.bar li.six {width: 300px;}
+ul.bar li.five {width: 250px;}
+ul.bar li.four {width: 200px;}
+ul.bar li.three {width: 150px;}
+ul.bar li.two {width: 100px;}
+ul.bar li.one {width: 50px;}
+
+

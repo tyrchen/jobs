@@ -3,6 +3,9 @@ extends layouts/layout
 block prepend title
   | #{page.title} -
 
+block css
+  style
+    article img {display:block; margin: 20px 0;}
 block content
   .main
     .container
@@ -10,34 +13,69 @@ block content
       .row
         .span8
           .row
-            .span5
+            .span4
               .thumbnail
                 img(src="#{page.metadata.avatar}", alt="关于我")
-            .span3
+            .span4  
               .well
                 h3= page.metadata.name
-                p= page.metadata.description
+                p!= page.metadata.description
               
           .page-header
-
-          != page.html
+          article
+            != page.html
 
 
         .span4
-          h3 联系方式
+          h3 Contacts
           p
             i.icon.icon-envelope 
             |  #{page.metadata.email}
-          p: a(href="#{page.metadata.github}")
+          p: a(href="#{page.metadata.github}", target="_blank")
             i.icon.icon-github 
             |  #{page.metadata.github}
-          p: a(href="#{page.metadata.linkedin}")
+          p: a(href="#{page.metadata.linkedin}", target="_blank")
             i.icon.icon-linkedin 
             |  #{page.metadata.linkedin}
-          p: a(href="#{page.metadata.weibo}")
-            i.icon.icon-weibo 
+          p: a(href="#{page.metadata.weibo}", target="_blank")
+            //i.icon.icon-weibo 
+            img(src="http://www.sinaimg.cn/blog/developer/wiki/LOGO_16x16.png", width="12px")
             |  #{page.metadata.weibo}
 
-          a#btnDownload.btn.btn-large.noPrint(href="#{page.metadata.download_url}")
+          //
+            a#btnDownload.btn.btn-large.noPrint(href="#{page.metadata.download_url}")
             i.icon.icon-download
             |  下载
+
+          h3 Technical Skills
+          - var colors = ['#E51400' ,'#339933', '#1ba1e2', '#f09609', '#8cbf26', '#00aba9', '#e671b8', '#a05000']
+          - var i = 0;
+          
+          ul.bar
+            for item in page.metadata.tech_skills
+              - var color = colors[i++ % 8]
+              li(class="#{item[1]}", style="background: #{color}") #{item[0]}
+          
+          h3 Soft Skills
+          ul.bar
+            for item in page.metadata.soft_skills
+              - var color = colors[i++ % 8]
+              li(class="#{item[1]}", style="background: #{color}") #{item[0]}
+          
+          h3 Language Skills
+          ul.bar
+            for item in page.metadata.lang_skills
+              - var color = colors[i++ % 8]
+              li(class="#{item[1]}", style="background: #{color}") #{item[0]}
+          
+          h3 Programming Skills
+          ul.bar
+            for item in page.metadata.program_skills
+              - var color = colors[i++ % 8]
+              li(class="#{item[1]}", style="background: #{color}") #{item[0]}
+          
+          h3 Web Framework Skills
+          ul.bar
+            for item in page.metadata.framework_skills
+              - var color = colors[i++ % 8]
+              li(class="#{item[1]}", style="background: #{color}") #{item[0]}

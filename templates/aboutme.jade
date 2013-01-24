@@ -1,0 +1,72 @@
+extends layouts/layout
+
+block prepend title
+  | #{page.title} -
+
+block css
+  link(rel="stylesheet", href="/assets/nvd3/nv.d3.css")
+  style
+    .social-buttons {list-style: none;}
+    .social-buttons li { float: left; line-height: 36px;}
+    .social-buttons li a { font-size: 32px; }
+    article img {display:block; margin: 10px 0;}
+
+block content
+  .main
+    .container
+      h2: span 会当凌绝顶，每逐清溪水
+      .row.feature-blocks
+        .span5
+          .thumbnail
+            img(src="#{page.metadata.avatar}", alt="关于我")
+        .span4
+          h3 #{page.metadata.name}
+          p!= page.metadata.description
+          hr
+          ul.social-buttons
+            li: a(href="#{page.metadata.github}", target="_blank")
+              i.icon.icon-github
+            li: a(href="#{page.metadata.linkedin}", target="_blank")
+              i.icon.icon-linkedin 
+            
+        .span3
+          .well
+            h3 Career
+            h4 8 Years
+            p Making system software
+            h4 2 Years
+            p creating web applications
+      hr
+
+//
+  block js
+  script(src="/assets/nvd3/lib/d3.v2.min.js")
+  script(src="/assets/nvd3/nv.d3.min.js")
+  script
+    $(function() {
+      var careerData = [{
+        key: "Career til now",
+        values: [{
+          employer: "Digital China Networks",
+          years: 2
+        }, {
+          employer: "Juniper Networks",
+          years: 6
+        }, {
+          employer: "tukeq.com",
+          years: 2
+        }]
+      }]
+      nv.addGraph(function() {
+        var chart = nv.models.pieChart()
+            .x(function(d) {return d.employer})
+            .y(function(d) {return d.years})
+            .showLegend(false).showLabels(false)
+            
+        d3.select("#career svg").datum(careerData)
+          .transition().duration(1200)
+          .call(chart);
+        return chart;
+      });
+    })
+  

@@ -16,8 +16,7 @@
       "title": "个人照片"
     }, {
       "href": "/pages/aboutme.html",
-      "title": "关于作者",
-      "published": false
+      "title": "About Me"
     }, {
       "href": "/pages/faq.html",
       "title": "常见问题",
