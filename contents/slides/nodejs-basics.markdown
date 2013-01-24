@@ -4,6 +4,7 @@ title: Nodejs basics
 date: 2013-01-20 22:58
 theme: default
 transition: cube
+tags: [node]
 ---
 
     # Nodejs Basics
@@ -33,6 +34,14 @@ transition: cube
     #### I/O blocking, poor performance
     #### Python, ruby, java is I/O blocking by default
 
+    
+
+    ## Why I/O blocking bad?
+
+
+
+    ![IO wait](/assets/img/snapshots/iowait.jpg)
+
 
 
     ## The Node Way
@@ -55,7 +64,7 @@ transition: cube
     ```
     deploy()
     while not deployed:
-    pass
+      os.sleep(1000)
 
     # deployed, now we can do auto test
     run_test()
@@ -74,6 +83,14 @@ transition: cube
     ```
 
     ### elegant code, different way of thinking
+
+
+
+    ## How does this work?
+
+
+
+    ![Nodejs event loop](/assets/img/snapshots/eventloop.jpg)
 
 
 
