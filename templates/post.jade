@@ -27,7 +27,10 @@ block content
               - var dt = moment(page.date).format('YYYY年M月D日')
               p #{dt} 
               != page.html
+          if locals.baidu_share
+            include layouts/includes/baidu_share.html
           hr
+          include layouts/includes/duoshuo
         aside.span3
           .well
             include layouts/includes/asides/series_posts
