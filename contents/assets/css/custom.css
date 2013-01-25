@@ -168,7 +168,7 @@ body.reveal h2 {
 }
 
 @media only screen and (max-width: 768px) {
-  article .toc-container {display: none; visibility: hidden;}
+  article .toc-container, article .toc {display: none; visibility: hidden;}
 }
 
 ul.bar {
