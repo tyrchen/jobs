@@ -166,11 +166,15 @@ body.reveal h2 {
   background-color: #f7fbfc;
 }
 
+@media only screen and (max-width: 768px) {
+  article .toc {display: none;}
+}
+
 ul.bar {
   list-style: none;
   margin: 0px;
   background: #f5f5f5;
-  width: 340px;
+  width: 290px;
   -webkit-box-shadow:0 1px 0 rgba(255,255,255,.5);
   -moz-box-shadow:0 1px 0 rgba(255,255,255,.5);
   box-shadow:0 1px 0 rgba(255,255,255,.5);
@@ -187,11 +191,11 @@ ul.bar li {
   margin-bottom: 1px;
 }
 
-ul.bar li.six {width: 300px;}
-ul.bar li.five {width: 250px;}
-ul.bar li.four {width: 200px;}
-ul.bar li.three {width: 150px;}
-ul.bar li.two {width: 100px;}
-ul.bar li.one {width: 50px;}
+ul.bar li.six {width: 250px;}
+ul.bar li.five {width: 200px;}
+ul.bar li.four {width: 150px;}
+ul.bar li.three {width: 100px;}
+ul.bar li.two {width: 50px;}
+ul.bar li.one {width: 1px;}
 
 
