@@ -23,6 +23,10 @@ tags: [github]
 
 不管怎么说，以后多了个写作的工具，总归是好事。不过Github要是能把自己原来的编辑器的优点放入Zen Writing Mode，一定会有更多人使用。
 
+![Github Zen Writing Mode](/assets/img/snapshots/zenwriting.jpg)
+
+<!--more-->
+
 ## 实现
 程序猿的老毛病又犯了，忍不住打开source code，看看从前端代码能否找到些许可用的open source library的端倪。可惜，Github似乎没有用诸如 **AceEditor**，**EpicEditor** 这样的工具，是自己写的。但其实这样的mode用 [EpicEditor](http://oscargodson.github.com/EpicEditor/) 并不困难。至于语法高亮和自动生成列表元素，似乎也并非难事，不知Github为何不做。KISS？
 
