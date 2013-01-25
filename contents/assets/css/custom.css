@@ -11,6 +11,7 @@ article img, article video, article .flash-video {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: white 0.5em solid;
+  margin-bottom: 10px;
 }
 
 article table tr {
@@ -167,7 +168,7 @@ body.reveal h2 {
 }
 
 @media only screen and (max-width: 768px) {
-  article .toc {display: none;}
+  article .toc-container {display: none; visibility: hidden;}
 }
 
 ul.bar {
@@ -198,4 +199,4 @@ ul.bar li.three {width: 100px;}
 ul.bar li.two {width: 50px;}
 ul.bar li.one {width: 1px;}
 
-
+.postdate {text-align: center;}

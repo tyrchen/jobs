@@ -6,6 +6,13 @@ block prepend title
 block prepend header
   - page.metadata.which = "index";
 
+block css
+  style
+    @media only screen and (max-width: 768px) {
+      .content {float: none; width: 95%;}
+      .content .span7 {float:none; width:100%;}
+      .aside {float: none; width: 95%;}
+    }
 block content
   .main
     .container
@@ -16,22 +23,22 @@ block content
               | #{page.title}
               if page.metadata.subtitle
                 span.small  - #{page.metadata.subtitle}
+
+          - var dt = moment(page.date).format('YYYY年M月D日')
+          p.postdate #{dt} 
       .row
-        .span9
+        .span9.content
           article.row
-            .span2
+            .span2.toc-container
               .toc(data-spy="affix", data-offset-top="185", style="width:140px;")
 
-
             .span7
-              - var dt = moment(page.date).format('YYYY年M月D日')
-              p #{dt} 
               != page.html
-          if locals.baidu_share
-            include layouts/includes/baidu_share.html
-          hr
-          include layouts/includes/duoshuo
-        aside.span3
+              if locals.baidu_share
+                include layouts/includes/baidu_share.html
+              hr
+              include layouts/includes/duoshuo
+        aside.span3.aside
           .well
             include layouts/includes/asides/series_posts
             include layouts/includes/asides/related_posts
