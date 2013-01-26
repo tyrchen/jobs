@@ -7,6 +7,7 @@ html
         title #{page.title} - #{locals.title}
         meta(name="author", content="Tyr Chen")
         link(href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic", rel="stylesheet")
+        link(rel="stylesheet", href="/assets/css/code/github.css")
         link(href="/assets/components/impress.js/css/impress-demo.css", rel="stylesheet")
     body.impress-not-supported
         .fallback-message
@@ -26,7 +27,10 @@ html
 
         .hint
             p 使用空格键或者方向键来控制演示
-
+        //
+            a.back(href="/pages/slides.html", title="返回")
+            i.icon.icon-arrow-left
+            | 演示文稿列表
         script
             if ("ontouchstart" in document.documentElement) { 
                 document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
