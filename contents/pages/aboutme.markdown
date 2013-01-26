@@ -2,17 +2,50 @@
 template: resume.jade
 title: 关于我
 name: "陈天（Tyr Chen）"
-description: I do not choose to be a common person. <br/>It is my right to be uncommon—if I can. <br/>I seek opportunity — not security. <br/>I do not wish to be a kept citizen, <br/>humbled and dulled by having the state look after me. <br/>I want to take the calculated risk, <br/>to dream and to build, <br/>to fail and to succeed.
+description: |
+  I do not choose to be a common person. <br/>
+  It is my right to be uncommon—if I can. <br/>
+  I seek opportunity — not security. <br/>
+  I do not wish to be a kept citizen, <br/>
+  humbled and dulled by having the state look after me. <br/>
+  I want to take the calculated risk, <br/>
+  to dream and to build, <br/>
+  to fail and to succeed. <br/>
 avatar: "/assets/img/tyr.jpg"
 email: "tyr.chen at google mail service"
 github: "http://github.com/tyrchen"
 linkedin: "http://linkedin.com/in/tyrchen/"
 weibo: "http://weibo.com/tchen82"
-tech_skills: [["System Software", "five"], ["Web Application", "six"], ["High Availability", "four"], ["Distributed Systems", "three"], ["Protocols (TCP/IP, HTTP, etc.)", "five"], ["Network Security", "three"], ["CPU Architecture", "four"]]
-soft_skills: [["Self Supervising", "six"], ["Team Management", "five"], ["Leadership", "four"], ["Problem Solving", "six"], ["Communication", "five"], ["Adaptability", "six"]]
-lang_skills: [["Chinese", "six"], ["Cantonese", "five"], ["English", "four"]]
-program_skills: [["C", "five"], ["Python", "five"], ["Javascript", "four"], ["HTML/CSS", "three"], ["Assembly", "three"]]
-framework_skills: [["Django", "five"], ["node", "three"], ["Octopress/Wintersmith", "four"], ["Meteor", "five"]]
+tech_skills: 
+  - ["System Software", "five"]
+  - ["Web Application", "six"]
+  - ["High Availability", "four"]
+  - ["Distributed Systems", "three"]
+  - ["Protocols (TCP/IP, HTTP, etc.)", "five"]
+  - ["Network Security", "three"]
+  - ["CPU Architecture", "four"]
+soft_skills: 
+  - ["Self Supervising", "six"]
+  - ["Team Management", "five"]
+  - ["Leadership", "four"]
+  - ["Problem Solving", "six"]
+  - ["Communication", "five"]
+  - ["Adaptability", "six"]
+lang_skills: 
+  - ["Chinese", "six"]
+  - ["Cantonese", "five"]
+  - ["English", "four"]
+program_skills: 
+  - ["C", "five"]
+  - ["Python", "five"]
+  - ["Javascript", "four"]
+  - ["HTML/CSS", "three"]
+  - ["Assembly", "three"]
+framework_skills: 
+  - ["Django", "five"]
+  - ["node", "three"]
+  - ["Octopress/Wintersmith", "four"]
+  - ["Meteor", "five"]
 which: "about"
 ---
 
