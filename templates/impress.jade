@@ -1,0 +1,36 @@
+doctype 5
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=1024")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        title #{page.title} - #{locals.title}
+        meta(name="author", content="Tyr Chen")
+        link(href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic", rel="stylesheet")
+        link(href="/assets/components/impress.js/css/impress-demo.css", rel="stylesheet")
+    body.impress-not-supported
+        .fallback-message
+            p Your browser doesn't support the features required by impress.js. so you are presented with a simplified version of this presentation.
+            p For the best experience please use the latest Chrome, Safari or Firefox browser. 
+
+        #impress
+            each slide, i in page.metadata.slides
+                - var x = slide.x || i * 1000
+                - var y = slide.y || 0
+                - var z = slide.z || 0
+                - var scale = slide.scale || 1
+                - var rotate = slide.rotate || 0
+                - var classes = slide.classes ? slide.classes.join(' ') : ''
+                .step(class="#{classes}", data-x="#{x}", data-y="#{y}", data-z="#{z}", data-rotate="#{rotate}", data-scale="#{scale}")
+                    != slide.jade
+
+        .hint
+            p 使用空格键或者方向键来控制演示
+
+        script
+            if ("ontouchstart" in document.documentElement) { 
+                document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+            }
+        script(src="/assets/components/impress.js/js/impress.js")
+        script
+            impress().init();

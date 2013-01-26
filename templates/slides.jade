@@ -23,4 +23,7 @@ block content
           li.span3
             .thumbnail
               a(href="#{post.url}", title="#{post.title}", class="#{post.metadata.theme}")
-                != post.intro
+                if post.metadata.intro
+                  != post.metadata.intro
+                else
+                  != post.intro
