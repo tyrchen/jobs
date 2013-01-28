@@ -178,9 +178,9 @@ $ sudo python install.py
 ```
 按照提示下一步就好。
 
-接下来把SD卡插入Pi，连上internet和电视，启动，等待3-5小时（取决于你的网速），最终XBMC会被自动安装成功。
+接下来把SD卡插入Pi，连上internet和电视，启动，等待3-5小时（取决于你的网速），最终XBMC会被自动安装成功。这是安装后的效果：
 
-> 这里会补上一张安装完成后的界面
+![raspberry bmc](/assets/img/snapshots/rasp_bmc.jpg)
 
 可惜里面的服务大部分都被伟大的长城墙了，所以安完后我也不知道那他来干什么用，只是觉得很cool而已。哈哈，hacker's joy.
 
