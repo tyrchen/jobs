@@ -15,10 +15,14 @@ html
             p For the best experience please use the latest Chrome, Safari or Firefox browser. 
 
         #impress
+            - var coordinates = [];
+            //- function get(item, attr, i) { if (item[attr] != undefined) {return item[attr]} else { if (i > 0) {return coordinates[i-1][attr];} else {return 0;}}} 
+            - function get(item, attr, i) { return item[attr] || 0;}
             each slide, i in page.metadata.slides
-                - var x = slide.x || i * 1000
-                - var y = slide.y || 0
-                - var z = slide.z || 0
+                - var x = get(slide, 'x', i)
+                - var y = get(slide, 'y', i)
+                - var z = get(slide, 'z', i)
+                - coordinates.push({x:x, y:y, z:z})
                 - var scale = slide.scale || 1
                 - var rotate = slide.rotate || 0
                 - var classes = slide.classes ? slide.classes.join(' ') : ''
