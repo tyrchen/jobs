@@ -94,7 +94,7 @@ slides:
 
   - x: 4000
     jade: |
-      p <b>Systematically</b> Test Your Plan
+      p Systematically <b>Test</b> Your Plan
 
   - x: 4000
     y: 500
