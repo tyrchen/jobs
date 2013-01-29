@@ -12,8 +12,8 @@ slides:
       h4 2013-01-29 By Tyr Chen
       br
       small 
-        As a summary for the book "Running Lean" <br/>
-        Will be iterate again and again
+        | As a summary for the book "Running Lean" <br/>
+        | Will be iterate again and again
   - x: 1000
     y: -3000
     rotate: 90
@@ -89,7 +89,8 @@ slides:
       p Lessons Learned
       blockquote 
         | Building low-burn startups by eliminating waste through the maximization 
-        of existing resources before expending effort on the acquisition of new or external resources.
+        | of existing resources before expending effort on the acquisition of new or 
+        | external resources.
 
   - x: 4000
     jade: |
