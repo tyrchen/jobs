@@ -16,21 +16,25 @@ email: "tyr.chen at google mail service"
 github: "http://github.com/tyrchen"
 linkedin: "http://linkedin.com/in/tyrchen/"
 weibo: "http://weibo.com/tchen82"
+patents:
+  - [Ager Ring Optimization, /assets/files/US8140656B2.pdf]
+  - [Session Cache Based HTTP Acceleration, /assets/files/US20100235522A1.pdf]
+  - [Server Protection from DDOS Attacks, /assets/files/US20100235902A1.pdf]
 tech_skills: 
-  - ["System Software", "five"]
   - ["Web Application", "six"]
-  - ["High Availability", "four"]
-  - ["Distributed Systems", "three"]
+  - ["System Software", "five"]
   - ["Protocols (TCP/IP, HTTP, etc.)", "five"]
-  - ["Network Security", "three"]
-  - ["CPU Architecture", "four"]
+  - ["High Availability", "four"]
+  - ["Distributed Systems", "four"]
+  - ["Network Security", "four"]
+  - ["CPU Architecture", "three"]
 soft_skills: 
   - ["Self Supervising", "six"]
-  - ["Team Management", "five"]
-  - ["Leadership", "four"]
   - ["Problem Solving", "six"]
-  - ["Communication", "five"]
   - ["Adaptability", "six"]
+  - ["Team Management", "five"]
+  - ["Communication", "five"]
+  - ["Leadership", "four"]
 lang_skills: 
   - ["Chinese", "six"]
   - ["Cantonese", "five"]
@@ -41,15 +45,10 @@ program_skills:
   - ["Javascript", "four"]
   - ["HTML/CSS", "three"]
   - ["Assembly", "three"]
-framework_skills: 
-  - ["Django", "five"]
-  - ["node", "three"]
-  - ["Octopress/Wintersmith", "four"]
-  - ["Meteor", "five"]
 which: "about"
 ---
 
-That's enough of talking about myself in the third person. you may want to look at my [resume](http://linkedin.com/in/tyrchen/) in linkedin. If you are curious about what I've done in the past year, here's a [summary](/posts/2012-12-28-retrospect-of-the-year-2012.html). If you still want to know more about me, read on.
+This page is pretty trivial. You may just want to look at my [resume](http://linkedin.com/in/tyrchen/) in linkedin. If you are curious about what I've done in the past year, here's a [summary](/posts/2012-12-28-retrospect-of-the-year-2012.html). If you still want to know more about me, read on.
 
 ## High mover
 
@@ -68,7 +67,6 @@ Then around 5 years later I graduated from high school. I went to Northeastern U
 Again 4 years passed. Beijing became my next destination. I didn't plan to stay long in this big, crowded city, however, this year is my 10th year in Beijing. 10 years! How many decades do you have in your life? Every time, when I looked at the big, clear eyes of my lovely baby girl, I always asked myself: is it the time to make the next move, just as what my father did for his children? 
 
 
-
 ## Hacker
 
 I'm a hacker and a self motivator. Period.
@@ -76,8 +74,8 @@ I'm a hacker and a self motivator. Period.
 ### I like to build tools to make the life much easier
 
 * I built version 1 and version 2 __tukeq.com__ to make the life of frequent independent travellers easy. Liked it or not, the version 1 travel planning tool did help people organize their trip in a brand new way. The version 2 travel planning tool helps people gather information from various sites, and generate a great [PDF](http://pdf-temp.b0.upaiyun.com/%E6%9B%BC%E8%B0%B7%E6%99%AE%E5%90%89PP%E5%B2%9B%E4%B8%83%E6%97%A5%E6%B8%B8.pdf) for further use. Here's a snapshot of PDF: ![PDF](/assets/img/snapshots/tukeq_pdf.jpg)
-* I built __teamspark__ for make the communication and collaboration easy and fun in tukeq team. This is an internal project for tracking and discussing team tasks. We use redmine before, but it is not so efficient (think about how many pages you have to go through to change a status of an issue) and not realtime. So I made this single page app with easy to use UI and *realtime experience*. Here's a snapshot: ![teamspark](/assets/img/snapshots/teamspark.jpg)
-* I made a __integration tool__ for my first employer, Digital China Networks, which automates building, burning and testing process for firmware, saving lots of engineering time. We do have lots of well-designed open source tools nowadays, but at that time (2004), in the router/switch field in China, people still using *Visual SourceSafe* as SCM, nobody talks about *continuous integration*.
+* I built [teamspark](http://tchen.me/teamspark/) for making the communication and collaboration easy and fun in tukeq team. This is an internal project for tracking and discussing team tasks. We use redmine before, but it is not so efficient (think about how many pages you have to go through to change a status of an issue) and not realtime. So I made this single page app with easy to use UI and *realtime experience*. Here's a snapshot: ![teamspark](/assets/img/snapshots/teamspark.jpg)
+* I made an __integration tool__ for my first employer, Digital China Networks, which automates building, burning and testing process for firmware, saving lots of engineering time. We do have lots of well-designed open source tools nowadays, but at that time (2004), in the router/switch field in China, people still using *Visual SourceSafe* as SCM, nobody talks about *continuous integration*.
 * I build a small but very useful __memory analyze tool__ for the team when I was in Juniper. This is another great time saving tool. Reading memory dump line by line hurts a lot. Mapping hex digits with a known structure is time-consuming and stupid. But that's what lots of system engineers deal with everyday. So I build a tool called ScreenOS memory analyzer, providing a web interface for people to use.
 * I build a __weekly report aggregator__ right after I became a manager in Juniper. It saves me lots of time collecting data from separated excels (individual weekly report) then summarizing a team report.
 
@@ -91,6 +89,7 @@ I'm a hacker and a self motivator. Period.
 * I am trying to make my [raspberry Pi](http://www.raspberrypi.org/) a nodejs server for serving digital media from my NAS. 
 * ...
 
+
 ## Founder
 
 I am a founder. 
@@ -99,7 +98,7 @@ I founded [tukeq.com](http://tukeq.com).
 
 But that's not all. For every company I worked with, I held a founder's mind and attitude. Not only did I make the jobs done well, I also tried to make the team better and the life easier. I desired to make and create. 
 
-How can a insignificant engineer make any visible changes? You may wonder.
+How can an insignificant engineer make any visible changes? You may wonder.
 
 Here's a real story. In SLT of Juniper, we have an awesome embedded operating system called ScreenOS. It is not well documented internally, only the gurus of the ScreenOS team knows the detail of the code. In 2006, after joining Juniper for over 1 year, I got the chance to take a training in sunnyvale. I tried my best to learn from the gurus, to keep every piece of notes in the day, and to summarize what I learned during the night. 2 or 3 month later, I wrote two documents, over 100 pages in total, describing almost every important scenarios and underlying ideas of the code. They greatly reduce the learning curve for not only the new hires but also the not-so-guru engineers. The VP of core security at the time, [Paul Gacek](http://www.linkedin.com/in/paulgacek) praised me for "make it easy" in one of all-hands meetings.
 

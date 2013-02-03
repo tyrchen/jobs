@@ -56,6 +56,11 @@ block content
             i.icon.icon-download
             |  下载
 
+          .patents
+            h3 Patents and Publications
+            ul
+              for item in page.metadata.patents
+                li: a(href="#{item[1]}") #{item[0]}
           .skills
             h3 Technical Skills
             - var colors = ['#A8DBA8', '#79BD9A', '#3B8686', '#0B486B']
@@ -87,9 +92,3 @@ block content
                 - var color = colors[i++ % colors.length]
                 li(class="#{item[1]}", style="background: #{color}") #{item[0]}
           
-          .skills
-            h3 Web Framework Skills
-            ul.bar
-              for item in page.metadata.framework_skills
-                - var color = colors[i++ % colors.length]
-                li(class="#{item[1]}", style="background: #{color}") #{item[0]}
