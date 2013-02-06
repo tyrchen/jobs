@@ -22,7 +22,7 @@ block content
         each post in posts
           li.span3
             .thumbnail
-              a(href="#{post.url}", title="#{post.title}", class="#{post.metadata.theme}")
+              a(href="#{post.url}", title="#{post.title}", class="#{post.metadata.theme}", target="_blank")
                 if post.metadata.intro
                   != post.metadata.intro
                 else

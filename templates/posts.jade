@@ -14,7 +14,7 @@ block content
         .span10
           //- underscore helps us filter and sort our posts
           - var posts = _.chain(contents.posts).filter(function(item) {
-          -   return !(item.published === false)
+          -   return !(item.metadata.published === false)
           - }).sortBy(function(item) {
           -   // sort them by date
           -   return -item.date
