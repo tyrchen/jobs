@@ -4,7 +4,7 @@ theme: default
 title: SDN浅谈
 date: 2013-02-18 10:27
 comments: true
-tags: []
+tags: [SDN]
 ---
 
 ## 引言
