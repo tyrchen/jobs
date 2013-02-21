@@ -7,7 +7,7 @@ comments: true
 tags: [SDN]
 ---
 
-[上一篇文章](/posts/2013-02-18-sdn-elementory-introduction.html)简单介绍了SDN及其应用场景，臆测的成分大些。本文谈谈SDN的基石：openflow。
+[上一篇文章](/posts/2013-02-18-sdn-elementatory-introduction.html)简单介绍了SDN及其应用场景，臆测的成分大些。本文谈谈SDN的基石：openflow。
 
 我们知道，SDN的核心是将control plane（下文统称controller）和data plane（下文统称oSwitch，openflow switch）分离，由一个中央集权的controller（好比一个军团的将领）指挥成百上千的oSwitch（好比千千万万的士兵），共同完成网络中数据的传输。而openflow，as a protocol，是这套体系正常运作的基石。
 
