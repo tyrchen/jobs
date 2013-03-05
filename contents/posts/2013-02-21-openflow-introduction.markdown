@@ -90,11 +90,14 @@ openflow允许系统中存在一到多张flow table并且他们之间以一种pi
 
 什么情况下一个packet从一张flow table里出来，进入另一张flow table呢？有不少这样的case，我们说一个比较容易理解的。
 
-假定flow table 1存放IPSec VPN tunnel的flow entry，flow table 2存放普通flow entry。当一个IPSec packet进入flow table 1后match对应的flow entry，其instruction为：1) decryption 2) FWD to flow table 2。当packet被解密，inner ip packet重见天日时，就可以用flow table 2中的flow entry进行转发。
+~假定flow table 1存放IPSec VPN tunnel的flow entry，flow table 2存放普通flow entry。当一个IPSec packet进入flow table 1后match对应的flow entry，其instruction为：1) decryption 2) FWD to flow table 2。当packet被解密，inner ip packet重见天日时，就可以用flow table 2中的flow entry进行转发。~
 
 ```
 注：这个理解可能有些错误，因为openflow规定flow table是有序的，但这个VPN in的例子如果换成VPN out的例子则flow table的顺序正好相反，所以和openflow的spec violate...等笔者搞明白些再回过头来修订这个例子
 ```
+Update:
+
+看Open vSwitch时想到一种multi table的模式：即L2，L3，L4各一张table。这说得过去，而且各个flow table是严格有序的。
 
 ### Instructions
 
