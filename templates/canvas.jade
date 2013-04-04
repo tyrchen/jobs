@@ -89,4 +89,7 @@ block content
               ul
                 each p in page.metadata.revenue_stream
                   li #{p}
-
+      if locals.baidu_share
+        include layouts/includes/baidu_share.html
+      hr
+      include layouts/includes/duoshuo
