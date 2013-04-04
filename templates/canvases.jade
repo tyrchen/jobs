@@ -3,6 +3,11 @@ extends layouts/layout
 block prepend title
   | #{page.title} -
 
+block css
+  style
+    .thumbnail h4 {text-align: center; margin: 20px; font-weight:bold;}
+    .thumbnail p {text-align: center; margin-bottom: 10px; color: gray;}
+
 block content
   .main
     .container
@@ -23,7 +28,8 @@ block content
           li.span3
             .thumbnail
               a(href="#{post.url}", title="#{post.title}", class="#{post.metadata.theme}", target="_blank")
-                h3 #{post.metadata.title}
+                h4 #{post.metadata.title}
+                p #{post.metadata.date}
                 ul
                   each p in post.metadata.problem
                     li #{p}
