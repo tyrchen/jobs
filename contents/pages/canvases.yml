@@ -1,0 +1,5 @@
+title: 奇思妙想
+template: canvases.jade
+which: canvases
+items_per_page: 20
+say: 调试是生命中的一部分
