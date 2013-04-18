@@ -1,5 +1,5 @@
 title: 近期博文
 template: posts.jade
 which: index
-items_per_page: 20
+items_per_page: 50
 say: 举世誉之而不加劝 举世非之而不加沮
