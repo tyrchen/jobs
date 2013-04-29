@@ -366,7 +366,7 @@ Meteor不算是标准的MVC framework。如果非要往上套，Collection算是
 ## 后记
 
 今天就先写这么多，感兴趣的童鞋可以为聊天室加一个输入界面，这样说句话不必费劲地敲代码了。本文的完整代码可以在这里下载：
-[chat.tgz](/downloads/chat.tgz)。
+[chat.tgz](/assets/files/chat.tgz)。
 
 依旧例，送上小宝今日照片。
 
