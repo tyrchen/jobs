@@ -223,13 +223,13 @@ underscore: Collection of small helper functions: _.map, _.each, ...
         <a class="brand" href="#">Meteor Example</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li><a href="#">{ { loginButtons } }</a></li>
+            <li><a href="#">{{loginButtons}}</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-  { { > hello } }
+  {{>hello}}
 </body>
 ```
 
@@ -301,7 +301,7 @@ __proto__: Object
 Meteor的Collection一旦定义后，在client/server端都可以访问。在meteor-example.js里输入如下代码创建collection：
 
 ```
-var Messages = new Meteor.Collection('messages');
+Messages = new Meteor.Collection('messages');
 ```
 
 在浏览器的console中可以访问该collection:
@@ -322,15 +322,15 @@ var Messages = new Meteor.Collection('messages');
   <div class="hero-unit">
     <h1>Messages</h1>
     <ul>
-      { { #each messages } }
-      <li>{ { username } } says: { { content } }</li>
-      { {/each } }
+      {{ #each messages }}
+      <li>{{ username }} says: {{ content }}</li>
+      {{/each }}
     </ul>
   </div>
 </template>
 ```
 
-然后在body中引用它，在 **{ { >hello } }** 后，加入 **{ { >message } }**。
+然后在body中引用它，在 **{{ >hello }}** 后，加入 **{{ >message }}**。
 
 有了显示message的template，我们还需要提供数据的controller。在meteor-example.js中 if(...client)的scope中，加入新的message的controller：
 ```
