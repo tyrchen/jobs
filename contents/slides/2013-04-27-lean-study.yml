@@ -1,9 +1,9 @@
 template: impress.jade
 theme: simple
-title: Lean Study
-intro: <section><h1>Tools for Lean Study</h1></section>
+title: Productivity Tools
+intro: <section><h1>Productivity Tools</h1></section>
 date: 2013-04-27 08:12
-tags: [study, lean]
+tags: [productivity]
 slides:
   - y: -3000
     jade: |
