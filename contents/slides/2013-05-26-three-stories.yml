@@ -54,6 +54,14 @@ slides:
 
   - x: 1500
     y: 1500
+    rotate: 90
+    scale: 0.5
+    jade: |
+      img(src="/assets/img/charts/responsibility.jpg")
+
+
+  - x: 2000
+    y: 2000
     scale: 0.2
     jade: |
       h1 END & Thanks
