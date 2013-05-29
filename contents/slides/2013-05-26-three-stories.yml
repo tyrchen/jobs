@@ -53,8 +53,7 @@ slides:
       p 3. Take <b>responsibilities</b>
 
   - x: 1500
-    y: 1500
-    rotate: 90
+    y: 1000
     scale: 0.5
     jade: |
       img(src="/assets/img/charts/responsibility.jpg")
