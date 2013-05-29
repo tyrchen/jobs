@@ -33,6 +33,10 @@ slides:
     y: 500
     jade: |
       p 2. Embrace the <b>grey</b> areas
+      div
+        img(src="/assets/img/charts/grey_area1.png", height="300px", style="margin-right:10px")
+        img(src="/assets/img/charts/grey_area2.jpg", height="300px")
+
 
   - x: 500
     y: 500
