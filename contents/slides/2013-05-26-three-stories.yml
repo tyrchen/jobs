@@ -18,7 +18,7 @@ slides:
     y: -1000
     rotate: 90
     jade: |
-      p 1. Make a <b>difference</b>
+      p 1. Think <b>differently</b>
       
 
   - x: 500
@@ -26,8 +26,8 @@ slides:
     rotate: 90
     scale: 0.2
     jade: |
-      p Your assignments are common
-      p but, you are <b>UNIQUE*</b>
+      p Your assignments are ordinary
+      p but, you are <b>*UNIQUE*</b>
 
   - x: 0
     y: -2000
@@ -70,4 +70,5 @@ slides:
     y: 2000
     scale: 0.2
     jade: |
-      h1 END & Thanks
+      h1 Thanks
+      p Every engineer should use MAC
