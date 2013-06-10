@@ -20,6 +20,8 @@ tags: [scrapy, crawler]
 
 你想将其做成service，在一台ubuntu server（gryffindoe）上每周定期运行。
 
+<!-- more -->
+
 ## 前提
 
 在gryffindoe上，安装scrapyd：
