@@ -344,6 +344,7 @@ tags: []
 
 
     ```
+    # code from https://github.com/michaelliao/sinaweibopy
     class APIClient(object):
         ...
 
