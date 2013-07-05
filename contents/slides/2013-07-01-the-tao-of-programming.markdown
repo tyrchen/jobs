@@ -2,7 +2,7 @@
 template: slide.jade
 theme: beige
 title: the tao of programming
-date: 2013-07-04 21:14
+date: 2013-07-01 21:14
 comments: true
 published: true
 tags: []
@@ -10,7 +10,7 @@ tags: []
 
     # The Tao of Programming
     ### Brought to you by Tyr Chen
-    2013-07-04
+    2013-07-01
 
 
 <!--more-->
