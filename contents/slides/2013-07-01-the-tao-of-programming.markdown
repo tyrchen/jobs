@@ -46,6 +46,8 @@ tags: []
     * octeon_pthread_init()
 
 
+    <section>
+
     ## Open/Closed Principle (OCP)
 
     <br/>
@@ -94,6 +96,8 @@ tags: []
 
     *This is also an example of SoC*
 
+    </section>
+
 
     ## Separation of Concerns (SoC)
 
@@ -101,6 +105,8 @@ tags: []
 
     *separation of concerns is the process of breaking a computer program into distinct features that overlap in functionality as little as possible.*
 
+    
+    <section>
 
     ## Inversion of Control (IoC)
     
@@ -121,11 +127,15 @@ tags: []
             pass
     ```
 
+    </section>
+
 
     ## Convention over Configuration
 
     *Aka coding by convention - seeks to decrease the number of decisions that developers need to make, gaining simplicity, but not necessarily losing flexibility.*
 
+
+    <section>
 
     ## Encapsulation
 
@@ -246,6 +256,10 @@ tags: []
     };
     ```
 
+    </section>
+
+
+    <section>
 
     ## Indirection
 
@@ -253,22 +267,46 @@ tags: []
     *All problems in computer science can be solved by another level of indirection.*
 
 
+    application
+    <hr/>
     __OS__
+    <hr/>
+    bare metal
 
 
+    application
+    <hr/>
     __Virtual Memory__
+    <hr/>
+    physical memory
 
 
+    OS
+    <hr/>
     __Virtual Machine__
+    <hr/>
+    bare metal/OS
 
 
+    real datagram
+    <hr/>
     __Tunnel__
+    <hr/>
+    transport channel
 
 
+    ifstate
+    <hr/>
     __Proxy Peer__  
+    <hr/>
+    ifstate consumer
+
+    </section>
 
 
-    *That's all for principles, but do you still remember these - DRY, OCP, SoC, IoC, CoC, Encapsulation, Indirection...*
+    ## Summary - what to bring back
+    <br/>
+    *DRY, OCP, SoC, IoC, CoC, Encapsulation, Indirection...*
 
 
     ## Paradigms
@@ -276,6 +314,8 @@ tags: []
     * Meta Programming & DSL
 
     
+    <section>
+
     ## Generic Programming (GP)
     
     <br/>
@@ -334,7 +374,10 @@ tags: []
         [action(X) || X <- L, test(X) =:= true].
     ```
 
+    </section>
 
+
+    <section>
 
     ## Meta Programming & DSL
 
@@ -398,6 +441,16 @@ tags: []
                                   pic=open('/Users/michael/test.png'))
     ```
 
+    </section>
+
+
+    ## Summary - what to bring back
+    
+    <br/>
+
+    * GP: algorithm, container, iterator
+    * MP: program to write program itself
+
 
     ## Methodology
     * Object Oriented Programming (OOP)
@@ -408,7 +461,42 @@ tags: []
     ## Object Oriented Programming (OOP)
 
 
+    <section>
+
     ## Aspect Oriented Programming (AOP)
+
+
+    ```
+    # normally if we want to authenticate user in a view
+    def user_view(request, *args, **kwargs):
+      if request.user.is_authenticated():
+        return HttpRequestRedirect('/login/')
+
+      user = request.user
+      profile = user.get_profile()
+
+      varialbes = RequestContext(request, {
+        'user': user,
+        'profile': profile,
+      })
+
+      return render_to_response(...)
+
+    # AOP for authenticate a user in a view
+    @login_required
+    def user_view(request, *args, **kwargs):
+      user = request.user
+      profile = user.get_profile()
+
+      varialbes = RequestContext(request, {
+        'user': user,
+        'profile': profile,
+      })
+
+      return render_to_response(...)
+    ```
+
+    </section>
 
 
     ## Functional Programming (FP)
@@ -417,16 +505,26 @@ tags: []
     % Erlang
     qsort([]) -> [];
     qsort([Pivot|T]) ->
-    qsort([X || X <- T, X < Pivot])
-    ++ [Pivot] ++
-    qsort([X || X <- T, X >= Pivot]).
+      qsort([X || X <- T, X < Pivot])
+      ++ [Pivot] ++
+      qsort([X || X <- T, X >= Pivot]).
     ```
+
+
+    ## Summary - what to bring back
+    
+    <br/>
+
+    * OOP - focus on data, then algorithm operated on data
+    * AOP - focus on core logic, moving concerns out
+    * FP  - no side effect, more abstracted, and elegant
 
 
     ## Patterns
     * Observer (Pub/Sub)
     * Chain of Responsibility
     * Strategy
+    * ...
 
 
     ## Observer (Pub/Sub)
@@ -449,7 +547,7 @@ tags: []
     *3DES/AES, etc.*
 
 
-    ## Zen of Coding
+    ## In summary - Zen of Coding
 
     ```
     >>> import this
