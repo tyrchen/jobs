@@ -35,10 +35,10 @@ html
             a.back(href="/pages/slides.html", title="返回")
             i.icon.icon-arrow-left
             | 演示文稿列表
-        script
+        script.
             if ("ontouchstart" in document.documentElement) { 
                 document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
             }
         script(src="/assets/components/impress.js/js/impress.js")
-        script
+        script.
             impress().init();

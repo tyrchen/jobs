@@ -24,23 +24,120 @@ tags: []
     * Misc
 
     
-    <section>
-
     # Python Basics
 
 
+    <section>
     ## Data Structure
 
+
+    ## integer
+
     ```
-    In [1]: a = 1
+    # basic
+    In [1]: a = 123456789123456789123456789 # any big number
+
+    In [287]: dir(a)
+    Out[287]:
+    ['__abs__',
+     '__add__',
+     '__and__',
+     '__class__',
+     '__cmp__',
+     '__coerce__',
+     '__delattr__',
+     '__div__',
+     '__divmod__',
+     '__doc__',
+     '__float__',
+     '__floordiv__',
+     '__format__',
+     '__getattribute__',
+     '__getnewargs__',
+     '__hash__',
+     '__hex__',
+     '__index__',
+     '__init__',
+     '__int__',
+     '__invert__',
+     '__long__',
+     '__lshift__',
+     '__mod__',
+     '__mul__',
+     '__neg__',
+     '__new__',
+     '__nonzero__',
+     '__oct__',
+     '__or__',
+     '__pos__',
+     '__pow__',
+     '__radd__',
+     '__rand__',
+     '__rdiv__',
+     '__rdivmod__',
+     '__reduce__',
+     '__reduce_ex__',
+     '__repr__',
+     '__rfloordiv__',
+     '__rlshift__',
+     '__rmod__',
+     '__rmul__',
+     '__ror__',
+     '__rpow__',
+     '__rrshift__',
+     '__rshift__',
+     '__rsub__',
+     '__rtruediv__',
+     '__rxor__',
+     '__setattr__',
+     '__sizeof__',
+     '__str__',
+     '__sub__',
+     '__subclasshook__',
+     '__truediv__',
+     '__trunc__',
+     '__xor__',
+     'bit_length',
+     'conjugate',
+     'denominator',
+     'imag',
+     'numerator',
+     'real']
 
     In [2]: pi = 3.1415926
+    ```
 
+
+    ## list
+
+    ```
     In [27]: l = [1,2,3,4,5]
 
     In [28]: l
     Out[28]: [1, 2, 3, 4, 5]
 
+    In [273]: len(l)
+    Out[273]: 5
+
+    In [274]: l.append(6)
+
+    In [275]: l
+    Out[275]: [1, 2, 3, 4, 5, 6]
+
+    In [276]: l[3]
+    Out[276]: 4
+
+    In [277]: map(lambda x: x*2, l)
+    Out[277]: [2, 4, 6, 8, 10, 12]
+
+    In [279]: reduce(lambda x,y: x+y, l)
+    Out[279]: 21
+    ```
+
+
+    ## dict
+
+    ```
     In [29]: point = {"x": 10, "y": -20}
 
     In [30]: point["x"]
@@ -49,20 +146,35 @@ tags: []
     In [31]: point["y"]
     Out[31]: -20
 
-    In [32]: s = "This is a string"
+    In [281]: point.keys()
+    Out[281]: ['y', 'x']
 
+    In [282]: point.has_key('x')
+    Out[282]: True
+
+    In [283]: point.items()
+    Out[283]: [('y', -20), ('x', 10)]
+
+    In [32]: s = "This is a string"
 
     In [33]: s.split(' ')
     Out[33]: ['This', 'is', 'a', 'string']
 
     In [36]: ' '.join(['This', 'is', 'a', 'string'])
     Out[36]: 'This is a string'
-    
     ```
 
+    </section>
+
+
+    <section>
 
     ## Function and control flow
 
+
+    ## Function Basics
+
+    ```
     In [3]: def double(x):
        ...:     return x*2
        ...:
@@ -102,7 +214,12 @@ tags: []
 
     In [17]: triple([1,2,3])
     Out[17]: [3, 6, 9]
+    ```
 
+
+    ## Higher Order Function
+
+    ```
     In [22]: def multiple(y):  # function can return function (higher order function)
        ....:     def f(x):
        ....:         return x * y
@@ -118,22 +235,17 @@ tags: []
 
     In [26]: triple(10)
     Out[26]: 30
-
     ```
 
 
-    ## Advanced control flow
+    ## Generator
 
     ```
-
     In [40]: def fabonacci(): # generator
-       ....:     a=1
-       ....:     b=2
+       ....:     a, b = 1, 2
        ....:     while True:
-       ....:         c = a + b
-       ....:         a = b
-       ....:         b = c
-       ....:         yield c
+       ....:         a, b = b, a+b
+       ....:         yield b
        ....:
 
     In [56]: f = fabonacci()
@@ -154,379 +266,237 @@ tags: []
     Out[61]: 21       
     ```
 
+    </section>
+
+
+    <section>
+
     ## OOP
+
+
+    ## OOP Basics
 
     ```
     In [8]: class Circle:
-    def __init__(self, r):
-        self.r = r
-    def area(self):
-        return 3.14159 * self.r * self.r
-   ...:
+    ....:       def __init__(self, r):
+    ....:           self.r = r
+    ....:       def area(self):
+    ....:           return 3.14159 * self.r * self.r
+    ....:
 
     In [9]: c = Circle(10)
 
     In [10]: c.area()
     Out[10]: 314.159
     ```
-    
-    </section>
-
-    ## Principles
-    * Don't Repeat Yourself (DRY)
-    * Open/Closed
-    * Separation of Concerns (SoC)
-    * Inversion of Control (IoC)
-    * Convention over Configuration (CoC)
-    * Encapsulation
-    * Indirection
 
 
-    ## Don't Repeat Yourself!
-
-    * Hardware session installation (SoS)
-    * octeon_pthread_init()
-
-
-    <section>
-
-    ## Open/Closed Principle (OCP)
-
-    <br/>
-    *Software entities should be open for extension, but closed for modification.*
-
-
-    Let's rewrite ``octeon_pthread_init()``:
-    
-    ```
-    def octeon_pthread_init(configuration='/etc/flowd.conf'):
-        f = open(configuration)
-        conf = json.load(f)
-        cores = conf['cores']
-        for core in cores:
-            callback = pthread_callbacks[core['callback']]
-            id = core['id']
-            stack_size = core['stack_size']
-            stack = stack_create(stack_size)
-            name = core['name']
-            
-            # pre hook
-            pthread_pre_init(core)
-            
-            pthread_create(callback, id, name, stack, stack_size)
-            
-            # post hook - e.g. UTM initialization
-            pthread_post_init(core)
-    
-    # here comes the file content
-    {
-        "cores": [
-            {
-                "name": "TX",
-                "id": 1,
-                "stack_size": 128000,
-                "callback": "PTHREAD_CALLBACK_TX"
-            }, {
-                "name": "LBT",
-                "id": 2,
-                "stack_size": 256000,
-                "callback": "PTHREAD_CALLBACK_LBT"
-            }
-        ]
-    }
-    ```
-
-    *This is also an example of SoC*
-
-    </section>
-
-
-    ## Separation of Concerns (SoC)
-
-    <br/>
-
-    *separation of concerns is the process of breaking a computer program into distinct features that overlap in functionality as little as possible.*
-
-    
-    <section>
-
-    ## Inversion of Control (IoC)
-    
-    <br/>
-    *Don't call me, let us call you.*
-
+    ## Operator override
 
     ```
-    # in settings
-    middlewares = [Authenticator, Logger, ...]
+    In [65]: class Iterable: # make object work like a list
+       ....:     def __iter__(self):
+       ....:         return self
+       ....:     def next(self):
+       ....:         if self.has_next():
+       ....:             return self.next_value()
+       ....:         else:
+       ....:             raise StopIteration
+       ....:     def __init__(self, items):
+       ....:         self.items = items
+       ....:         self.cur = 0
+       ....:     def has_next(self):
+       ....:         return self.cur < len(self.items)
+       ....:     def next_value(self):
+       ....:         value = self.items[self.cur]
+       ....:         self.cur += 1
+       ....:         return value
     
-    # in your class
-    Class Logger(MiddleWare):
-        def handle_request(request):
-            pass
+    In [67]: i = Iterable([1,2,3,4])
 
-        def handle_response(response):
-            pass
+    In [68]: for item in i:
+       ....:     print item
+       ....:
+    1
+    2
+    3
+    4       
+
+    In [69]: class Indexable:
+       ....:     def __getitem__(self, index):
+       ....:         return index * 2
+       ....:
+
+    In [70]: i = Indexable()
+
+    In [71]: i[3]
+    Out[71]: 6
+
+    In [72]: i["Hello"]
+    Out[72]: 'HelloHello'
     ```
 
-    </section>
 
-
-    ## Convention over Configuration
-
-    *Aka coding by convention - seeks to decrease the number of decisions that developers need to make, gaining simplicity, but not necessarily losing flexibility.*
-
-
-    <section>
-
-    ## Encapsulation
-
+    ## Inheritance
+    
+    Python do not stop you from multiple inheritance, but single inheritance is recommended
 
     ```
-    // code from linux kernel...
-    struct device 
-    {
+    In [73]: class A(Indexable, Iterable): # here Indexable is a mixin, actually
+       ....:     pass
+       ....:
 
-      /*
-       * This is the first field of the "visible" part of this structure
-       * (i.e. as seen by users in the "Space.c" file).  It is the name
-       * the interface.
-       */
-      char                    *name;
+    In [74]: a = A([1,2,3,4])
 
-      /* I/O specific fields                                           */
-      unsigned long           rmem_end;        /* shmem "recv" end     */
-      unsigned long           rmem_start;      /* shmem "recv" start   */
-      unsigned long           mem_end;         /* shared mem end       */
-      unsigned long           mem_start;       /* shared mem start     */
-      unsigned long           base_addr;       /* device I/O address   */
-      unsigned char           irq;             /* device IRQ number    */
+    In [75]: a[2]
+    Out[75]: 4
 
-      /* Low-level status flags. */
-      volatile unsigned char  start,           /* start an operation   */
-                              interrupt;       /* interrupt arrived    */
-      unsigned long           tbusy;           /* transmitter busy     */
-      struct device           *next;
-
-      /* The device initialization function. Called only once.         */
-      int                     (*init)(struct device *dev);
-
-      /* Some hardware also needs these fields, but they are not part of
-         the usual set specified in Space.c. */
-      unsigned char           if_port;         /* Selectable AUI,TP,   */
-      unsigned char           dma;             /* DMA channel          */
-
-      struct enet_statistics* (*get_stats)(struct device *dev);
-
-      /*
-       * This marks the end of the "visible" part of the structure. All
-       * fields hereafter are internal to the system, and may change at
-       * will (read: may be cleaned up at will).
-       */
-
-      /* These may be needed for future network-power-down code.       */
-      unsigned long           trans_start;     /* Time (jiffies) of 
-                                                  last transmit        */
-      unsigned long           last_rx;         /* Time of last Rx      */
-      unsigned short          flags;           /* interface flags (BSD)*/
-      unsigned short          family;          /* address family ID    */
-      unsigned short          metric;          /* routing metric       */
-      unsigned short          mtu;             /* MTU value            */
-      unsigned short          type;            /* hardware type        */
-      unsigned short          hard_header_len; /* hardware hdr len     */
-      void                    *priv;           /* private data         */
-
-      /* Interface address info. */
-      unsigned char           broadcast[MAX_ADDR_LEN];
-      unsigned char           pad;               
-      unsigned char           dev_addr[MAX_ADDR_LEN];  
-      unsigned char           addr_len;        /* hardware addr len    */
-      unsigned long           pa_addr;         /* protocol address     */
-      unsigned long           pa_brdaddr;      /* protocol broadcast addr*/
-      unsigned long           pa_dstaddr;      /* protocol P-P other addr*/
-      unsigned long           pa_mask;         /* protocol netmask     */
-      unsigned short          pa_alen;         /* protocol address len */
-
-      struct dev_mc_list      *mc_list;        /* M'cast mac addrs     */
-      int                     mc_count;        /* No installed mcasts  */
-      
-      struct ip_mc_list       *ip_mc_list;     /* IP m'cast filter chain */
-      __u32                   tx_queue_len;    /* Max frames per queue   */
-        
-      /* For load balancing driver pair support */
-      unsigned long           pkt_queue;       /* Packets queued       */
-      struct device           *slave;          /* Slave device         */
-      struct net_alias_info   *alias_info;     /* main dev alias info  */
-      struct net_alias        *my_alias;       /* alias devs           */
-      
-      /* Pointer to the interface buffers. */
-      struct sk_buff_head     buffs[DEV_NUMBUFFS];
-
-      /* Pointers to interface service routines. */
-      int                     (*open)(struct device *dev);
-      int                     (*stop)(struct device *dev);
-      int                     (*hard_start_xmit) (struct sk_buff *skb,
-                                                  struct device *dev);
-      int                     (*hard_header) (struct sk_buff *skb,
-                                              struct device *dev,
-                                              unsigned short type,
-                                              void *daddr,
-                                              void *saddr,
-                                              unsigned len);
-      int                     (*rebuild_header)(void *eth, 
-                                              struct device *dev,
-                                              unsigned long raddr,
-                                              struct sk_buff *skb);
-      void                    (*set_multicast_list)(struct device *dev);
-      int                     (*set_mac_address)(struct device *dev,
-                                              void *addr);
-      int                     (*do_ioctl)(struct device *dev, 
-                                              struct ifreq *ifr,
-                                              int cmd);
-      int                     (*set_config)(struct device *dev,
-                                              struct ifmap *map);
-      void                    (*header_cache_bind)(struct hh_cache **hhp,
-                                              struct device *dev, 
-                                              unsigned short htype,
-                                              __u32 daddr);
-      void                    (*header_cache_update)(struct hh_cache *hh,
-                                              struct device *dev,
-                                              unsigned char *  haddr);
-      int                     (*change_mtu)(struct device *dev,
-                                              int new_mtu);
-      struct iw_statistics*   (*get_wireless_stats)(struct device *dev);
-    };
+    In [76]: map(lambda x:x, a)
+    Out[76]: [1, 2, 3, 4]
     ```
 
     </section>
 
 
     <section>
-
-    ## Indirection
-
-    <br/>
-    *All problems in computer science can be solved by another level of indirection.*
-
-
-    application
-    <hr/>
-    __OS__
-    <hr/>
-    bare metal
-
-
-    application
-    <hr/>
-    __Virtual Memory__
-    <hr/>
-    physical memory
-
-
-    OS
-    <hr/>
-    __Virtual Machine__
-    <hr/>
-    bare metal/OS
-
-
-    real datagram
-    <hr/>
-    __Tunnel__
-    <hr/>
-    transport channel
-
-
-    ifstate
-    <hr/>
-    __Proxy Peer__  
-    <hr/>
-    ifstate consumer
-
-    </section>
-
-
-    ## Summary - what to bring back
-    <br/>
-    *DRY, OCP, SoC, IoC, CoC, Encapsulation, Indirection...*
-
-
-    ## Paradigms
-    * Generic Programming (GP)
-    * Meta Programming & DSL
-
     
-    <section>
-
-    ## Generic Programming (GP)
-    
-    <br/>
-
-    *Decouple algorithm with data structure, generalize the data structure used by algorithm so that the algorithm could be reused broadly.*
+    ## Metaprogramming
     
 
-    __What's your intuition on GP?__
+    __What is class?__
 
 
-    *Yes in C++ we have this weired thing called template, and a library called __STL__... *
+    __Class is the template of creating objects__
 
     <br/>
-    ```
-    template <typename T>
-    T max(T a, T b) {
-        return (a > b) ? a : b;
-    }
-    ```
+    which have different states but share with same structure and behavior
 
 
-    __Well, what we're talking is more than that...__
-
-
-    ### Basic coding tests
-    1. Randomly pick up 10 numbers from an array, sum up the primes.
-    2. Given company directory, find female engineers then raise their salary by 10%.
-    3. In CLI if user input a keyword which doesn't exist, print error message.
-
-
-    __How do you abstract the algorithm?__
-
-
-    ```
-    // C++
-    template <typename Iterator, typename Filter, typename Action>
-    void process(Iterator begin, Iterator end, Filter test, Action action) {
-        for (; begin <= end; begin++) {
-            if (test(*begin)) action(*begin);
-        }
-    }
-    ```
+    ## old and new style classes
     
     ```
-    # Python
-    def process(l, test, action):
-        def f(x):
-            return action(x) if test(x) else None
+    # old style class
+    In [1]: class X:
+       ...:     pass
+   
+    In [2]:
 
-        return filter(None, map(f, l))
+    In [2]: x = X()
+
+    In [3]: type(x)
+    Out[3]: instance
+
+    In [4]: type(type(x))
+    Out[4]: type
+
+    In [6]: type(X)
+    Out[6]: classobj
+
+    In [7]: type(type(X))
+    Out[7]: type
+
+    # new style class
+    In [8]: class Y(object):
+       ...:     pass
+       ...:
+
+    In [9]: y = Y()
+
+    In [10]: type(Y)
+    Out[10]: type
+
+    In [11]: type(y)
+    Out[11]: __main__.Y
+
+    In [12]: type(type(y))
+    Out[12]: type
     ```
 
+
+    ## Crafting class
+
     ```
-    %% Erlang
-    process(L, test, action) ->
-        [action(X) || X <- L, test(X) =:= true].
+    class Animal(object):
+        can_fly = False
+
+        def flee(self):
+            if self.can_fly:
+                print "Fly..."
+            else:
+                print "Run..."
+
+    class Swimmable(object):
+        def swim(self):
+            print "I'm swimming"
+
+    class Duck(Animal, Swimmable):
+        can_fly = True
+
+        def say(self):
+            print "Gaga..."
+
+    In [22]: d = Duck()
+
+    In [23]: d.flee()
+    Fly...
+
+    In [24]: d.say()
+    Gaga...
+
+    In [25]: d.swim()
+    I'm swimming
     ```
 
-    </section>
+
+    ## Craft the class on the fly
+
+    ```
+    In [50]: Duck1 = type("Duck1", (Animal, Swimmable), {'can_fly': True, 'say': say})
+
+    In [51]: d1 = Duck1()
+
+    In [52]: d1.say()
+    Gaga...
+
+    In [53]: d1.can_fly
+    Out[53]: True
+
+    In [54]: d1.flee()
+    Fly...
+
+    In [55]: d1.swim()
+    I'm swimming
+    ```
+    
+
+    ## Method mssing
+
+    Method mssing could be used to dynamically add attributes that are in common.
+
+    ```
+    In [39]: class Y(object):
+       ....:     point = (0, 0)
+       ....:     def __getattr__(self, attr):
+       ....:         def f(*args, **kwargs):
+       ....:             return "%s, %s" % (args, kwargs)
+       ....:         print "%s is missing" % attr
+       ....:         return f
+       ....:
+
+    In [42]: y.point
+    Out[42]: (0, 0)
+
+    In [44]: y.hello("a", "b")
+    hello is missing
+    Out[44]: "('a', 'b'), {}"
+
+    In [45]: y.asdf
+    asdf is missing
+    Out[45]: <function __main__.f>
+    ```
 
 
-    <section>
-
-    ## Meta Programming & DSL
-
-    <br/>
-
-    *a programmed system begins to program itself.*
-
+    ## Method missing real case
 
     ```
     # code from https://github.com/michaelliao/sinaweibopy
@@ -582,150 +552,59 @@ tags: []
     print client.statuses.upload.post(status=u'test weibo with picture',
                                   pic=open('/Users/michael/test.png'))
     ```
-
-    </section>
-
-
-    ## Summary - what to bring back
     
+    
+    ## Metaclass
+
     <br/>
+    A metaclass is a class whose instances are classes. 
 
-    * GP: algorithm, container, iterator
-    * MP: program to write program itself
-
-
-    ## Methodology
-    * Object Oriented Programming (OOP)
-    * Aspect Oriented Programming (AOP)
-    * Functional Programming (FP)
+    It defines the behavior of certain classes and their instances.
 
 
-    ## Object Oriented Programming (OOP)
-
-
-    <section>
-
-    ## Aspect Oriented Programming (AOP)
-
-
+    ## Adding classmethod automatically
+    
     ```
-    # normally if we want to authenticate user in a view
-    def user_view(request, *args, **kwargs):
-      if request.user.is_authenticated():
-        return HttpRequestRedirect('/login/')
+    $ cat metatest.py
+    import random
 
-      user = request.user
-      profile = user.get_profile()
+    class MetaAutoProperty(type):
+        def __init__(cls, name, bases, attrs):
+            super(MetaAutoProperty, cls).__init__(name, bases, attrs)
+            for key in attrs:
+                if not key.startswith('_') and not hasattr(attrs[key], '__call__'):
+                    new_key = 'find_by_%s' % key
+                    setattr(cls, new_key, classmethod(lambda c, value: "look up %s...find %d records"
+                            % (value, random.randint(0, 10))))
 
-      varialbes = RequestContext(request, {
-        'user': user,
-        'profile': profile,
-      })
+    class AutoProperty(object):
+        __metaclass__ = MetaAutoProperty
 
-      return render_to_response(...)
+    class User(AutoProperty):
+        name = "Tyr"
+        _password = "won't tell you"
+        title = "Software Engineer"
 
-    # AOP for authenticate a user in a view
-    @login_required
-    def user_view(request, *args, **kwargs):
-      user = request.user
-      profile = user.get_profile()
 
-      varialbes = RequestContext(request, {
-        'user': user,
-        'profile': profile,
-      })
+        def change_password(self, password):
+            self._password = password
 
-      return render_to_response(...)
+    if __name__ == '__main__':
+        print User.find_by_name("Hello World")
+        print User.find_by_title("MTS")
+
+    $ python  ./metatest.py
+    look up Hello World...find 8 records
+    look up MTS...find 6 records
     ```
 
     </section>
-
-
-    ## Functional Programming (FP)
-
-    ```
-    % Erlang
-    qsort([]) -> [];
-    qsort([Pivot|T]) ->
-      qsort([X || X <- T, X < Pivot])
-      ++ [Pivot] ++
-      qsort([X || X <- T, X >= Pivot]).
-    ```
-
-
-    ## Summary - what to bring back
     
-    <br/>
 
-    * OOP - focus on data, then algorithm operated on data
-    * AOP - focus on core logic, moving concerns out
-    * FP  - no side effect, more abstracted, and elegant
+    # Django Basics
 
 
-    ## Patterns
-    * Observer (Pub/Sub)
-    * Chain of Responsibility
-    * Strategy
-    * ...
-
-
-    ## Observer (Pub/Sub)
-
-    <br/>
-    *event notification, linux kernel notifier chain, etc.*
-
-
-    ## Chain of Responsibility
-    
-    <br/>
-    *jexec nexthop, flow vector processing are typical use cases.*
-
-
-    ## Strategy
-
-    <br/>
-    *the strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable.*
-    
-    *3DES/AES, etc.*
-
-
-    ## In summary - Zen of Coding
-
-    ```
-    >>> import this
-    ```
-    
-    ```
-    Beautiful is better than ugly.
-    Explicit is better than implicit.
-
-    Simple is better than complex.
-    Complex is better than complicated.
-
-    Flat is better than nested.
-    Sparse is better than dense.
-
-    Readability counts.
-
-    Special cases are not special enough to break the rules.
-    Although practicality beats purity.
-
-    Errors should never pass silently.
-    Unless explicitly silenced.
-
-    In the face of ambiguity, refuse the temptation to guess.
-
-    There should be one - and preferably only one - obvious way to do it.
-    Although that way may not be obvious at first unless you are Dutch.
-
-    Now is better than never.
-    Although never is often better than *right* now.
-
-    If the implementation is hard to explain, it is a bad idea.
-    If the implementation is easy to explain, it may be a good idea.
-
-    Namespaces are one honking great idea -- let us do more of those!   
-    ```
+    # Misc
 
 
     # Thanks
