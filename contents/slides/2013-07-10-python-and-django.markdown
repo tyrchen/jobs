@@ -585,7 +585,6 @@ tags: []
         _password = "won't tell you"
         title = "Software Engineer"
 
-
         def change_password(self, password):
             self._password = password
 
