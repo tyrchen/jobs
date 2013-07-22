@@ -115,25 +115,122 @@ tags: []
     *Don't call me, let us call you.*
 
 
-    ```
-    # in settings
-    middlewares = [Authenticator, Logger, ...]
+    ## A small server framework
     
-    # in your class
-    Class Logger(MiddleWare):
-        def handle_request(request):
-            pass
-
-        def handle_response(response):
-            pass
     ```
+    %% server_framework.erl - the framework
+    -module(server_framework).
+    -export([start/2, rpc/2]).
+
+    start(Name, Mod) ->
+      register(Name, spawn(fun() -> loop(Name, Mod, Mod:init()) end)).
+
+    rpc(Name, Request) ->
+      Name ! {self(), Request},
+      receive
+        {Name, Response} -> Response
+      end.
+
+    loop(Name, Mod, State) ->
+      receive
+        {From, Request} ->
+          {Response, State1} = Mod:handle(Request, State),
+          From ! {Name, Response},
+          loop(Name, Mod, State1)
+      end.
+
+    %% name_server.erl - the implementation
+    -module(name_server).
+    -export([init/0, add/2, whereis/1, handle/2]).
+    -import(server_framework, [rpc/2]).
+
+    add(Name, Place) -> rpc(name_server, {add, Name, Place}).
+    whereis(Name)    -> rpc(name_server, {whereis, Name}).
+
+    init() -> dict:new().
+
+    handle({add, Name, Place}, Dict) -> {ok, dict:store(Name, Place, Dict)};
+    handle({whereis, Name}, Dict) -> {dict:find(Name, Dict), Dict}.
+
+    ```
+
+
+    ## Stop and Think
+
+    <br/>
+
+    * Framework defines convention, we just follow it
+    * Details (concurrent programming) are hide
 
     </section>
 
 
+    <section>
+
     ## Convention over Configuration
 
     *Aka coding by convention - seeks to decrease the number of decisions that developers need to make, gaining simplicity, but not necessarily losing flexibility.*
+
+
+    __ruby on rails is the best known CoC__
+    
+    Other framworks, like django, drupal, Spring, etc. also greatly inspired by CoC...
+
+
+    code from 
+
+    <small>tyrchen/church/church/management/commands/import_user.py</small>
+
+    ```
+    # -*- coding: utf-8 -*-
+
+    from __future__ import division, unicode_literals, print_function
+    from django.contrib.auth.models import User, Group
+    from django.core.management import BaseCommand
+    import codecs
+    import json
+    import requests
+
+    __author__ = 'tchen'
+
+    DIRECTORY_API = 'http://api.jcnrd.us/directory/employees.json'
+
+    class Command(BaseCommand):
+        help = u'Import employee directory'
+
+        def process_user(self, item):
+            u, created = User.objects.get_or_create(username=item['uid'])
+            if created:
+                u.set_password('xxxxxxxx')
+
+            u.email = item['email']
+            first, last = item['preferred_name'].rsplit(' ', 1)
+            u.first_name = first
+            u.last_name = last
+            u.save()
+            print('User %s %s.' % (u.username, 'created' if created else 'updated'))
+
+        def handle(self, *args, **options):
+            page = 1
+            while True:
+                data = requests.get(DIRECTORY_API, params={'page': page}).json()
+                if not data['items']:
+                    break
+
+                print('\nProcess page %s\n' % page)
+                for item in data['items']:
+                    self.process_user(item)
+
+                page += 1
+    ```
+
+    You can run it: 
+
+    ```
+    $ ./manage.py import_user
+    ```
+
+    </section>
 
 
     <section>
