@@ -200,3 +200,7 @@ ul.bar li.two {width: 50px;}
 ul.bar li.one {width: 1px;}
 
 .postdate {text-align: center;}
+
+code {
+  border: 0px;
+}
