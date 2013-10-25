@@ -13,12 +13,12 @@ tags: [atanasoff]
 ## 交互
 
 ### 整站结构
-![atanasoff整站结构](/assets/img/charts/atanasoff-pages.jpg)
+![atanasoff整站结构](/assets/files/charts/atanasoff-pages.jpg)
 
 <!--more-->
 ### 主要页面元素
 
-![atanasoff主要页面元素](/assets/img/charts/atanasoff-widgets.jpg)
+![atanasoff主要页面元素](/assets/files/charts/atanasoff-widgets.jpg)
 
 ## 设计
 
@@ -109,5 +109,5 @@ Url                 | parameters             | Functionality
 元旦开工，但基本只有清晨和晚上有时间。争取3天下来做个能用的雏形。
 
 依旧例，上小宝照片一张。
-![小宝](/assets/img/photos/baby20121231.jpg)
+![小宝](/assets/files/photos/baby20121231.jpg)
 

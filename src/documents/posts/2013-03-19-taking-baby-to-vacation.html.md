@@ -91,6 +91,6 @@ tags: []
 
 先写这些，放一张照片，其他照片之后有空再补。
 
-![小宝在三亚](/assets/img/photos/baby20130320.jpg)
+![小宝在三亚](/assets/files/photos/baby20130320.jpg)
 
 

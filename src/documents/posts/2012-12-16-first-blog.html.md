@@ -260,7 +260,7 @@ $ rake preview
 
 断断续续写了两个小时，期间还哄了下满月的小宝，拍下了一堆她满月的照片，选一张出来，算是对你耐心读完本文的奖励：
 
-![小宝](/assets/img/photos/baby20121216.jpg)
+![小宝](/assets/files/photos/baby20121216.jpg)
 
 
 

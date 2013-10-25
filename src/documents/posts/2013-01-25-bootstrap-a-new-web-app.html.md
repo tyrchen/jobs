@@ -49,35 +49,35 @@ tags: [thoughts]
 
 [Bootstrap](http://twitter.github.com/bootstrap/) 提供几乎前端所需要的一切，由于名气很大，在此之上的project相当众多。小T收下后暗想：这货我以前用过几次，但从来都是浅尝辄止，这次痛下决心，要学好bootstrap。
 
-![Bootstrap](/assets/img/snapshots/bootstrap.jpg)
+![Bootstrap](/assets/files/snapshots/bootstrap.jpg)
 
 ## 第二站：SubtlePatterns
 
 [SubtlePatterns](http://subtlepatterns.com/) 能够提供各种各样很有质感的页面的底纹。别小看这小小的底纹，用好了能让App增色不少。小T欣然收入囊中。
 
-![Subtle Patterns](/assets/img/snapshots/subtlepatterns.jpg)
+![Subtle Patterns](/assets/files/snapshots/subtlepatterns.jpg)
 
 ## 第三站：COLOURlovers
 
 在 [COLOURlovers](http://www.colourlovers.com/browse) 的世界里，小T找到了天堂的感觉。原来非黑即白，大红大紫的世界里还有这样淡淡的美丽，就像其中一个调色盘的title所说那样：life is a gift。小T突然觉得有色彩的世界，很美好。
 
-![Colour Lovers](/assets/img/snapshots/colourlovers.jpg)
+![Colour Lovers](/assets/files/snapshots/colourlovers.jpg)
 
 ## 第四站：Font Awesome
 
 小T早对设计做的那堆css sprite不满了，稍微放大一些，各种狗啃般的锯齿就出来了，不想要锯齿，sprite要重新生成，多一倍的图标，大一倍还多。小T头脑中浮现出之前的sprite hell...
 
-![Sprite Hell](/assets/img/snapshots/spritehell.jpg)
+![Sprite Hell](/assets/files/snapshots/spritehell.jpg)
 
 你看人家 [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 的思想，多给力，一个小小的字体文件就搞定，还提供了bootstrap的支持，真棒！收之，必收之，有了示意性的图标，页面丰富多了，谁说俺做不好前端？那是俺没有利器～
 
-![Font Awesome](/assets/img/snapshots/fontawesome.jpg)
+![Font Awesome](/assets/files/snapshots/fontawesome.jpg)
 
 临走前，发小广告的偷偷塞给小T一个链接：[Elusive Iconfont](http://aristath.github.com/elusive-iconfont/index.html)，小T看了看，觉得也挺靠谱。
 
 迈出大门后，又一个小广告飞速冲过来，硬塞了个链接，说是build what you want only。小T打开一看，是 [Fontello](http://fontello.com/)。这是个好东东。
 
-![Fontello](/assets/img/snapshots/fontello.jpg)
+![Fontello](/assets/files/snapshots/fontello.jpg)
 
 ## 第五站：Bootstrap themes
 
@@ -87,7 +87,7 @@ tags: [thoughts]
 * [BootsWatch](http://bootswatch.com/)
 * [Wrapbootstrap](https://wrapbootstrap.com/)
 
-![Wrap Bootstrap](/assets/img/snapshots/wrapbootstrap.jpg)
+![Wrap Bootstrap](/assets/files/snapshots/wrapbootstrap.jpg)
 
 不过令小T不那么开心的是，Wrapbootstrap里面模版的效果很好，但要收费。狠了下心买了个admin模版，下次的项目前端基本有着落了。
 
@@ -95,7 +95,7 @@ tags: [thoughts]
 
 [Emoji](http://www.emoji-cheat-sheet.com/) 这货很好！小T眼前一亮，遂又黯淡下来，苦笑，google大神，你怎么最后给了我个打酱油的？我现在的项目肯定用不到。不过留着也好，说不定哪天加个feature，开个聊天室，各种表情就有用武之地了。
 
-![Emoji](/assets/img/snapshots/emoji.jpg)
+![Emoji](/assets/files/snapshots/emoji.jpg)
 
 ## 第七站：家
 
@@ -109,8 +109,8 @@ tags: [thoughts]
 
 笑谈毕，依旧上小宝照片。
 
-![小宝抬头](/assets/img/photos/baby20130125-1.jpg)
+![小宝抬头](/assets/files/photos/baby20130125-1.jpg)
 
-![小宝穿裙子](/assets/img/photos/baby20130125-2.jpg)
+![小宝穿裙子](/assets/files/photos/baby20130125-2.jpg)
 
 

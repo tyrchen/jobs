@@ -227,4 +227,4 @@ Liquid::Template.register_tag('reveal', Jekyll::RevealTag)
 
 依旧例，放上小宝今日照片一张：
 
-![小宝](/assets/img/photos/baby20121226.jpg)
+![小宝](/assets/files/photos/baby20121226.jpg)

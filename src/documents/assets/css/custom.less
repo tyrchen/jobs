@@ -1,7 +1,33 @@
+// global
+
 a.navbar-brand {
   span {font-size: 2em; line-height: 45px; vertical-align: middle;}
 }
 
+.pager {
+  list-style: none;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    a {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #7C98A8;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 3px;
+      .transition(all .3s ease);
+      &:hover {
+        border-bottom: 2px solid #DB6967;
+        text-decoration: none;
+      }
+    }
+  }
+}
 
 
 // for slides

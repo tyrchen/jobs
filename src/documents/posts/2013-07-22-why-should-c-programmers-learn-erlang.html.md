@@ -11,7 +11,7 @@ tags: [functional, erlang]
 
 If somebody says X language is better than Y language, usually there will be a fierce quarrel between two sides. If you're using certain language for a long time, you will be the evangelist of that language, and try to protect it unconsciously. Admitted or not, you have been trapped in a tunnel, that what you can see is constraint greatly. "The Shawshank Redemption" gives a good footnote on it:
 
-![institutionalized](/assets/img/snapshots/institutionalized.jpg)
+![institutionalized](/assets/files/snapshots/institutionalized.jpg)
 
 > [Red] These walls are funny. First you hate 'em, then you get used to 'em. Enough time passes, you get so you depend on them. That's institutionalized.
 
@@ -265,7 +265,7 @@ Erlang is really difficult to learn. But once you mastered it, you're the king. 
 
 > In the movie Avatar, there's this big badass bird-brained pterodactyl thing called a Toruk that the main character must learn to ride in order to regain the trust of the blue people. As a general rule, Toruks do not like to be ridden, but if you fight one, subdue it, and then link your Blue Man ponytail to the Toruk's ptero-tail, you get to own the thing for life. Owning a Toruk is awesome; it's like owning a flying car you can control with your mind, which comes in handy when battling large chemical companies, impressing future colleagues, or delivering a pizza. But learning to ride a Toruk is dangerous, and very few people succeed.
 
-![toruk](/assets/img/snapshots/toruk.jpg)
+![toruk](/assets/files/snapshots/toruk.jpg)
 
 It reflects perfectly how hard I learned Erlang. BTW, I've far from conquering it. 
 

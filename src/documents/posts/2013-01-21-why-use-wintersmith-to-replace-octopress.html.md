@@ -309,7 +309,7 @@ theme: serif
 
 依然放上小宝的一张照片：
 
-![小宝](/assets/img/photos/baby20130121.jpg)
+![小宝](/assets/files/photos/baby20130121.jpg)
 
 
 

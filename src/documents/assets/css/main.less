@@ -1411,11 +1411,22 @@ footer#main-footer {
   p {
     margin-bottom: 30px;
   }
+  .read-previous-link {
+    font-size: 14px;
+    i {
+      margin-right: 10px;
+    }
+    text-decoration: none;
+    @media (max-width: @screen-sm-max) {
+      display: none;
+    }
+  }
   .read-next-link {
     font-size: 14px;
     i {
       margin-left: 10px;
     }
+    text-decoration: none;
     @media (max-width: @screen-sm-max) {
       display: none;
     }

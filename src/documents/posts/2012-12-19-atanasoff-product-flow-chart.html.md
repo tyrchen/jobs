@@ -18,7 +18,7 @@ Atanasoff基本的想法已经有了，接下来就是一些细节上的思考�
 
 用户使用github接入后，Atanasoff需要为用户创建属于他的博客repo。
 
-![atanasoff注册](/assets/img/charts/atanasoff-registration.jpg)
+![atanasoff注册](/assets/files/charts/atanasoff-registration.jpg)
 
 ## 博客撰写和编辑流程
 
@@ -26,11 +26,11 @@ Atanasoff基本的想法已经有了，接下来就是一些细节上的思考�
 
 博客撰写时，为避免浏览器或app崩溃，需要定期将修改保存在local storage中；并在一定时间内提交到服务器。如果客户端10分钟内没有任何改动，则提交所有更改并退出编辑状态（让其它客户端有机会进行编辑）。
 
-![atanasoff博客](/assets/img/charts/atanasoff-blog.jpg)=
+![atanasoff博客](/assets/files/charts/atanasoff-blog.jpg)=
 
 
 ## 小宝照片
 
-![小宝](/assets/img/photos/baby20121219.jpg)
+![小宝](/assets/files/photos/baby20121219.jpg)
 
 

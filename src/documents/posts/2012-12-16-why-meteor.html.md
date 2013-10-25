@@ -168,6 +168,6 @@ $ meteor
 
 依旧例，还是上一张小宝的当天照片以飨读者。
 
-![小宝](/assets/img/photos/baby20121216-1.jpg)
+![小宝](/assets/files/photos/baby20121216-1.jpg)
 
 

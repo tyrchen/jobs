@@ -188,4 +188,4 @@ value is f50cef80
 
 学语言，如果抱着一颗写编译器的心去学，那么就无敌于天下了。:)
 
-![小宝和爷爷](/assets/img/photos/baby20130711.jpg)
+![小宝和爷爷](/assets/files/photos/baby20130711.jpg)

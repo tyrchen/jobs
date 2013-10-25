@@ -164,6 +164,6 @@ You may ask why I wrote this in English, is it a kind of show-off? No. There are
 
 As usual, here's lingxi's latest photo:
 
-![小宝](/assets/img/photos/baby20121227.jpg)
+![小宝](/assets/files/photos/baby20121227.jpg)
 
-![小宝](/assets/img/photos/baby20121228.jpg)
+![小宝](/assets/files/photos/baby20121228.jpg)

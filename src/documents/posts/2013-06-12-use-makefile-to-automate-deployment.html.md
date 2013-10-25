@@ -17,7 +17,7 @@ tags: []
 
 首先要做的是將服务器的配置本地化，放在自己的项目中：
 
-![项目目录结构](/assets/img/snapshots/project_layout.jpg)
+![项目目录结构](/assets/files/snapshots/project_layout.jpg)
 
 图中，_deploy目录下的内容就是我们要部署到服务器上的配置，其目录结构和服务器要完全一致，这样可以用 ``cp`` 直接將文件拷贝过去：
 
@@ -170,4 +170,4 @@ Makefile文件比较简单，不解释了。注意这里我们把 ``remote_deplo
 
 送上小宝的近照一张：
 
-![小宝近期照片](/assets/img/photos/baby20130612.jpg)
+![小宝近期照片](/assets/files/photos/baby20130612.jpg)

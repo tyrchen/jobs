@@ -27,7 +27,7 @@ tags: [development]
 
 * 编辑环境和运行/测试环境分离。这意味着开发人员，不管是dev还是ux，可以使用任何她喜欢的系统进行内容的编辑，而其产出可以无缝地运行在另一个统一的环境。无缝是很重要的体验，如果分离意味着在两个系统显示地频繁切换，那还不如不分离；在此基础上的统一的环境则让大家在同一个上下文中交流。
 * 开发人员可以同时工作在好几个版本下。在途客圈，一个relase（或者一个scrum）以两周为周期，一周开发，一周测试，然后就上线，如图所示：
-![tukeq iteration](/assets/img/charts/tukeq_iteration.jpg)<br/>
+![tukeq iteration](/assets/files/charts/tukeq_iteration.jpg)<br/>
 这意味着在任何一周，开发人员同时工作在3个不同的branch上，以week 3第一天为例：Dalian已经部署到线上，Edingburgh交付测试，而Florence正在开发中。开发人员能够无痛地在这三个环境中任意切换，就像任务调度一样，保存上下文，切换到另一个branch，开始工作。作为小团队，我们不希望甚至不可能将有限的人员切成三份来运作，所以应该通过工具支持这种开发状态。
 * 能很好地支持持续集成。```travis-ci.org``` 跑跑开源项目还可以，但商业项目就免了，而且其每次构建都rebuild整套环境这个效率太低。
 
@@ -67,7 +67,7 @@ tags: [development]
 
 详细的环境和工作场景参见下图：
 
-![dev environment](/assets/img/charts/environment.jpg)
+![dev environment](/assets/files/charts/environment.jpg)
 
 ### 适用场景
 
@@ -82,7 +82,7 @@ tags: [development]
 
 送上小宝的近照一张：
 
-![小宝近期照片](/assets/img/photos/baby20130427.jpg)
+![小宝近期照片](/assets/files/photos/baby20130427.jpg)
 
 
 

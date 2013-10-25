@@ -19,23 +19,23 @@ tags: []
 
 抢票开始前一分钟，在google IO注册页面用你的google plus账号先登录一下，然后打开google wallet，也登录进去。然后等倒计时。这个时候不要刷页面，没意义，尤其是还是一两秒的时候。我手贱，还有1s的时候刷了一下，结果悲剧了，眼看着有general admission (貌似是这个)的表单被我刷没。然后整个页面反应奇慢无比，于是我着急再刷，刷，好几次之后才又看到提交申请的表单。然后你会看到这个页面：
 
-![Google IO waiting](/assets/img/snapshots/google-io-waiting.jpg)
+![Google IO waiting](/assets/files/snapshots/google-io-waiting.jpg)
 
 要有耐心，做好被踢出去好几次的准备，只要registration没有close，就还有机会。我被踢出去四次，然后终于看到这个页面：
 
-![Google IO wallet](/assets/img/snapshots/google-io-wallet.jpg)
+![Google IO wallet](/assets/files/snapshots/google-io-wallet.jpg)
 
 注意，支付时间只有5分钟，点了purchase后千万不要傻等！我等了近三分钟才感觉不太对，果断cancel，然后翻墙，又继续purchase，终于，还有一分钟的时候，我看到了这个界面：
 
-![Google IO purchase](/assets/img/snapshots/google-io-purchase.jpg)
+![Google IO purchase](/assets/files/snapshots/google-io-purchase.jpg)
 
 果断购买。我事先跟我的发卡行打过招呼，对方说没问题，只要商家不在黑名单就可以。然后几十秒的等待后，我终于看到了这个界面：
 
-![Google IO confirmation](/assets/img/snapshots/google-io-confirmation.jpg)
+![Google IO confirmation](/assets/files/snapshots/google-io-confirmation.jpg)
 
 一分钟后，收到发卡行的短信，同时gmail也收到确认邮件。欣喜之余，回到google IO，发现门票已经卖光，虽然很快，但没有去年传说中的50s卖光那么可怕。
 
-![Google IO closed](/assets/img/snapshots/google-io-closed.jpg)
+![Google IO closed](/assets/files/snapshots/google-io-closed.jpg)
 
 ## 总结
 
@@ -49,5 +49,5 @@ tags: []
 
 小宝又来抢镜头：
 
-![小宝](/assets/img/photos/baby20130312.jpg)
+![小宝](/assets/files/photos/baby20130312.jpg)
 

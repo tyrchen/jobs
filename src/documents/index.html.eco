@@ -6,7 +6,7 @@ title: Hello World
 <div class='area-content'>
     <div class='container'>
 
-        <%- @partial('newest_post') %>
+        <%- @partial('posts/newest_post') %>
         
         <%- @partial('separator') %>
 

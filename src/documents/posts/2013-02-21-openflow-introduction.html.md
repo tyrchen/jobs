@@ -40,7 +40,7 @@ openflow定义了oSwitch端如何协同controller来处理网络中的packets。
 ### 解决问题的思路
 
 我们先放着openflow不表，看看网络设备（switch，router，firewall）进行packets处理的共性，如下图所示：
-![network device packet processing](/assets/img/charts/firewall-2.jpg)
+![network device packet processing](/assets/files/charts/firewall-2.jpg)
 
 * 它们都有一张 **table**（或者叫database）做为决策依据。
 * table建立的依据是一系列的 **rule**。
@@ -57,7 +57,7 @@ openflow定义了oSwitch端如何协同controller来处理网络中的packets。
 以相对复杂的firewall为例，看看packets实际是如何处理的：
 
 拓扑很简单：
-![firewall session](/assets/img/charts/firewall-1.jpg)
+![firewall session](/assets/files/charts/firewall-1.jpg)
 
 1. client 1.1.1.1发起一个到server 2.2.2.2的SYN请求（TCP连接，端口为12345->80），firewall得到这个SYN packet后，进行Table Lookup，因为是第一次请求，所以找不到对应的entry。
 1. SYN packet进入到Table Creation Unit，查找有没有相关的rule来建立entry
@@ -72,21 +72,21 @@ openflow定义了oSwitch端如何协同controller来处理网络中的packets。
 
 openflow关心从L1-L4的所有packet header，从这点上看，oSwitch端的很多处理和firewall很像。
 
-![openflow packet](/assets/img/charts/packet.jpg)
+![openflow packet](/assets/files/charts/packet.jpg)
 
 openflow定义了能够match L1-L4 的flow entry：
 
-![openflow entry](/assets/img/charts/openflow-entry.jpg)
+![openflow entry](/assets/files/charts/openflow-entry.jpg)
 
 其中，假定instructions使用64bit，那么整个entry大小为76bytes，如果能够支持1M的flow，那么flow table会消耗76M内存。
 
 当packets到达时，openflow是如何match并处理呢？openflow-spec的这张图讲的很明白，我就不多说了：
 
-![openflow match，截取自openflow-spec](/assets/img/charts/openflow-match.jpg)
+![openflow match，截取自openflow-spec](/assets/files/charts/openflow-match.jpg)
 
 openflow允许系统中存在一到多张flow table并且他们之间以一种pipeline的方式运行。
 
-![openflow pipeline，截取自openflow-spec](/assets/img/charts/openflow-pipeline.jpg)
+![openflow pipeline，截取自openflow-spec](/assets/files/charts/openflow-pipeline.jpg)
 
 什么情况下一个packet从一张flow table里出来，进入另一张flow table呢？有不少这样的case，我们说一个比较容易理解的。
 
@@ -148,7 +148,7 @@ Action的执行按照如下顺序：
 
 我们用下图来诠释oSwitch和Controller间如何来协作进行packet forwarding：
 
-![openflow entry installation and forwarding](/assets/img/charts/openflow-reactive.jpg)
+![openflow entry installation and forwarding](/assets/files/charts/openflow-reactive.jpg)
 
 1. 客户端发出一个packet，到达oSwitch。
 1. oSwitch match flow table失败，packet enqueue，同时发送flow entry inquiry给controller。
@@ -177,4 +177,4 @@ Action的执行按照如下顺序：
 
 送上小宝照片一枚。
 
-![小宝](/assets/img/photos/baby20130221.jpg)
+![小宝](/assets/files/photos/baby20130221.jpg)

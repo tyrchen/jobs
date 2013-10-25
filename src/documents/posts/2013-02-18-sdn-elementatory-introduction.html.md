@@ -13,7 +13,7 @@ SDN（Software Defined Network）是个有意思的概念。[ONF](https://www.op
 
 > In the SDN architecture, the control and data planes are decoupled, network intelligence and state are __logically__ centralized, and the underlying network infrastructure is abstracted from the applications.
 
-![SDN architecture](/assets/img/snapshots/sdn-arch.jpg)
+![SDN architecture](/assets/files/snapshots/sdn-arch.jpg)
 
 用普通话说就是软件独立于硬件，让硬件标准化，软件平台化，信息中心化。
 
@@ -83,7 +83,7 @@ Convergence = 链路状态变化发现时间 + 协议消息传递时间 + SPF计
 
 另一个问题是服务器动态迁移带来的网络管理问题。这个问题是服务器虚拟化革命带来的，现在的网络设备对此基本无解。为了便于说明，我们看下图：
 
-![企业内部防火墙](/assets/img/snapshots/firewall.jpg)
+![企业内部防火墙](/assets/files/snapshots/firewall.jpg)
 
 一个典型的企业intranet会将不同部门间的访问权限分隔开，比如说engineering team只能访问engineering server，finance team只能访问finance server。传统防火墙对此表示毫无压力。
 
@@ -149,6 +149,6 @@ SDN太有优势了，因为集中控制，所以可以：
 
 依旧例，放上一张小宝最近的游泳照，感谢你耐心读到这里：
 
-![小宝游泳照](/assets/img/photos/baby20130218.jpg)
+![小宝游泳照](/assets/files/photos/baby20130218.jpg)
 
 

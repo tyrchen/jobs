@@ -279,4 +279,4 @@ server {
 
 小宝笑了，依旧是那么天真无邪。看到她，我的苦闷阴霾一下子就没了。
 
-![小宝](/assets/img/photos/baby20130109.jpg)
+![小宝](/assets/files/photos/baby20130109.jpg)

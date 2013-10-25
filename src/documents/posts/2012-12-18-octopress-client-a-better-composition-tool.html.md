@@ -113,5 +113,5 @@ python / django对我而言是最佳的选择，但我会考虑尝试nodejs。
 
 昨日小宝洗完澡，躺着就睡着了。
 
-![小宝](/assets/img/photos/baby20121217.jpg)
+![小宝](/assets/files/photos/baby20121217.jpg)
 

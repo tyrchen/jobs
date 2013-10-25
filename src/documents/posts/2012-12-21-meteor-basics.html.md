@@ -348,7 +348,7 @@ Template.message.messages = function() {
 
 奇迹出现了，不仅仅是当前窗口得到了更新，另外一个浏览器有了最新的消息！我们仅仅写了几行代码，就已经见到一个实时聊天系统的雏形了！
 
-![meteor实时聊天](/assets/img/snapshots/meteor-realtime.jpg)
+![meteor实时聊天](/assets/files/snapshots/meteor-realtime.jpg)
 
 ### Live Update
 
@@ -370,9 +370,9 @@ Meteor不算是标准的MVC framework。如果非要往上套，Collection算是
 
 依旧例，送上小宝今日照片。
 
-![小宝](/assets/img/photos/baby20121222-1.jpg)
+![小宝](/assets/files/photos/baby20121222-1.jpg)
 
-![小宝](/assets/img/photos/baby20121222-2.jpg)
+![小宝](/assets/files/photos/baby20121222-2.jpg)
 
 
 

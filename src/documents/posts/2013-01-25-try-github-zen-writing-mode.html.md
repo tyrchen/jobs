@@ -23,7 +23,7 @@ tags: [github]
 
 不管怎么说，以后多了个写作的工具，总归是好事。不过Github要是能把自己原来的编辑器的优点放入Zen Writing Mode，一定会有更多人使用。
 
-![Github Zen Writing Mode](/assets/img/snapshots/zenwriting.jpg)
+![Github Zen Writing Mode](/assets/files/snapshots/zenwriting.jpg)
 
 <!--more-->
 
@@ -49,4 +49,4 @@ Github竟然在使用 [gaug.es](http://get.gaug.es/) 这样一个我之前未听
 ## 后记
 
 虽说这是篇酱油文，但小宝的照片还是不能不放：
-![小宝](/assets/img/photos/baby20130124.jpg)
+![小宝](/assets/files/photos/baby20130124.jpg)

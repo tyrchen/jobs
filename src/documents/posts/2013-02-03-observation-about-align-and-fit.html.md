@@ -67,4 +67,4 @@ tags: [observation]
 
 谨以此文献给创业616天来一直默默支持我的LP，没有你的支持，我撑不了这么久。:)
 
-![小宝和宝妈](/assets/img/photos/baby20130203.jpg)
+![小宝和宝妈](/assets/files/photos/baby20130203.jpg)

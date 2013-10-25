@@ -1,8 +1,10 @@
 # The DocPad Configuration File
 # It is simply a CoffeeScript Object which is parsed by CSON
 marked = require 'marked'
+moment = require('moment')
 
 TEASER = /<!--\s*more\s*-->/i
+READ_SPEED = 500
 
 docpadConfig = {
 
@@ -143,8 +145,15 @@ docpadConfig = {
 		hasTeaser: (content) ->
 			content.search(TEASER) >= 0
 
+		timeToRead: (content) ->
+			Math.round(content.length / READ_SPEED)
+
 		renderMarkdown: (content) ->
 			marked(content)
+
+		formatDate: (date) -> 
+			moment.lang('zh-cn')
+			moment(date).fromNow()
 			
 	# =================================
 	# Collections

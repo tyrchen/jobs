@@ -11,7 +11,7 @@ tags: [raspberry]
 
 心仪很久的Raspberry Pi model B终于到手。拆开相当原始的包装后，就两页说明书和一块电路板，连条电源线也没有（不过$35就能搞到这样一个好东东，你还能要求什么呢）。
 
-![Raspberry Pi](/assets/img/snapshots/rasp.jpg)
+![Raspberry Pi](/assets/files/snapshots/rasp.jpg)
 
 板子上清晰地刻着 `MADE IN CHINA`，这年头，电子产品不made in china你都不好意思拿出来卖。
 
@@ -68,10 +68,10 @@ sudo dd if=/Users/tchen/software/2012-12-16-wheezy-raspbian.img of=/dev/disk1
 > 注意，以下步骤不是必须，Pi缺省是打开ssh的，所以只要知道IP，就可以ssh上去配置，我只是觉得这样挺好玩，更有感觉一些
 
 接通电源前你还需要至少接个USB键盘和有HDMI接口的显示器。前者好搞定，甭管有线无线，一般家里都有个键盘鼠标神马的（我家有个无线的键鼠套装，用于HTPC，可以用）。带HDMI接口的显示器不好找，这年头用台式机越来越少。不过，现在的电视一般都带HDMI，只好屈就一下它做为Pi的display。一切电缆连好之后，就可以插入电源了。Pi没有开机键，点亮后就开始启动，屏幕上左上角应该会出现一个大大的树莓，下面就是标准的debian输出，玩过linux的人都不陌生。一分钟左右的时间，进入到如下画面：
-![Raspberry bootup menu](/assets/img/snapshots/rasp_up.jpg)
+![Raspberry bootup menu](/assets/files/snapshots/rasp_up.jpg)
 
 有这些配置项：
-![Raspberry bootup menu](/assets/img/snapshots/rasp_menu.jpg)
+![Raspberry bootup menu](/assets/files/snapshots/rasp_menu.jpg)
 
 你要做的最重要的两项是：
 
@@ -148,7 +148,7 @@ server {
 
 然后试试打开浏览器：http://pi.tchen.me/。
 
-![帮你擦屁股](/assets/img/snapshots/cleanmyass.jpg)
+![帮你擦屁股](/assets/files/snapshots/cleanmyass.jpg)
 
 呵呵，小小的恶作剧。这个页面会自动帮你从一些主要的网站自动登出，比如微博。如果你在网吧上网，可能需要这么个玩意儿。
 
@@ -180,7 +180,7 @@ $ sudo python install.py
 
 接下来把SD卡插入Pi，连上internet和电视，启动，等待3-5小时（取决于你的网速），最终XBMC会被自动安装成功。这是安装后的效果：
 
-![raspberry bmc](/assets/img/snapshots/rasp_bmc.jpg)
+![raspberry bmc](/assets/files/snapshots/rasp_bmc.jpg)
 
 可惜里面的服务大部分都被伟大的长城墙了，所以安完后我也不知道那他来干什么用，只是觉得很cool而已。哈哈，hacker's joy.
 
@@ -188,7 +188,7 @@ $ sudo python install.py
 
 依旧献上小宝的萌照：
 
-![小宝](/assets/img/photos/baby20130128-1.jpg)
-![小宝](/assets/img/photos/baby20130128-2.jpg)
+![小宝](/assets/files/photos/baby20130128-1.jpg)
+![小宝](/assets/files/photos/baby20130128-2.jpg)
 
 

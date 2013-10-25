@@ -101,7 +101,7 @@ Teamspark并不是我用Meteor的第一个项目。第一个项目是 [途客圈
 
 还是放上小宝一张照片：
 
-![小宝照片](/assets/img/photos/baby20130204.jpg)
+![小宝照片](/assets/files/photos/baby20130204.jpg)
 
 
 

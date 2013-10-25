@@ -30,18 +30,18 @@ layout: null
           <span>
             <i class='icon-user'></i>
             by
-            <a href='#'>David Villa</a>
+            <a href='#'><%= @document.author or @site.author %></a>
           </span>
           <span>
             <i class='icon-bookmark'></i>
-            10 min read
+            <%= @timeToRead(@document.content) %> 分钟
           </span>
         </div>
         <h1 class='has-sub-header'><%= @document.title %></h1>
         <div class='post-single-meta'>
           <span class='meta-item'>
-            <i class='icon-time'></i>
-            <%= @document.date %>
+            <i class='icon-calendar'></i>
+            <%= @formatDate(@document.date) %>
           </span>
           <span class='meta-item'>
             <a href='#'>
@@ -57,33 +57,44 @@ layout: null
           </span>
           <span class="meta-item">
           	
-            <i class='icon-bookmark'></i>
-            10 min read
+            <i class='icon-time'></i>
+            <%= @timeToRead(@document.content) %> 分钟
           </span>
         </div>
         <%- @content %>
         <div class='under-post'>
-          <div class='pull-right'>
-            <a class='read-next-link' href='#'>
-              Read Next Post
-              <i class='icon-angle-right'></i>
-            </a>
-          </div>
-          <div class='post-social'>
-            <span class='social-label'>SHARE THIS POST:</span>
-            <a class='social-link' href='#'>
-              <i class='icon-facebook'></i>
-            </a>
-            <a class='social-link' href='#'>
-              <i class='icon-twitter'></i>
-            </a>
-            <a class='social-link' href='#'>
-              <i class='icon-linkedin'></i>
-            </a>
-            <a class='social-link' href='#'>
-              <i class='icon-envelope'></i>
-            </a>
-          </div>
+          <% posts = @getCollection('posts').toJSON() %>
+          <% for document, documentIndex in posts: %>
+            
+            <!-- Get the current document, from there,@getCollection('posts') we will be able to get the next and previous -->
+            <% if @document.id is document.id: %>
+         
+                <!-- We have the current document, do the next and previous buttons -->
+                
+                <!-- Check if we have a previous page -->
+                <% if documentIndex < posts.length - 1: %>
+                  <div class='pull-left'>
+                    <a class='read-previous-link' href='<%= posts[documentIndex+1].url %>'>
+                      <i class='icon-angle-left'></i>
+                      上一篇
+                    </a>
+                  </div>                  
+                <% end %>
+         
+                <!-- Check if we have a next page -->
+                <% if documentIndex >= 1: %>
+                  <div class='pull-right'>
+                    <a class='read-next-link' href='<%= posts[documentIndex-1].url %>'>
+                      下一篇
+                      <i class='icon-angle-right'></i>
+                    </a>
+                  </div>
+                <% end %>
+         
+            <% end %>
+          <% end %>
+          
+          <%- @partial('posts/post_social') %>
         </div>
       </div>
     </div>
