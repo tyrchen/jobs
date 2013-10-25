@@ -1,0 +1,100 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html>
+
+<%- @partial('head') %>
+
+<body>
+
+<%- @partial('contact') %>
+
+<div class="header-image-wrapper">
+  <img alt="" src="/assets/images/backgrounds/page-header-bg-1.jpg">
+</div>
+
+<%- @partial('nav') %>
+
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-12'>
+      <div class='post-single'>
+        <div class='pre-post-meta'>
+          <span>
+            <i class='icon-reorder'></i>
+            in
+            <a href='#'>Web Development</a>
+          </span>
+          <span>
+            <i class='icon-user'></i>
+            by
+            <a href='#'>David Villa</a>
+          </span>
+          <span>
+            <i class='icon-bookmark'></i>
+            10 min read
+          </span>
+        </div>
+        <h1 class='has-sub-header'><%= @document.title %></h1>
+        <div class='post-single-meta'>
+          <span class='meta-item'>
+            <i class='icon-time'></i>
+            <%= @document.date %>
+          </span>
+          <span class='meta-item'>
+            <a href='#'>
+              <i class='icon-comments'></i>
+              24
+            </a>
+          </span>
+          <span class='meta-item'>
+            <a href='#'>
+              <i class='icon-heart'></i>
+              15
+            </a>
+          </span>
+          <span class="meta-item">
+          	
+            <i class='icon-bookmark'></i>
+            10 min read
+          </span>
+        </div>
+        <%- @content %>
+        <div class='under-post'>
+          <div class='pull-right'>
+            <a class='read-next-link' href='#'>
+              Read Next Post
+              <i class='icon-angle-right'></i>
+            </a>
+          </div>
+          <div class='post-social'>
+            <span class='social-label'>SHARE THIS POST:</span>
+            <a class='social-link' href='#'>
+              <i class='icon-facebook'></i>
+            </a>
+            <a class='social-link' href='#'>
+              <i class='icon-twitter'></i>
+            </a>
+            <a class='social-link' href='#'>
+              <i class='icon-linkedin'></i>
+            </a>
+            <a class='social-link' href='#'>
+              <i class='icon-envelope'></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- @partial('footer') %>
+
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,49 @@
+<% if @slides: %>
+<h2 class='header-lined'><%= @title or "Recent Slides" %></h2>
+<div class='carousel slide carousel-with-animated-content' id='carousel-works'>
+    <!-- Wrapper for slides -->
+    <div class='carousel-inner'>
+        <% for items, i in @slides: %>
+            <div class='item <%= "active" if i is 0 %>'>
+                <div class='row'>
+                    <% for item in items %>
+                        <div class='col-md-4'>
+                            <div class='portfolio-item portfolio-style-3 animated-when-visible' data-animation-type='flipInY'>
+                                <div class='frame-browser'>
+                                    <figure>
+                                        <img alt='' src='http://placehold.it/800x600'>
+                                        <figcaption>
+                                            <h5 class='fp-title'>
+                                                <a href='#'><%= item.title %></a>
+                                            </h5>
+                                            <div class='fp-content'><%= item.content %></div>
+                                            <div class='fp-buttons'>
+                                                <a class='btn btn-default btn-sm fp-details-btn' href='portfolio-single.html'>
+                                                    <i class='icon-file-text-alt'></i>
+                                                    查看详情
+                                                </a>
+                                                <!--
+                                                <a class='btn btn-default btn-sm fp-lightbox-btn prettyphoto' data-rel='prettyPhoto' href='http://placehold.it/700x500'>
+                                                    <i class='icon-zoom-in'></i>
+                                                    View Bigger
+                                                </a>
+                                                -->
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+<div class='block-lined-over'>
+    <a class='continue-reading-link pull-right' href='portfolio.html'>
+        <i class='icon-th'></i>
+        查看全部
+    </a>
+</div>
+<% end %>

@@ -1,0 +1,52 @@
+template: canvas.jade
+theme: default
+title: 揭秘创业项目
+date: 2013-04-09 07:10
+comments: true
+tags: []
+
+customer_segments:
+  - 技术专家
+  - 创业者
+  - 刨根问底者
+
+early_adopters:
+  - 喜欢阅读科技博客
+  - 想了解一个创业项目背后技术上（甚至商业上）如何实现的人
+  - 想做类似copy cat的创业者
+
+problem:
+  - 想深入了解一个已有的产品技术上是如何实现的，但没有途径
+
+existing_alternatives:
+  - 在Quora/zhihu上提问，并期待创始人来回答
+  - 咨询insider
+
+unique_value_proposition:
+  - 让有意思的科技产品不再神秘
+
+high_level_concept:
+  - quora for copycat
+
+solution:
+  - 通过某种手段（如逆向工程）分析产品，并撰写分析报告
+  - 允许专家按照template规定的格式投稿
+
+channels:
+  - 科技博客
+  - 社交网络
+
+revenue_stream:
+  - 咨询/顾问服务
+
+cost_structure:
+  - 服务器及带宽
+  - 社区奖励
+
+key_metrics:
+  - 专家数量
+  - 投稿量
+  - 阅读量
+
+unfair_advantage:
+  - 内容（分析报告）

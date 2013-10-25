@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<%- @partial('head') %>
+
+<body>
+
+<%- @partial('contact') %>
+
+
+<%- @partial('nav') %>
+
+<%- @content %>
+
+<%- @partial('footer') %>
+
+
+
+
+</body>
+
+</html>

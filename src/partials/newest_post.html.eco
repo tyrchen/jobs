@@ -1,0 +1,30 @@
+<div class='row bottom-margin'>
+    <% document = @getCollection('posts').toJSON()[0] %>
+    <div class='col-md-5'>
+        <h2 class='header-lined'><%= document.title %></h2>
+        <p class='text-bigger'><%- @teaser(document.content) %></p>
+        <div class='slogan-buttons'>
+            <a class='btn btn-primary btn-cta btn-lg animated swing' href='<%= document.url %>'>
+                继续阅读 ->
+            </a>
+        </div>
+    </div>
+    <div class='col-md-1'></div>
+    <div class='col-md-6'>
+        <div class='relative-w'>
+            <div class='loupe loupe-left loupe-large animated-when-visible' data-animation-type='fadeInLeft'>
+                <img alt='' src='http://placehold.it/800x600'>
+            </div>
+            <div class='frame-browser animated-when-visible' data-animation-type='bounceInRight'>
+                <div class='frame-buttons'>
+                    <div class='frame-button-close'></div>
+                    <div class='frame-button-max'></div>
+                    <div class='frame-button-min'></div>
+                </div>
+                <div class='frame-browser-image'>
+                    <img alt='' src='http://placehold.it/800x600'>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

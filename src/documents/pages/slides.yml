@@ -1,0 +1,5 @@
+title: 演示文稿
+template: slides.jade
+which: slides
+items_per_page: 20
+say: 知者不惑  仁者不忧  勇者不惧

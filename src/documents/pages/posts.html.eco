@@ -1,0 +1,43 @@
+---
+title: 文章随笔
+layout: default
+pageOrder: 1
+isPaged: true
+pagedCollection: posts
+pageSize: 3
+---
+
+<div class='container'>
+
+  <% for document in @getCollection('posts').toJSON()[@document.page.startIdx...@document.page.endIdx]: %>
+    <%- @partial('post_loop_item', {item: document}) %>
+
+  <% end %>
+
+  <% if @document.page.count > 1: %>
+    <ul class="portfolio-filters text-center">
+        <!-- Previous Page Button -->
+        <% unless @hasPrevPage(): %>
+            <li class="disabled"><span>上一页</span></li>
+        <% else: %>
+            <li><a href="<%= @getPrevPage() %>">上一页</a></li>
+        <% end %>
+
+        <!-- Page Number Buttons -->
+        <% for pageNumber in [0..@document.page.count-1]: %>
+            <% if @document.page.number is pageNumber: %>
+                <li class="active"><span><%= pageNumber + 1 %></span></li>
+            <% else: %>
+                <li><a href="<%= @getPageUrl(pageNumber) %>"><%= pageNumber + 1 %></a></li>
+            <% end %>
+        <% end %>
+
+        <!-- Next Page Button -->
+        <% unless @hasNextPage(): %>
+            <li class="disabled"><span>下一页</span></li>
+        <% else: %>
+            <li><a href="<%= @getNextPage() %>">下一页</a></li>
+        <% end %>
+    </ul>
+  <% end %>
+</div>

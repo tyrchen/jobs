@@ -1,0 +1,57 @@
+template: canvas.jade
+theme: default
+title: lockitron
+date: 2013-04-10 08:18
+comments: true
+tags: []
+
+customer_segments:
+  - 喜欢新奇事物的科技一族
+  - 房东
+  - 企业（用其取代门禁系统）
+
+early_adopters:
+  - hackers
+  - 喜欢很酷很时尚的东西（iPhone的第一批用户）
+  - 家庭自动化爱好者
+  - airbnb玩家*
+
+problem:
+  - 家中无人，但有你信任的访客到访，无法为其开门
+  - 丢失钥匙，无法进家门
+
+existing_alternatives:
+  - 将备用钥匙放在门口一个隐蔽的地方（如脚垫下，花盆底）
+
+unique_value_proposition:
+  - Keyless entry using your phone
+  - Lock your door from anywhare in the world
+
+high_level_concept:
+  - 很难和已有的东西类比（遥控门）
+
+solution:
+  - 在已有的门锁上安装特定硬件，可接收来自网络的信号，从而打开或关闭门锁
+  - 客户通过手机
+
+channels:
+  - kick starter
+  - 在线商店
+  - BestBuy
+
+revenue_stream:
+  - 销售硬件，每件$179
+
+cost_structure:
+  - BOM成本
+  - 服务器成本
+  - 软件开发成本（包括软件授权）
+  - 人员成本
+
+key_metrics:
+  - 销售量
+  - 退货率
+  - 成品率
+
+unfair_advantage:
+  - 技术及专利

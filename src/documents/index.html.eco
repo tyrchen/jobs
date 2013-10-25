@@ -1,0 +1,15 @@
+---
+layout: default
+title: Hello World
+---
+
+<div class='area-content'>
+    <div class='container'>
+
+        <%- @partial('newest_post') %>
+        
+        <%- @partial('separator') %>
+
+
+    </div>
+</div>
