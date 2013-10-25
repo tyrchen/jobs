@@ -1,8 +1,0 @@
-{
-	"name": "Atanasoff",
-	"version": "0.1.0",
-	"dependencies": {
-		"reveal.js": "git://github.com/hakimel/reveal.js.git",
-		"impress.js": "*"
-	}
-}

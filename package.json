@@ -1,9 +1,0 @@
-{
-  "name": "barr",
-  "description": "",
-  "version": "0.1.0",
-  "dependencies": {
-	  "wintersmith-snockets": "latest",
-	  "randy": "*"
-  }
-}
