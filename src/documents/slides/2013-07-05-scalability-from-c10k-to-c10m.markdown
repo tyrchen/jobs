@@ -1,5 +1,5 @@
 ---
-template: slide.jade
+layout: slide
 theme: beige
 title: Scalability - From C10K to C10M
 date: 2013-07-05 21:47

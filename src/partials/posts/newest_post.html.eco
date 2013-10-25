@@ -1,10 +1,10 @@
 <div class='row bottom-margin'>
-    <% document = @getCollection('posts').toJSON()[0] %>
+    <% document = @getRecentItems('posts',1)[0] %>
     <div class='col-md-5'>
         <h2 class='header-lined'><%= document.title %></h2>
         <p class='text-bigger'><%- @teaser(document.content) %></p>
         <div class='slogan-buttons'>
-            <a class='btn btn-primary btn-cta btn-lg animated swing' href='<%= document.url %>'>
+            <a class='btn btn-primary btn-cta btn-lg animated-when-hover' data-animation-type="swing" href='<%= document.url %>'>
                 继续阅读 ->
             </a>
         </div>

@@ -264,7 +264,7 @@ html
 
 ```
 ---
-template: slide.jade
+layout: slide
 title: 我的第一篇演示稿
 date: 2012-12-26 20:50
 theme: serif

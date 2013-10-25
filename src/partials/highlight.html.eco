@@ -1,0 +1,12 @@
+<div class="highlight-content highlighted-image text-center cta-box light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h1 class="animated fadeInDown"><%= @title %></h1>
+        <p class="animated fadeInUp"><%- @renderMarkdown(@summary) %></p>
+        <a class="btn btn-clean-light btn-lg animated wobble" data-toggle="modal" href="<%= @action.url %>"><%= @action.title %></a>
+      </div>
+    </div>
+  </div>
+</div>

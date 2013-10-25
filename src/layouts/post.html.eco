@@ -65,13 +65,7 @@ layout: null
         <div class='under-post'>
           <% posts = @getCollection('posts').toJSON() %>
           <% for document, documentIndex in posts: %>
-            
-            <!-- Get the current document, from there,@getCollection('posts') we will be able to get the next and previous -->
             <% if @document.id is document.id: %>
-         
-                <!-- We have the current document, do the next and previous buttons -->
-                
-                <!-- Check if we have a previous page -->
                 <% if documentIndex < posts.length - 1: %>
                   <div class='pull-left'>
                     <a class='read-previous-link' href='<%= posts[documentIndex+1].url %>'>
@@ -80,8 +74,6 @@ layout: null
                     </a>
                   </div>                  
                 <% end %>
-         
-                <!-- Check if we have a next page -->
                 <% if documentIndex >= 1: %>
                   <div class='pull-right'>
                     <a class='read-next-link' href='<%= posts[documentIndex-1].url %>'>
@@ -89,8 +81,7 @@ layout: null
                       <i class='icon-angle-right'></i>
                     </a>
                   </div>
-                <% end %>
-         
+                <% end %>         
             <% end %>
           <% end %>
           
@@ -99,6 +90,8 @@ layout: null
       </div>
     </div>
   </div>
+  <%- @partial('separator') %>
+  <%- @partial('plugins/duoshuo') %>
 </div>
 
 <%- @partial('footer') %>

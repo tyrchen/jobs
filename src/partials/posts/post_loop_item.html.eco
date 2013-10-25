@@ -6,8 +6,8 @@
       </div>
       <div class='author-meta'>
         <h4 class='author-name'><%= @item.author or @site.author %></h4>
-        <i class='icon-time'></i>
-        <%= @item.date %>
+        <i class='icon-calendar'></i>
+        <%= @formatDate(@item.date) %>
       </div>
     </div>
   </div>
@@ -23,8 +23,8 @@
           <a href='#'>Web Development</a>
         </span>
         <span>
-          <i class='icon-bookmark'></i>
-          <%= @timeToRead(@item.content) %>
+          <i class='icon-time'></i>
+          <%= @timeToRead(@item.content) %> 分钟
         </span>
         <span class='hidden-mobile-ib'>
           <a href='#'>
@@ -41,11 +41,11 @@
       </div>
       <%- @teaser(@item.content) %>
       <div class='under-post'>
-        <%- @partial('post_social') %>
+        <%- @partial('posts/post_social') %>
       </div>
       <br/>
       <div class='slogan-buttons'>
-          <a class='btn btn-primary btn-cta btn-lg animated swing' href='<%= @item.url %>'>
+          <a class='btn btn-primary btn-cta btn-lg animated-when-hover' data-animation-type="swing" href='<%= @item.url %>'>
               继续阅读 ->
           </a>
       </div>

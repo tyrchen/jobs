@@ -1,4 +1,4 @@
-template: impress.jade
+layout: impress
 theme: simple
 title: 我第一个impress.js演示稿
 intro: <section><h1>我第一个impress.js演示稿</h1></section>

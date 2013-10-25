@@ -1,5 +1,5 @@
 ---
-template: slide.jade
+layout: slide
 title: "alternative perspective on programming languages 2"
 date: 2013-01-11 08:25
 theme: night

@@ -1,4 +1,4 @@
-template: impress.jade
+layout: impress
 theme: simple
 title: Three Stories
 intro: <section><h1>Three Stories</h1></section>

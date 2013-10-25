@@ -1,4 +1,5 @@
-template: canvas.jade
+---
+layout: canvas
 theme: default
 title: Lean Canvas Example
 date: 2013-04-04 11:53
@@ -39,6 +40,7 @@ key_metrics:
 
 unfair_advantage:
   - Something that can't be easily copied or bought
+---
 
 
 

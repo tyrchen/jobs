@@ -1,4 +1,4 @@
-template: impress.jade
+layout: impress
 theme: simple
 title: Running Lean
 intro: <section><h1>Running Lean (unfinished)</h1></section>

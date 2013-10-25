@@ -1,15 +1,16 @@
-template: canvas.jade
+---
+layout: canvas
 theme: default
-title: Outlines - your form helper
-date: 2013-09-30 08:18
+title: Prattle - your document center
+date: 2013-09-10 08:18
 published: false
 comments: true
 tags: []
 
 customer_segments:
-  - website / mobile app owners
-  - enterprises
-  - bloggers / envanglists
+  - Bloggers, writers
+  - software engineers
+  - People who would like to have their own customizable personal site
 
 early_adopters:
   - wordpress users
@@ -62,3 +63,5 @@ key_metrics:
 
 unfair_advantage:
   - 技术及专利
+---
+

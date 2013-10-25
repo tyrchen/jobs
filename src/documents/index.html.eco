@@ -10,6 +10,7 @@ title: Hello World
         
         <%- @partial('separator') %>
 
+		<%- @partial('posts/recent_sliders') %>
 
     </div>
 </div>

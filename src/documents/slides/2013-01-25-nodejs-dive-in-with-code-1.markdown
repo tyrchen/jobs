@@ -1,5 +1,5 @@
 ---
-template: slide.jade
+layout: slide
 theme: beige
 title: nodejs dive in with code (1)
 date: 2013-01-25 06:46

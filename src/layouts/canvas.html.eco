@@ -1,0 +1,121 @@
+---
+layout: default
+---
+
+<div class="container">
+	<h2><%= @document.title %></h2>
+	<table class="canvas">
+		<tr>
+			<td rowspan="2">
+				<div>
+					<h4>PROBLEM</h4>
+					<ul class="top">
+					<% for p in @document.problem: %>
+						<li><%= p %></li>
+					<% end %>
+					</ul>
+					<h4>EXISTING ALTERNATIVES</h4>
+					<ul>
+					<% for p in @document.existing_alternatives: %>
+						<li><%= p %></li>
+					<% end %>
+					</ul>
+					
+				</div>
+			</td>
+			<td>
+				<div>
+					<h4>SOLUTION</h4>
+					<ul>
+					<% for p in @document.solution: %>
+						<li><%= p %></li>
+					<% end %>
+					</ul>
+				</div>
+			</td>
+			<td class="small" rowspan="2" clospan="2">
+				<div>
+					<h4>UNIQUE VALUE PROPOSITION</h4>
+					<ul class="top">
+					<% for p in @document.unique_value_proposition: %>
+						<li><%= p %></li>
+					<% end %>						
+					</ul>
+
+				</div>
+			</td>
+			<td>
+				<div>
+					<h4>UNFAIR ADVANTAGE</h4>
+					<ul>
+					<% for p in @document.unfair_advantage: %>
+						<li><%= p %></li>
+					<% end %>
+					</ul>
+				</div>
+			</td>
+			<td rowspan="2">
+				<div>
+					<h4>CUSTOMER SEGMENTS</h4>
+					<ul class="top">
+					<% for p in @document.customer_segments: %>
+						<li><%= p %></li>
+					<% end %>
+					</ul>
+					<h4>EARLY ADOPTERS</h4>
+					<ul>
+					<% for p in @document.early_adopters: %>
+						<li><%= p %></li>
+					<% end %>
+					</ul>
+					
+				</div>
+			</td>			
+		</tr>
+		<tr>
+			<td>
+				<div>
+					<h4>KEY METRICS</h4>
+					<ul>
+					<% for p in @document.key_metrics: %>
+						<li><%= p %></li>
+					<% end %>
+					</ul>
+				</div>
+			</td>
+			<td>
+				<div>
+					<h4>CHANNELS</h4>
+					<ul>
+					<% for p in @document.channels: %>
+						<li><%= p %></li>
+					<% end %>
+					</ul>
+				</div>
+			</td>			
+		</tr>
+		<tr>
+			<td colspan="3">
+				<div>
+					<h4>COST STRUCTURE</h4>
+					<ul>
+					<% for p in @document.cost_structure: %>
+						<li><%= p %></li>
+					<% end %>
+					</ul>
+				</div>
+			</td>
+			<td colspan="3">
+				<div>
+					<h4>REVENUE STREAM</h4>
+					<ul>
+					<% for p in @document.revenue_stream: %>
+						<li><%= p %></li>
+					<% end %>
+					</ul>
+				</div>
+			</td>			
+		</tr>		
+	</table>
+	<%- @partial('plugins/duoshuo') %>
+</div>

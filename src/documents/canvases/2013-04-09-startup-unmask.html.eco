@@ -1,4 +1,5 @@
-template: canvas.jade
+---
+layout: canvas
 theme: default
 title: 揭秘创业项目
 date: 2013-04-09 07:10
@@ -50,3 +51,5 @@ key_metrics:
 
 unfair_advantage:
   - 内容（分析报告）
+---
+

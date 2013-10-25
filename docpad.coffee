@@ -56,9 +56,10 @@ docpadConfig = {
 			# Styles
 			styles: [
 				"/assets/css/app.css",
-				"/assets/css/animate.min.css",
+				"/assets/css/animate.css",
 				"http://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Yanone+Kaffeesatz:200,300,400,700|Raleway:200,300,400,500,700",
 				"http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css",
+				"/assets/css/solarized_dark.css"
 			]
 
 			themes: [
@@ -73,6 +74,7 @@ docpadConfig = {
 				"/assets/js/jquery.isotope.min.js",
 				"/assets/js/jquery.knob.js",
 				"/assets/js/jquery.scrollUp.min.js",
+				"/assets/js/highlight.pack.js",
 				"/assets/js/application.js"
 
 			]
@@ -81,6 +83,10 @@ docpadConfig = {
 				2012-2013
 			"""
 			menu: []
+
+			# plugins
+
+			duoshuo_name: "tyrchen"
 
 		# -----------------------------
 		# Helper Functions
@@ -154,6 +160,23 @@ docpadConfig = {
 		formatDate: (date) -> 
 			moment.lang('zh-cn')
 			moment(date).fromNow()
+
+		chunk: (items, chunkSize = 0) ->
+			results = []
+			if chunkSize is 0
+				return items
+			else if chunkSize > 0 and chunkSize != items.length
+				while items.length
+					results.push items.splice(0, chunkSize)
+				return results
+			else
+				return [items]
+
+		getRecentItems: (type, count, chunkSize = 0) ->
+			items =	@getCollection(type).toJSON()[0..count-1]
+			@chunk(items, chunkSize)
+
+
 			
 	# =================================
 	# Collections
@@ -165,13 +188,13 @@ docpadConfig = {
 			
 		posts: (database) ->
 			database.findAllLive({layout: 'post'}, [date:-1])
-			
-		newestPost: (database) ->
-			documents = database.findAllLive({layout: 'post'}, [date:-1])
-			if documents
-				[documents[0]]
-			else
-				[]
+
+		slides: (database) ->
+			database.findAllLive({layout: ['slide', 'impress']}, [date:-1])
+
+		canvases: (database) ->
+			database.findAllLive({layout: 'canvas'}, [date: -1])
+
 
 	# =================================
 	# Plugins

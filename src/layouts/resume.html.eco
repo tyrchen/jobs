@@ -1,0 +1,167 @@
+---
+layout: default
+title: About Me
+---
+
+<div class="highlight-content highlighted-image text-center cta-box light" style="margin-top:-28px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+      	<div class="row">
+	      	<div class="col-md-4 col-md-offset-4">
+		      	<div class="team-member animated-when-visible delay-animation-one animated bounceInUp" data-animation-type="bounceInUp">
+			        <div class="member-avatar">
+			          <img alt="" src="<%= @document.avatar %>">
+			        </div>
+			    </div>
+			</div>
+		</div>
+        <h1 class="animated fadeInDown"><%= @document.info.title %></h1>
+        <p class="animated fadeInUp"><%- @renderMarkdown(@document.info.summary) %></p>
+        <a class="btn btn-clean-light btn-lg animated wobble" data-toggle="modal" href="<%= @document.info.action.url %>"><%= @document.info.action.title %></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='container'>
+  <h2 class='header-lined has-sub-header text-center'>Skills I Got</h2>
+  <h4 class='sub-lined-header text-center'>I'm keen to learn new things. I might be THE web developer who has the best knowledge on network/security, while THE system developer who has the best knowledge on web technologies. </h4>
+  <% for skills in @chunk(@document.capabilities, 3) : %>
+  <div class='iconed-features style-2'>
+    <div class='row'>
+      <% for skill in skills : %>
+      <div class='col-md-4'>
+      	<%- @partial('iconed_feature', skill) %>
+      </div>
+      <% end %>
+
+    </div>
+  </div>
+  <% end %>
+
+</div>
+
+<div class="container">
+    <h2>
+        <span>
+            会当凌绝顶，每逐清溪水
+        </span>
+    </h2>
+    <div class="row">
+        <div class="span8 content">
+            <div class="row">
+                <div class="span4 photo">
+                    <div class="thumbnail">
+                        <img src="avatar" alt="关于我" />
+                    </div>
+                </div>
+                <div class="span4 info">
+                    <div class="well">
+                        <h3>
+                            hello name
+                        </h3>
+                        <p>
+                            hello description
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="page-header">
+            </div>
+            <article>
+                <div>
+                    <%- @content %>
+                </div>
+            </article>
+        </div>
+        <div class="span4 aside">
+            <div class="contacts">
+                <h3>
+                    Contacts
+                </h3>
+                <p>
+                    <i class="icon icon-envelope">
+                    </i>
+                    email
+                </p>
+                <p>
+                    <a href="github" target="_blank">
+                        <i class="icon icon-github">
+                        </i>
+                        github
+                    </a>
+                </p>
+                <p>
+                    <a href="linkedin" target="_blank">
+                        <i class="icon icon-linkedin">
+                        </i>
+                        linkedin
+                    </a>
+                </p>
+                <p>
+                    <a href="weibo" target="_blank">
+                        <!--i.icon.icon-weibo -->
+                        <img src="http://www.sinaimg.cn/blog/developer/wiki/LOGO_16x16.png" width="12px"
+                        />
+                        weibo
+                    </a>
+                </p>
+            </div>
+            <!--<a id="btnDownload" href="download_url" class="btn btn-large noPrint"></a><i class="icon icon-download"></i> 下载-->
+            <div class="patents">
+                <h3>
+                    Patents and Publications
+                </h3>
+                <ul>
+                    <li>
+                        <a href="patent">
+                            patent
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h3>
+                    Technical Skills
+                </h3>
+                <ul class="bar">
+                    <li style="background: #A8DBA8" class="world">
+                        hello
+                    </li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h3>
+                    Soft Skills
+                </h3>
+                <ul class="bar">
+                    <li style="background: #79BD9A" class="world">
+                        hello
+                    </li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h3>
+                    Language Skills
+                </h3>
+                <ul class="bar">
+                    <li style="background: #3B8686" class="world">
+                        hello
+                    </li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h3>
+                    Programming Skills
+                </h3>
+                <ul class="bar">
+                    <li style="background: #0B486B" class="world">
+                        hello
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

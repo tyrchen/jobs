@@ -1,0 +1,15 @@
+<% if not @document.comments or @document.comments is true: %>
+  <div class="ds-thread">
+    <script>
+        var duoshuoQuery = {short_name:"<%= @site.duoshuo_name %>"};
+        (function() {
+          var ds = document.createElement('script');
+          ds.type = 'text/javascript';ds.async = true;
+          ds.src = 'http://static.duoshuo.com/embed.js';
+          ds.charset = 'UTF-8';
+          (document.getElementsByTagName('head')[0]
+          || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+  </div>
+<% end %>

@@ -1,4 +1,5 @@
-template: canvas.jade
+---
+layout: canvas
 theme: default
 title: lockitron
 date: 2013-04-10 08:18
@@ -55,3 +56,5 @@ key_metrics:
 
 unfair_advantage:
   - 技术及专利
+---
+

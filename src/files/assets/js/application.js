@@ -6,6 +6,11 @@
         return el.addClass("animated " + el.data("animation-type"));
       }
     });
+    $(".animated-when-hover").hover(function() {
+      $(this).addClass("animated " + $(this).data("animation-type"));
+    }, function() {
+      $(this).removeClass("animated " + $(this).data("animation-type"));
+    });
     $(window).scroll(function(event) {
       return $(".animated-when-visible").each(function(i, el) {
         el = $(el);
@@ -37,4 +42,6 @@
     });
   });
 
+  hljs.tabReplace = '    ';
+  hljs.initHighlightingOnLoad();  
 }).call(this);

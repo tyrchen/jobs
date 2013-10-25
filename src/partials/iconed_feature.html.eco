@@ -1,0 +1,13 @@
+<div class='iconed-feature' href='#'>
+  <div class='row'>
+    <div class='col-md-3'>
+      <div class='feature-icon-w animated rollIn'>
+        <i class='<%= @icon %>'></i>
+      </div>
+    </div>
+    <div class='col-md-9'>
+      <h4><%= @title %></h4>
+      <%- @renderMarkdown(@description) %>
+    </div>
+  </div>
+</div>

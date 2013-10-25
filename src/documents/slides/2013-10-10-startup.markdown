@@ -1,5 +1,5 @@
 ---
-template: slide.jade
+layout: slide
 theme: beige
 title: Startup
 date: 2013-10-10 12:14

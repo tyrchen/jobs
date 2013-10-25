@@ -1,4 +1,5 @@
-template: canvas.jade
+---
+layout: canvas
 theme: default
 title: 著作出版平台
 date: 2013-04-04 13:46
@@ -57,3 +58,5 @@ unfair_advantage:
   - 平台与作者的良好关系
   - 与平台同步成长的作者与读者
   - 沉淀的内容
+---
+

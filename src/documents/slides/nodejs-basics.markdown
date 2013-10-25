@@ -1,5 +1,5 @@
 ---
-template: slide.jade
+layout: slide
 title: Nodejs basics
 date: 2013-01-20 22:58
 theme: default

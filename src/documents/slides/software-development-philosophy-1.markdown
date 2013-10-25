@@ -1,5 +1,5 @@
 ---
-template: slide.jade
+layout: slide
 title: "software development philosophy 1"
 date: 2013-01-11 08:17
 theme: beige

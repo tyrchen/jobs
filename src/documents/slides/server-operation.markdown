@@ -1,5 +1,5 @@
 ---
-template: slide.jade
+layout: slide
 title: "server operation"
 date: 2013-01-11 07:18
 theme: sky

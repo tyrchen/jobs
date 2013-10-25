@@ -1,5 +1,5 @@
 ---
-template: slide.jade
+layout: slide
 theme: default
 title: Python & Django
 date: 2013-07-10 15:14

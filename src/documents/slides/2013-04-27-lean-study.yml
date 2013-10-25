@@ -1,4 +1,4 @@
-template: impress.jade
+layout: impress
 theme: simple
 title: Productivity Tools
 intro: <section><h1>Productivity Tools</h1></section>
