@@ -4,7 +4,8 @@ theme: default
 title: Openflow简介
 date: 2013-02-21 13:57
 comments: true
-tags: [SDN]
+tags: [SDN, technology]
+cover: /assets/files/posts/sdn.jpg
 ---
 
 [上一篇文章](/posts/2013-02-18-sdn-elementatory-introduction.html)简单介绍了SDN及其应用场景，臆测的成分大些。本文谈谈SDN的基石：openflow。
@@ -12,6 +13,8 @@ tags: [SDN]
 我们知道，SDN的核心是将control plane（下文统称controller）和data plane（下文统称oSwitch，openflow switch）分离，由一个中央集权的controller（好比一个军团的将领）指挥成百上千的oSwitch（好比千千万万的士兵），共同完成网络中数据的传输。而openflow，as a protocol，是这套体系正常运作的基石。
 
 本文难度稍大，可能不适合没有网络设备基础知识的读者阅读。我会在下节中稍微讲一些基础概念，如果无法理解，则不建议读下去。
+
+<!--more-->
 
 ## 网络基础知识
 
@@ -30,8 +33,6 @@ tags: [SDN]
   * 修改packet并reinject：根据规则对packet进行修改，如做source NAT（对源地址做网络地址转换），或者terminate VPN（将外层VPN包头去掉），再将packets以一个新的ingress port丢回device处理。
 
 如果到这里还没有晕的话，可以继续读下去。
-
-<!--more-->
 
 ## Openflow Packets处理
 

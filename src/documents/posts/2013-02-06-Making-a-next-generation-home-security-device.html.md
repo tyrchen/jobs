@@ -4,7 +4,8 @@ theme: default
 title: 创建下一代家用防火墙vMars
 date: 2013-03-05 14:14
 comments: true
-tags: []
+tags: [firewall, thought, startup]
+cover: /assets/files/posts/fire_alarm.jpg
 ---
 
 > 2013-03-05 作者按：这是个胡思乱想的产品，写于2013-02-06，我尝试者把我系统领域的知识和互联网上的实践结合起来，看看能擦出什么火花。一直keep private，是想有朝一日做成自己的下一个创业项目。但最近的精力放在这上的很少，目前可预见的一年内自己也没有能耐去handle这样一个项目（主要是涉及的链条太广）。所以干脆将其open，或许可以激发能干成这事的人。

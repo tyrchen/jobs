@@ -2,7 +2,7 @@
   <div class='col-md-2 col-md-offset-1'>
     <div class='post-loop-author-info'>
       <div class='author-avatar'>
-        <img alt='' src='http://placehold.it/500x500'>
+        <img alt='' src='<%= @item.avatar or @site.avatar %>'>
       </div>
       <div class='author-meta'>
         <h4 class='author-name'><%= @item.author or @site.author %></h4>
@@ -17,15 +17,17 @@
         <a href='<%= @item.url %>'><%= @item.title %></a>
       </h2>
       <div class='post-loop-meta'>
-        <span class='hidden-mobile-ib'>
+        <span class='hidden-mobile-ib tags'>
           <i class='icon-reorder'></i>
-          in
-          <a href='#'>Web Development</a>
+          <% for tag in @item.tags : %>
+            <a href='<%= @getTagUrl(tag) %>'><%= tag %></a>
+          <% end %>
         </span>
         <span>
           <i class='icon-time'></i>
           <%= @timeToRead(@item.content) %> 分钟
         </span>
+        <!--
         <span class='hidden-mobile-ib'>
           <a href='#'>
             <i class='icon-comments'></i>
@@ -38,6 +40,7 @@
             15
           </a>
         </span>
+        -->
       </div>
       <%- @teaser(@item.content) %>
       <div class='under-post'>

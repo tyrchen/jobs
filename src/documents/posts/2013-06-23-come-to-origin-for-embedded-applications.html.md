@@ -4,18 +4,19 @@ theme: default
 title: Come to Origins for Embedded Applications
 date: 2013-06-23 08:14
 comments: true
-tags: [architecture]
+tags: [architecture, technology]
+cover: /assets/files/posts/embeddedsystem.jpg
 ---
 
 ## The problem
 
 Recently I did a web application to make easy GNATS report for my team. I use scrapy to crawl the GNATS web pages for people's issues every 4 hours, then add the crawled data into mongodb. A set of simple-to-use RESTful APIs written with nodejs can provide easy access to the data ([try it out](http://api.jcnrd.us/gnats/tchen.json), but only viewable internally in Juniper). Then a django application consumes the APIs and wraps them into a not-so-bad user interface, thanks to twitter bootstrap and a set of javascript frameworks and libraries. You can look at the ultimate application here: [GNATS report system](http://gnats.jcnrd.us/groups/branch-team/).
 
+<!--more-->
+
 What I want to emphosize is, I did all these stuffs in less than a full week, and then a working edition is there. I've not counted the code, maybe a few thousands line of python, coffescript, css and html code.
 
 Here comes the problem - I can never be so productive when writing code for the datapath of JUNOS, or any embedded systems I've been working with. Why is it?
-
-<!--more-->
 
 Then I began to compare the differences for my web application and the data path application, say NAT for embedded systems, to find the magic.
 

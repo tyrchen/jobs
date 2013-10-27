@@ -4,7 +4,8 @@ theme: default
 title: 用Sails开发安全的API服务
 date: 2013-10-17 20:40
 comments: true
-tags: [api, application]
+ignored: true
+tags: [api, nodejs, technology]
 ---
 
 很久没有更新博客了。最近几个月写了三篇文章：

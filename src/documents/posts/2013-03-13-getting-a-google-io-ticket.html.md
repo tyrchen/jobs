@@ -4,7 +4,8 @@ theme: default
 title: Google IO抢票记
 date: 2013-03-13 11:01
 comments: true
-tags: []
+tags: [google]
+cover: /assets/files/posts/google_io_2013.jpg
 ---
 
 ## 题记

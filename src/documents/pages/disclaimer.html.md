@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: term
+standalone: true
 title: 免责声明
 ---
 

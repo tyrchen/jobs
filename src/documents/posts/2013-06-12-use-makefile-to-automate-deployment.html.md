@@ -4,7 +4,8 @@ theme: default
 title: 使用Makefile自动化部署
 date: 2013-06-12 07:14
 comments: true
-tags: []
+tags: [automation, technology]
+cover: /assets/files/posts/automation.jpg
 ---
 
 有时候，写个小app，部署是件麻烦的事情 —— 你需要登录到服务器上，手工编辑nginx，supervisor等配置文件，然后重启相关的服务。这些配置都不在版本库中，所以也无法记录历史修订。``puppet`` 是个不错的解决方案，但对于小项目来说，使用puppet是个负担。

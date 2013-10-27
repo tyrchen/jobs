@@ -4,7 +4,8 @@ theme: default
 title: 你无法想象的C语法
 date: 2013-07-18 08:22
 comments: true
-tags: [c, language]
+tags: [c, lang, technology]
+cover: /assets/files/posts/gears.jpg
 ---
 
 ## 引子

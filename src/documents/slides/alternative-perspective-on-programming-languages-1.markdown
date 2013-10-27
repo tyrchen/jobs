@@ -3,7 +3,7 @@ layout: slide
 title: "alternative perspective on programming languages 1"
 date: 2013-01-11 08:19
 theme: default
-published: false
+ignored: true
 ---
 
     # 换个角度看编程语言(1)

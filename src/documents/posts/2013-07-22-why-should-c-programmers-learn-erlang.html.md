@@ -4,7 +4,8 @@ theme: default
 title: Why should C programmers learn Erlang?
 date: 2013-07-22 18:32
 comments: true
-tags: [functional, erlang]
+tags: [erlang, lang, technology]
+cover: /assets/files/posts/erlang.jpg
 ---
 
 ## Prologue
@@ -18,6 +19,8 @@ If somebody says X language is better than Y language, usually there will be a f
 So before we're institutionalized too deep, let's learn something completely different - a language that not derived from C family, a language that leads you to a totally different mindset.
 
 Erlang seems to be a good candidate.
+
+<!-- more -->
 
 ## Why Erlang?
 

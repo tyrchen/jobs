@@ -3,12 +3,13 @@ layout: post
 title: "Octopress支持reveal.js撰写slides"
 date: 2012-12-26 21:10
 comments: true
-categories: [tools, octopress]
-tags: [octopress]
+tags: [octopress, tool]
 
 ---
 
 [reveal.js](https://github.com/hakimel/reveal.js)是一个NB的HTML presention framework，可以使用一些简单地HTML标签撰写出效果很赞的演示稿，并通过互联网传播。具体效果可以看[这里](http://lab.hakim.se/reveal-js/)。本文不是介绍如何使用或者撰写使用reveal.js的演示稿，这些可以通过reveal.js的文档很快速地掌握。作者比较好奇的是，既然octopress能够生成静态Html，那么如何很方便地将reveal.js集成到octopress中，让blog和presentation能够更好地结合起来？？
+
+<!--more-->
 
 简单看了下octopress的代码，似乎不是太难，只要创造一个新的用于slide的layout，然后提供一条用于撰写slide的rake命令就可以。那还犹豫什么？挽起袖子，开干！
 
@@ -29,8 +30,6 @@ $ curl http://sh.tchen.me/install/octopress_reveal.sh | sh
 > ...
 
 就说明安装成功了。
-
-<!--more-->
 
 ## Slide layout
 

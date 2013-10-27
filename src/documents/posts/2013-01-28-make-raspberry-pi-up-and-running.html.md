@@ -4,7 +4,8 @@ theme: default
 title: Make raspberry pi up and running
 date: 2013-01-28 09:59
 comments: true
-tags: [raspberry]
+tags: [raspberry, hacker]
+cover: /assets/files/posts/raspberry_pi.jpg
 ---
 
 ## 引子

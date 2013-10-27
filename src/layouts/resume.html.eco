@@ -17,9 +17,17 @@ title: About Me
 			    </div>
 			</div>
 		</div>
+        <div class="contact">
+            <div class="post-social">
+                <% for s in @document.social : %>
+                <a class="social-link" href="<%= s[1] %>" target="_blank">
+                  <i class="<%= s[0] %>"></i>
+                </a>
+                <% end %>
+            </div>
+        </div>
         <h1 class="animated fadeInDown"><%= @document.info.title %></h1>
         <p class="animated fadeInUp"><%- @renderMarkdown(@document.info.summary) %></p>
-        <a class="btn btn-clean-light btn-lg animated wobble" data-toggle="modal" href="<%= @document.info.action.url %>"><%= @document.info.action.title %></a>
       </div>
     </div>
   </div>
@@ -43,125 +51,7 @@ title: About Me
 
 </div>
 
+<%- @partial('separator') %>
 <div class="container">
-    <h2>
-        <span>
-            会当凌绝顶，每逐清溪水
-        </span>
-    </h2>
-    <div class="row">
-        <div class="span8 content">
-            <div class="row">
-                <div class="span4 photo">
-                    <div class="thumbnail">
-                        <img src="avatar" alt="关于我" />
-                    </div>
-                </div>
-                <div class="span4 info">
-                    <div class="well">
-                        <h3>
-                            hello name
-                        </h3>
-                        <p>
-                            hello description
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="page-header">
-            </div>
-            <article>
-                <div>
-                    <%- @content %>
-                </div>
-            </article>
-        </div>
-        <div class="span4 aside">
-            <div class="contacts">
-                <h3>
-                    Contacts
-                </h3>
-                <p>
-                    <i class="icon icon-envelope">
-                    </i>
-                    email
-                </p>
-                <p>
-                    <a href="github" target="_blank">
-                        <i class="icon icon-github">
-                        </i>
-                        github
-                    </a>
-                </p>
-                <p>
-                    <a href="linkedin" target="_blank">
-                        <i class="icon icon-linkedin">
-                        </i>
-                        linkedin
-                    </a>
-                </p>
-                <p>
-                    <a href="weibo" target="_blank">
-                        <!--i.icon.icon-weibo -->
-                        <img src="http://www.sinaimg.cn/blog/developer/wiki/LOGO_16x16.png" width="12px"
-                        />
-                        weibo
-                    </a>
-                </p>
-            </div>
-            <!--<a id="btnDownload" href="download_url" class="btn btn-large noPrint"></a><i class="icon icon-download"></i> 下载-->
-            <div class="patents">
-                <h3>
-                    Patents and Publications
-                </h3>
-                <ul>
-                    <li>
-                        <a href="patent">
-                            patent
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="skills">
-                <h3>
-                    Technical Skills
-                </h3>
-                <ul class="bar">
-                    <li style="background: #A8DBA8" class="world">
-                        hello
-                    </li>
-                </ul>
-            </div>
-            <div class="skills">
-                <h3>
-                    Soft Skills
-                </h3>
-                <ul class="bar">
-                    <li style="background: #79BD9A" class="world">
-                        hello
-                    </li>
-                </ul>
-            </div>
-            <div class="skills">
-                <h3>
-                    Language Skills
-                </h3>
-                <ul class="bar">
-                    <li style="background: #3B8686" class="world">
-                        hello
-                    </li>
-                </ul>
-            </div>
-            <div class="skills">
-                <h3>
-                    Programming Skills
-                </h3>
-                <ul class="bar">
-                    <li style="background: #0B486B" class="world">
-                        hello
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <%- @content %>
 </div>

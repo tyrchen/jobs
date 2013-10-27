@@ -4,9 +4,8 @@ title: "第一个Meteor App"
 subtitle: "正字系统"
 date: 2012-12-31 08:46
 comments: true
-categories: [meteor]
-tags: [meteor]
-published: false
+tags: [meteor, technology]
+ignored: true
 ---
 
 ## 引子

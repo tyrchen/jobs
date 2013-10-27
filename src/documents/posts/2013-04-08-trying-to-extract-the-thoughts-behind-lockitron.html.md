@@ -5,7 +5,8 @@ title: 胡思乱想之Lockitron的技术架构
 date: 2013-04-08 08:53
 comments: true
 published: true
-tags: [analysis, lockitron]
+tags: [analysis, lockitron, technology]
+cover: /assets/files/canvases/lockitron.jpg
 ---
 
 ## 引子

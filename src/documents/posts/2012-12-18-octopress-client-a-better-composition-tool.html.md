@@ -4,8 +4,7 @@ title: "产品随想：octopress客户端 —— Atanasoff"
 subtitle: "解放程序猿的那双懒惰的手"
 date: 2012-12-18 08:26
 comments: true
-categories: [technology]
-tags: [atanasoff]
+tags: [atanasoff, product, technology]
 ---
 
 ## 引子
@@ -14,12 +13,12 @@ tags: [atanasoff]
 
 同事见了我的博客也想搭一个，我说这不适合你，octopress只适合程序猿。回过头来我想，为什么自己的视界这么狭小？程序猿是干什么的？不就是把复杂繁重的工作交给计算机，让计算机前的人能够悠然自得么？
 
+<!--more-->
+
 说**不**的程序猿不是好的产品经理。octopress已经为程序猿提供了一套 ```rake``` 的自动化工具。在这个基础之上，再提供一套简洁的工具让用户摆脱繁杂的设置和命令不就可以了么？是谁规定一定要搭建 ```ruby``` 环境才能搭建octopress博客？又是谁规定一定要会基本的 ```git``` 语法和 ```shell``` 命令才能使用octopress？
 
 于是就有了接下来的思考：一个Octopress客户端。
 为了行文方便，我暂且将这个产品称之为 **Atanasoff** [1]。我喜欢命名，因为一旦一个产品有了名字，它就有了血肉，有了生命。
-
-<!--more-->
 
 ## Atanasoff
 

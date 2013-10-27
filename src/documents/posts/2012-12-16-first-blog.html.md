@@ -3,18 +3,17 @@ layout: post
 title: "第一篇博客: 用octopress搭建博客系统"
 date: 2012-12-16 04:15
 comments: true
-categories: [tools, opensource]
-tags: [octopress]
+tags: [octopress, tool]
+cover: /assets/files/posts/first_blog.jpg
 ---
 ## 引子
 
 夜夜哭闹的混世小魔王在她满月的这天好像突然换了个人，一觉又一觉地睡。这可苦了我，一个月来建立的夜间作息倾刻间紊乱，她没有闹觉的时间里，我却丢了魂一样，怎么也睡不着。于是起身想折腾点什么，无意间看到了derbyjs的 [blog](http://blog.derbyjs.com "Derby JS") 是github pages支持的，遂产生了兴趣，挽起袖子就开始折腾一个自己的。虽然 [octopress][1]的文档写得很清晰，但对于第一次接触这个博客系统的人来讲，还是有一些拦路虎的。2012年12月16日凌晨4:15，当我的第一篇空的博客展现在 [tyrchen.github.com](tyrchen.github.com) 时，我终于累瘫在床上。
+<!--more-->
 
 早上9时，我翻身起来撰写此文，算是给自己折腾的那一个多小时时间一个交代吧。
 
 免责声明：如果你不知道什么是shell, github, 不能很快地掌握一种非常简单的标记语言(markdown)，那么本文不适合你。类似于 [wordpress](http://wordpress.com) 所见即所得的博客系统对你更有价值。[octopress][1]适合于黑客。
-
-<!--more-->
 
 ## 什么是github pages? 
 

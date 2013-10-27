@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="container">
+	<h1>文章列表：『<%= @document.tag %>』</h1>
+	<hr/>
+
+	<ul>
+	<% for doc in @getCollection('documents').findAll({tags: '$in': @document.tag}).toJSON(): %>
+	    <%- @partial('posts/post_loop_item', {item: doc}) %>
+	<% end %>
+	</ul>
+
+</div>

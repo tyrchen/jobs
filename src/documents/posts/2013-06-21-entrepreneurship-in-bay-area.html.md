@@ -5,6 +5,7 @@ title: 湾区创业者
 date: 2013-06-21 10:30
 comments: true
 tags: [startup]
+cover: /assets/files/posts/entrepreneur.jpg
 ---
 
 承工场合伙人Chris的情，短短的一周时间我有幸约见了硅谷当地的创业者：Brian，Bobby和Chung。

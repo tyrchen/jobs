@@ -4,8 +4,7 @@ title: "为什么是Meteor"
 subtitle: "它和我们熟悉的框架有何不同？"
 date: 2012-12-16 14:29
 comments: true
-categories: [meteor]
-tags: [meteor]
+tags: [meteor, tool]
 ---
 
 ## Meteor是什么？

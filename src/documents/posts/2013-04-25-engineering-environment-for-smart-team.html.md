@@ -4,7 +4,8 @@ theme: default
 title: 自动化的高效团队开发环境
 date: 2013-04-25 10:26
 comments: true
-tags: [development]
+tags: [startup, technology, automation]
+cover: /assets/files/posts/automation.jpg
 ---
 
 ## 引子

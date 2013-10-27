@@ -4,7 +4,8 @@ theme: default
 title: 带四个月大的宝宝去度假
 date: 2013-03-19 02:49
 comments: true
-tags: []
+tags: [travel]
+cover: /assets/files/photos/baby20130320.jpg
 ---
 
 有时候觉得我跟我LP是奇葩。自从怀上孩子后，同事朋友们就告诉我们到两岁前就不要想有任何假期，好好看孩子是正途。可我们一点也没受到善意叮嘱的困扰，

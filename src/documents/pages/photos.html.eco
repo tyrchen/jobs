@@ -2,6 +2,8 @@
 title: 个人照片
 layout: default
 pageOrder: 4
+ignored: true
+standalone: true
 ---
 
 About Page

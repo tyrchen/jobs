@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Hello World
 ---
 
 <div class='area-content'>
@@ -9,8 +8,17 @@ title: Hello World
         <%- @partial('posts/newest_post') %>
         
         <%- @partial('separator') %>
+		
+		<% posts = @getRecentItems('posts', 6, 3) %>
+		<% title = "文章随笔" %>
 
-		<%- @partial('posts/recent_sliders') %>
+		<%- @partial('posts/recent_items', {slides: posts, title: title, url: '/posts.html'}) %>
+
+		<% canvases = @getRecentItems('canvases', 6, 3) %>
+		<% title = "奇思妙想" %>
+
+		<%- @partial('posts/recent_items', {slides: canvases, title: title, url: '/canvases.html'}) %>
+
 
     </div>
 </div>

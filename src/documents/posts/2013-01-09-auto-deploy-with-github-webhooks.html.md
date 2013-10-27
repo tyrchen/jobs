@@ -3,8 +3,7 @@ layout: post
 title: "用Github Webhooks实现自动部署"
 date: 2013-01-09 22:10
 comments: true
-categories: [tools]
-tags: [automation]
+tags: [tool, automation]
 ---
 
 ## 问题

@@ -5,7 +5,7 @@ subtitle: "交互，设计，数据结构和技术方案"
 date: 2012-12-31 09:53
 comments: true
 categories: [technology]
-tags: [atanasoff]
+tags: [atanasoff, technology]
 ---
 
 [之前的文章](http://tchen.me/blog/2012/12/19/atanasoff-product-flow-chart/)把atanasoff的主要流程思考了一下，元旦期间考虑下atanasoff的实现。
@@ -16,6 +16,7 @@ tags: [atanasoff]
 ![atanasoff整站结构](/assets/files/charts/atanasoff-pages.jpg)
 
 <!--more-->
+
 ### 主要页面元素
 
 ![atanasoff主要页面元素](/assets/files/charts/atanasoff-widgets.jpg)

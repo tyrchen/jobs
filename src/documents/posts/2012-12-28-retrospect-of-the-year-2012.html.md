@@ -3,7 +3,6 @@ layout: post
 title: "Retrospect of the year 2012"
 date: 2012-12-28 14:56
 comments: true
-categories: [retro]
 tags: [english, retro]
 ---
 

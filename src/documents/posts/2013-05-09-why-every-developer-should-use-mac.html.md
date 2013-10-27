@@ -4,10 +4,13 @@ theme: default
 title: why every developer should use mac
 date: 2013-05-09 08:34
 comments: true
-tags: []
+tags: [mac, thought]
+cover: /assets/files/posts/apple_mac.jpg
 ---
 
 Two years ago, I bought my own 13" mbp. From then on, I never left mac world, only changed that little thing to a new 15" retina mbp. From my two years experience, I believe to make your development work much more productive, you shall use mac.
+
+<!--more-->
 
 ## Shell
 

@@ -3,7 +3,7 @@ layout: canvas
 theme: default
 title: Prattle - your document center
 date: 2013-09-10 08:18
-published: false
+ignored: true
 comments: true
 tags: []
 

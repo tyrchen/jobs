@@ -32,10 +32,11 @@
                         </li>
                         <% end %>
                     <% end %>
-
+                    <!--
                     <li>
                         <a data-toggle='modal' href='#contactModal'>联系我</a>
                     </li>
+                    -->
                 </ul>
             </div>
         </nav>

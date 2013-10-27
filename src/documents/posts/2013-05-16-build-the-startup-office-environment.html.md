@@ -4,8 +4,9 @@ theme: default
 title: 创业谈 - 创建办公环境
 date: 2013-05-16 07:42
 comments: true
-published: false
+ignored: true
 tags: [startup]
+cover: /assets/files/posts/startup_office.jpg
 ---
 
 公司发展到五个人以上，有两三个开发人员时，就要考虑构建一套高效的办公和开发环境。以下是笔者的一点经验。
@@ -13,6 +14,8 @@ tags: [startup]
 ## 域名
 
 为你的公司注册至少两个域名，一个对外，提供公司的形象展示和产品服务；一个对内，做为内网办公之用。域名建议采用第三方的解析服务，如**dnspod** (下文的域名设置均以dnspod中设置为例)。
+
+<!--more-->
 
 ## 办公系统
 

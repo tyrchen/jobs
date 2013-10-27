@@ -3,7 +3,7 @@ layout: post
 title: 为什么要使用wintersmith取代octopress
 date: 2013-01-21 06:55
 comments: true
-tags: [octopress, wintersmith]
+tags: [octopress, wintersmith, tool]
 ---
 
 ## 引言

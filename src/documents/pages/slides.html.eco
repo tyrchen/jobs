@@ -1,7 +1,9 @@
 ---
 title: 演示文稿
-layout: default
+layout: term
+standalone: true
 pageOrder: 2
+ignored: true
 ---
 
 About Page

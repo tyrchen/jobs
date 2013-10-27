@@ -4,8 +4,8 @@ title: "Atanasoff实现摘要"
 date: 2013-01-01 21:46
 comments: true
 categories: [technology]
-tags: [atanasoff]
-published: false
+tags: [atanasoff, technology]
+ignored: true
 ---
 
 ## 搭建环境

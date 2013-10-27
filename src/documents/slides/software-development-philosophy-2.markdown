@@ -3,7 +3,7 @@ layout: slide
 title: "software development philosophy 2"
 date: 2013-01-11 08:18
 theme: simple
-published: false
+ignored: true
 ---
 
     # Software Development Philosophy(2)

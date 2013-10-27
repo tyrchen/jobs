@@ -12,15 +12,42 @@ layout: null
 <%- @partial('contact') %>
 
 <div class="header-image-wrapper">
-  <img alt="" src="/assets/images/backgrounds/page-header-bg-1.jpg">
+  <img alt="" src="<%= @document.cover or "/assets/images/backgrounds/page-header-bg-1.jpg" %>">
 </div>
 
 <%- @partial('nav') %>
 
 <div class='container'>
   <div class='row'>
-    <div class='col-md-12'>
+    <div class="col-md-3">
+      <div class="post-side-bar">
+        <div class="widget widget-cats tags">
+          <h4 class="widget-title">标签</h4>
+          <ul>
+          <% for tag in @document.tags : %>
+            <li><a href='<%= @getTagUrl(tag) %>'><%= tag %></a></li>
+          <% end %>
+          </ul>
+        </div>
+        <div class="widget widget-cats">
+          <h4 class="widget-title">
+            相关文章
+          </h4>
+          <ul>
+            <% if @document.relatedDocuments : %>
+            <% for document in @document.relatedDocuments: %>
+              <li><a href="<%= document.url %>"><%= document.title %></a></li>
+            <% end %>
+            <% else : %>
+              <li><a>无</a></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>      
+    <div class='col-md-9'>
       <div class='post-single'>
+        <!--
         <div class='pre-post-meta'>
           <span>
             <i class='icon-reorder'></i>
@@ -37,12 +64,14 @@ layout: null
             <%= @timeToRead(@document.content) %> 分钟
           </span>
         </div>
+        -->
         <h1 class='has-sub-header'><%= @document.title %></h1>
         <div class='post-single-meta'>
           <span class='meta-item'>
             <i class='icon-calendar'></i>
             <%= @formatDate(@document.date) %>
           </span>
+          <!--
           <span class='meta-item'>
             <a href='#'>
               <i class='icon-comments'></i>
@@ -55,6 +84,7 @@ layout: null
               15
             </a>
           </span>
+          -->
           <span class="meta-item">
           	
             <i class='icon-time'></i>
@@ -89,6 +119,7 @@ layout: null
         </div>
       </div>
     </div>
+      
   </div>
   <%- @partial('separator') %>
   <%- @partial('plugins/duoshuo') %>

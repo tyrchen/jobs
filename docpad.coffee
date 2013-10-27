@@ -7,6 +7,8 @@ TEASER = /<!--\s*more\s*-->/i
 READ_SPEED = 500
 
 docpadConfig = {
+	# I'm using chinese
+	detectEncoding: true
 
 	# =================================
 	# Template Data
@@ -41,6 +43,8 @@ docpadConfig = {
 			# The website author's name
 			author: "Tyr Chen"
 
+			avatar: "/assets/images/tyr.png"
+
 			# The website author's email
 			email: "tyr.chen{#}gmail.com"
 
@@ -58,7 +62,7 @@ docpadConfig = {
 				"/assets/css/app.css",
 				"/assets/css/animate.css",
 				"http://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Yanone+Kaffeesatz:200,300,400,700|Raleway:200,300,400,500,700",
-				"http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css",
+				"/assets/css/font-awesome.css",
 				"/assets/css/solarized_dark.css"
 			]
 
@@ -209,8 +213,18 @@ docpadConfig = {
 	#				tarExtractClean: true
 	#			}
 	#		]
+	plugins:
+		raw:
+			commands:
+				# rsync
+				# -r recursive
+				# -u skip file if the destination file is newer
+				# -l copy any links over as well
+				raw  : ['rsync', '-rul', 'src/raw/', 'out/' ]
 
-
+		ghpages:
+			deployRemote: 'ghpages'
+			deployBranch: 'master'
 	# =================================
 	# DocPad Events
 

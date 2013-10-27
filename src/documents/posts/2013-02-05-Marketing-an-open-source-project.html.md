@@ -4,11 +4,14 @@ theme: default
 title: 如何Marketing一个开源项目
 date: 2013-02-05 00:06
 comments: true
-published: false
-tags: [marketing, open source]
+ignored: true
+tags: [marketing, product]
+cover: /assets/files/posts/marketing.jpg
 ---
 
 [前文](/posts/2013-02-04-teamspark-open-sourced.html) 讲述了我开源teamspark历程中的各种琐事。本文则是我marketing这个项目的整个经历。
+
+<!--more-->
 
 ## 为何要Marketing？
 

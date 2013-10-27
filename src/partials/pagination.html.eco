@@ -1,5 +1,5 @@
 <% if @document.page.count > 1: %>
-<ul class="pager text-center">
+<ul class="paginator text-center">
     <!-- Previous Page Button -->
     <% unless @hasPrevPage(): %>
         <li class="disabled"><span>上一页</span></li>

@@ -4,12 +4,15 @@ theme: default
 title: 用scrapyd来提供crawler服务
 date: 2013-06-10 07:51
 comments: true
-tags: [scrapy, crawler]
+tags: [scrapy, crawler, technology]
+cover: /assets/files/posts/spider.jpg
 ---
 
 这是一篇即兴的短文，主要是为了记录我用 ``scrapyd`` 的心得。
 
 之前做数据抓取，总是一个scrapy project做一个deploy，很不方便，一个一个更新起来也很麻烦，总觉得能有更好的方法去处理。今早看了看scrapyd，觉得这就是我想要的东西。
+
+<!--more-->
 
 ## 目标
 
@@ -19,8 +22,6 @@ tags: [scrapy, crawler]
 * beta: 其spider是beta-spider。
 
 你想将其做成service，在一台ubuntu server（gryffindoe）上每周定期运行。
-
-<!--more-->
 
 ## 前提
 

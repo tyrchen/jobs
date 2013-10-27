@@ -9,22 +9,10 @@
             </a>
         </div>
     </div>
-    <div class='col-md-1'></div>
-    <div class='col-md-6'>
-        <div class='relative-w'>
-            <div class='loupe loupe-left loupe-large animated-when-visible' data-animation-type='fadeInLeft'>
-                <img alt='' src='http://placehold.it/800x600'>
-            </div>
-            <div class='frame-browser animated-when-visible' data-animation-type='bounceInRight'>
-                <div class='frame-buttons'>
-                    <div class='frame-button-close'></div>
-                    <div class='frame-button-max'></div>
-                    <div class='frame-button-min'></div>
-                </div>
-                <div class='frame-browser-image'>
-                    <img alt='' src='http://placehold.it/800x600'>
-                </div>
-            </div>
+    <div class='col-md-7'>
+        <div class='frame-browser-image'>
+            <img class='img-rounded' src='<%= document.cover or "http://placehold.it/800x600" %>'>    
         </div>
+        
     </div>
 </div>

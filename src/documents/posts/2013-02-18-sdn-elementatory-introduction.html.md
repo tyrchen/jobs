@@ -4,7 +4,8 @@ theme: default
 title: SDN浅谈
 date: 2013-02-18 10:27
 comments: true
-tags: [SDN]
+tags: [SDN, technology]
+cover: /assets/files/posts/sdn.jpg
 ---
 
 ## 引言
@@ -16,6 +17,8 @@ SDN（Software Defined Network）是个有意思的概念。[ONF](https://www.op
 ![SDN architecture](/assets/files/snapshots/sdn-arch.jpg)
 
 用普通话说就是软件独立于硬件，让硬件标准化，软件平台化，信息中心化。
+
+<!--more-->
 
 ### 硬件标准化/软件平台化
 
@@ -37,8 +40,6 @@ SDN（Software Defined Network）是个有意思的概念。[ONF](https://www.op
 但是SDN将这一前提打破。所谓天下合久必分，分久必合。网络世界也不能免俗。Cloud computing引发的互联网革命新浪潮将计算和存储中心化，SDN顺应了这一趋势。通过硬件，软件平台的支持，信息（网络状态）被共享到一个逻辑上集中的中心。相对于去中心化的传统网络，SDN带来很多很多优势。本文将着重讨论信息中心化对网络设备的革命性意义。
 
 温馨提示：作者对还未系统研读过关于SDN的ONF white paper，也没有实际研发过SDN相关的软件，所以本文中的一些想法均属臆测，既不完整，也不完备，可能经不起进一步的推敲，不当之处，还望指正。
-
-<!--more-->
 
 ## 转发
 

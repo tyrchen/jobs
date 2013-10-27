@@ -14,10 +14,11 @@ description: |
   to dream and to build, <br/>
   to fail and to succeed. <br/>
 avatar: "/assets/images/tyr_sketch.png"
-email: "tyr.chen at google mail service"
-github: "http://github.com/tyrchen"
-linkedin: "http://linkedin.com/in/tyrchen/"
-weibo: "http://weibo.com/tchen82"
+social:
+  - ["icon-envelope", "tyr.chen at google mail service"]
+  - ["icon-github", "http://github.com/tyrchen"]
+  - ["icon-linkedin", "http://linkedin.com/in/tyrchen/"]
+  - ["icon-weibo", "http://weibo.com/tchen82"]
 capabilities:
   - 
     icon: "icon-eye-open"
@@ -34,9 +35,6 @@ capabilities:
 info:
   title: "Entrepreneur & Full Stack Engineer"
   summary: "Even darkness must pass. A new day will come. And when the sun shines it will shine out the clearer."
-  action: 
-    title: "Contact Me"
-    url: "#contactModal"
 patents:
   - [Ager Ring Optimization, /assets/files/US8140656B2.pdf]
   - [Session Cache Based HTTP Acceleration, /assets/files/US20100235522A1.pdf]
@@ -44,7 +42,9 @@ patents:
 which: "about"
 ---
 
-This page is pretty trivial. You may just want to look at my [resume](http://linkedin.com/in/tyrchen/) in linkedin. If you are curious about what I've done in the past year, here's a [summary](/posts/2012-12-28-retrospect-of-the-year-2012.html). If you still want to know more about me, read on.
+# More about me
+
+The following content is pretty trivial. You may just want to look at my [resume](http://linkedin.com/in/tyrchen/) in linkedin. If you are curious about what I've done in the past year, here's a [summary](/posts/2012-12-28-retrospect-of-the-year-2012.html). If you still want to know more about me, read on.
 
 ## High mover
 

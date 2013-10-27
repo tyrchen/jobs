@@ -4,8 +4,7 @@ title: "Meteor基础入门"
 subtitle: "安装，包管理及基本元素"
 date: 2012-12-21 08:55
 comments: true
-categories: [meteor]
-tags: [meteor]
+tags: [meteor, tool]
 published: true
 ---
 

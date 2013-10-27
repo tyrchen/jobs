@@ -4,12 +4,15 @@ theme: default
 title: Align/Fit杂谈
 date: 2013-02-03 10:53
 comments: true
-tags: [observation]
+tags: [thought]
+cover: /assets/files/posts/harmony.jpg
 ---
 
 上周见了一个半年多没见的朋友。他依旧是一套很朴素的打扮，衣服还是一两年前的，和他几十万年薪的身价一点都不符。这就是典型的engineer，外表和内在一点也不align。
 
 由是我想到了创业，工作及人生。于是就瞎写了这篇文章。
+
+<!--more-->
 
 ## 创业
 
@@ -20,8 +23,6 @@ tags: [observation]
 接下来找人。做为hiring manager，你要找到和公司/团队气质/文化align的人。这样才形成了团队。这个时候你并不需要最NB的人，而是最fit的人：他的经历/经验能够和你要解决的问题很好地align，无论是产品上，技术上还是运营上。
 
 团队有了，就能构建产品。产品必须和目标人群的问题或者说痛点align起来，产品才可能有人用。如何align？快速试错，快速小步调整。这是个循环，不断在align和re-align中痛苦摸索和前行。
-
-<!--more-->
 
 产品得到了某种程度的验证，获取了early adopter，接下来就是发展。发展需要钱。哥几个就算天天喝西北风，到这时也已近乎精尽人亡了。投资人是有钱的主儿，问题是你的拿钱的目的能否和投资人给钱的目的align。好在这时大家的目标相当align：增长！于是，钞票滚滚而来。
 

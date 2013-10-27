@@ -4,7 +4,8 @@ theme: default
 title: Teamspark及Meteor杂谈
 date: 2013-02-04 0:20
 comments: true
-tags: [meteor, teamspark]
+tags: [meteor, teamspark, tool, product]
+cover: /assets/files/posts/teamspark.jpg
 ---
 
 我终于厚着脸皮把Teamspark开源了。

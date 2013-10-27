@@ -4,12 +4,15 @@ theme: default
 title: a cure to nodejs callback hell
 date: 2013-10-16 15:40
 comments: true
-tags: [node, javascript, generator]
+ignored: true
+tags: [nodejs, javascript, generator, lang, technology]
 ---
 
 很久没有更新博客了。8月底的一篇文章：『软件公司如何有效地组织和运作?』和9月的一篇文章『班加罗尔初体验』因为种种原因都烂尾，没有继续下去。绵绵不断的工作压力和为人父的家庭责任让我心力交瘁，眼一睁一闭，一睁一闭的，一天天就过去了。
 
 这两个多月来，技术层面上最令我兴奋的事情莫过于generator在nodejs上的支持。nodejs是一套优秀的网络应用开发框架，javascript的异步执行特性让nodejs开发I/O密集型（如互联网产品）应用如鱼得水。然而成也萧何，败也萧何，异步执行最大的问题就是带来大量的回调函数嵌套（callback hell），代码可读性很差。现在，V8引擎终于在语言层面支持generator了，而nodejs的v0.11.x分支也支持最新的V8引擎，从而让我们有机会写出更漂亮的代码。
+
+<!--more-->
 
 在谈论generator之前，我们先看看现有的解决办法。我们先看看标准的node代码是什么样子。为了让本文更贴近实际，下面的例子使用mongodb，首先请安装mongojs:
 
