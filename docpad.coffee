@@ -67,7 +67,7 @@ docpadConfig = {
 			]
 
 			themes: [
-				"/assets/css/theme.css"
+				#"/assets/css/theme.css"
 			]
 
 			# Scripts

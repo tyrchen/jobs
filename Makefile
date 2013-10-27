@@ -1,2 +1,3 @@
 deploy:
-	docpad deploy-ghpages --env static
+	wintersmith build
+	cd build; make; cd ../..

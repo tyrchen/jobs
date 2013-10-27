@@ -29,8 +29,7 @@
     "docpad-plugin-paged": "*",
     "moment": "~2.3.1",
     "docpad-plugin-raw": "~2.1.3",
-    "docpad-plugin-tagging": "~2.0.1",
-    "docpad-plugin-ghpages": "~2.4.0"
+    "docpad-plugin-tagging": "~2.0.1"
   },
   "devDependencies": {},
   "main": "node_modules/docpad/bin/docpad-server",

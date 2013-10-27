@@ -6,6 +6,7 @@ date: 2012-12-21 08:55
 comments: true
 tags: [meteor, tool]
 published: true
+cover: /assets/files/posts/meteor.jpg
 ---
 
 ## 安装
