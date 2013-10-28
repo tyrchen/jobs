@@ -27,7 +27,8 @@
     "docpad-plugin-paged": "*",
     "moment": "~2.3.1",
     "docpad-plugin-tagging": "~2.0.1",
-    "node-minify": "~0.8.1"
+    "node-minify": "~0.8.1",
+    "docpad-plugin-rss": "~2.0.1"
   },
   "devDependencies": {},
   "main": "node_modules/docpad/bin/docpad-server",
