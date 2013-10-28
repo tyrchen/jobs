@@ -16,3 +16,5 @@ node_modules
 out
 Procfile
 .idea
+raw/assets/css/*
+raw/assets/js/*

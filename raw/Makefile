@@ -23,7 +23,7 @@ SYNC_TARGET=../out
 
 
 sync: $(CSS_TARGET) $(JS_TARGET)
-	$(SYNC) -au --exclude $(CSS_PATH) --exclude $(JS_PATH) . $(SYNC_TARGET)
+	$(SYNC) -au --exclude $(CSS_PATH) --exclude $(JS_PATH) --exclude Makefile . $(SYNC_TARGET)
 	@$(ECHO) $(DONE)
 
 $(CSS_TARGET):

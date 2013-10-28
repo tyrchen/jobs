@@ -119,10 +119,11 @@ layout: null
         </div>
       </div>
     </div>
+    
+    <%- @partial('separator') %>
+    <%- @partial('plugins/duoshuo') %>
       
   </div>
-  <%- @partial('separator') %>
-  <%- @partial('plugins/duoshuo') %>
 </div>
 
 <%- @partial('footer') %>

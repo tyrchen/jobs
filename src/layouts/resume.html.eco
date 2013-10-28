@@ -53,5 +53,7 @@ title: About Me
 
 <%- @partial('separator') %>
 <div class="container">
+    <div class='post-single'>
     <%- @content %>
+    </div>
 </div>
