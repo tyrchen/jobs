@@ -4,6 +4,7 @@ theme: default
 title: Lean Canvas Example
 date: 2013-04-04 11:53
 tags: [startup, lean]
+cover: /assets/files/canvases/lean.jpg
 
 customer_segments:
   - List your target customers and users

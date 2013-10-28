@@ -19,7 +19,7 @@ title: About Me
 		</div>
         <div class="contact">
             <div class="post-social">
-                <% for s in @document.social : %>
+                <% for s in @site.social : %>
                 <a class="social-link" href="<%= s[1] %>" target="_blank">
                   <i class="<%= s[0] %>"></i>
                 </a>

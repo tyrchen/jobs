@@ -1,6 +1,22 @@
 ---
-layout: default
+layout: null
 ---
+
+<!DOCTYPE html>
+<html>
+
+<div class="header-image-wrapper">
+  <img alt="" src="<%= @document.cover or "/assets/images/backgrounds/page-header-bg-1.jpg" %>">
+</div>
+
+<%- @partial('head') %>
+
+<body>
+
+<%- @partial('contact') %>
+
+
+<%- @partial('nav') %>
 
 <div class="container">
 	<h2><%= @document.title %></h2>
@@ -119,3 +135,16 @@ layout: default
 	</table>
 	<%- @partial('plugins/duoshuo') %>
 </div>
+
+<%- @partial('footer') %>
+
+
+
+
+</body>
+
+</html>
+
+
+
+

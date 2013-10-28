@@ -40,22 +40,25 @@ docpadConfig = {
 				创业, 思想, 点子, 经验, python, erlang, node, javascript, 服务器, devops, meteor
 				"""
 
-			# The website author's name
 			author: "Tyr Chen"
 
 			avatar: "/assets/images/tyr.png"
 
-			# The website author's email
-			email: "tyr.chen{#}gmail.com"
-
-			# The address
 			address: "No. 1 Zhongguancun East Road, Beijing, China"
 
-			# Phone
 			phone: ""
 
-			# Fax
 			fax: ""
+
+			social: [
+				["icon-envelope", "tyr.chen{#}gmail.com"],
+				["icon-weibo", "http://weibo.com/tchen82"],
+				["icon-github", "http://github.com/tyrchen"],
+				["icon-linkedin", "http://linkedin.com/in/tyrchen/"],
+				["icon-twitter", "https://twitter.com/tyrchen"],
+				["icon-facebook", "https://www.facebook.com/tyrchen"],
+				["icon-google-plus", "https://plus.google.com/114684266209262341260/"]
+			]
 
 			# Styles
 			styles: [

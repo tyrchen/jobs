@@ -1,4 +1,5 @@
 <div class='row post-loop'>
+  <!--
   <div class='col-md-2 col-md-offset-1'>
     <div class='post-loop-author-info'>
       <div class='author-avatar'>
@@ -11,14 +12,19 @@
       </div>
     </div>
   </div>
-  <div class='col-md-8'>
+  -->
+  <div class='col-md-8 col-md-offset-2'>
     <div class='post-loop-content'>
       <h2 class='has-sub-header'>
         <a href='<%= @item.url %>'><%= @item.title %></a>
       </h2>
       <div class='post-loop-meta'>
+        <span>
+          <i class='icon-calendar'></i>
+          <%= @formatDate(@item.date) %>
+        </span>
         <span class='hidden-mobile-ib tags'>
-          <i class='icon-reorder'></i>
+          <i class='icon-tags'></i>
           <% for tag in @item.tags : %>
             <a href='<%= @getTagUrl(tag) %>'><%= tag %></a>
           <% end %>
@@ -43,10 +49,12 @@
         -->
       </div>
       <%- @teaser(@item.content) %>
+      <!--
       <div class='under-post'>
         <%- @partial('posts/post_social') %>
       </div>
       <br/>
+      -->
       <div class='slogan-buttons'>
           <a class='btn btn-primary btn-cta btn-lg animated-when-hover' data-animation-type="swing" href='<%= @item.url %>'>
               继续阅读 ->

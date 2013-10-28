@@ -18,17 +18,14 @@
             </div>
             <div class="col-md-6">
                 <ul class="footer-social">
-                    <li><a href="#"><i class="icon-facebook"></i></a></li>
-                    <li><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                    <li><a href="#"><i class="icon-google-plus"></i></a></li>
+                <% for item in @site.social : %>
+                    <li><a href="<%= item[1] %>" target="_blank"><i class="<%= item[0] %>"></i></a></li>
+                <% end %>
                 </ul>
             </div>
         </div>
     </div>
 </footer>
-
 
 <!-- Scripts -->
 <%- @dpBlock('scripts') %>

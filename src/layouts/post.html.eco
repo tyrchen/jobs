@@ -21,6 +21,22 @@ layout: null
   <div class='row'>
     <div class="col-md-3">
       <div class="post-side-bar">
+        <!--
+        <div class="widget widget-author">
+          <div class="author-avatar">
+            <img alt="" src="<%= @document.avatar or @site.avatar %>">
+          </div>
+          <div class="author-meta">
+            <h4 class="author-name"><%= @document.author or @site.author %></h4>
+            <p class="author-bio">Progressively maintain extensive infomediaries via extensible niches.</p>
+            
+            <a class="author-more" href="#">
+              read more posts
+              <i class="icon-angle-right"></i>
+            </a>
+          </div>
+        </div>
+        -->
         <div class="widget widget-cats tags">
           <h4 class="widget-title">标签</h4>
           <ul>
@@ -50,7 +66,7 @@ layout: null
         <!--
         <div class='pre-post-meta'>
           <span>
-            <i class='icon-reorder'></i>
+            <i class='icon-tags'></i>
             in
             <a href='#'>Web Development</a>
           </span>
@@ -117,12 +133,13 @@ layout: null
           
           <%- @partial('posts/post_social') %>
         </div>
+        <%- @partial('separator') %>
+        <%- @partial('plugins/duoshuo') %>
+    
       </div>
     </div>
-    
-    <%- @partial('separator') %>
-    <%- @partial('plugins/duoshuo') %>
-      
+
+
   </div>
 </div>
 

@@ -14,11 +14,6 @@ description: |
   to dream and to build, <br/>
   to fail and to succeed. <br/>
 avatar: "/assets/images/tyr_sketch.png"
-social:
-  - ["icon-envelope", "tyr.chen at google mail service"]
-  - ["icon-github", "http://github.com/tyrchen"]
-  - ["icon-linkedin", "http://linkedin.com/in/tyrchen/"]
-  - ["icon-weibo", "http://weibo.com/tchen82"]
 capabilities:
   - 
     icon: "icon-eye-open"

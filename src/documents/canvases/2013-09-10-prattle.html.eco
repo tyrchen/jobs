@@ -3,9 +3,9 @@ layout: canvas
 theme: default
 title: Prattle - your document center
 date: 2013-09-10 08:18
-ignored: true
 comments: true
 tags: []
+cover: /assets/files/canvases/prattle.jpg
 
 customer_segments:
   - Bloggers, writers
@@ -62,6 +62,6 @@ key_metrics:
   - monthly new documents composed
 
 unfair_advantage:
-  - 技术及专利
+  - much less cost structure to serve more people
 ---
 

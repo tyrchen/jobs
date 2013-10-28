@@ -1244,7 +1244,11 @@ footer#main-footer {
   margin-bottom: 50px;
   padding-bottom: 50px;
   border-bottom: 1px solid #eee;
-
+  .post-loop-author-info {
+    @media (max-width: @screen-sm-max) {
+      display: none;
+    }
+  }
   &:hover {
     .post-loop-author-info {
       .opacity(1);
