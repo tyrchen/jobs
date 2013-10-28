@@ -59,11 +59,7 @@ docpadConfig = {
 
 			# Styles
 			styles: [
-				"/assets/css/app.css",
-				"/assets/css/animate.css",
-				"http://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Yanone+Kaffeesatz:200,300,400,700|Raleway:200,300,400,500,700",
-				"/assets/css/font-awesome.css",
-				"/assets/css/solarized_dark.css"
+				"/assets/css/app.min.css",
 			]
 
 			themes: [
@@ -72,21 +68,8 @@ docpadConfig = {
 
 			# Scripts
 			scripts: [
-				"/assets/js/jquery.js",
-				"/assets/js/bootstrap.min.js",
-				"/assets/js/jquery.visible.min.js",
-				"/assets/js/jquery.isotope.min.js",
-				"/assets/js/jquery.knob.js",
-				"/assets/js/jquery.scrollUp.min.js",
-				"/assets/js/highlight.pack.js",
-				"/assets/js/application.js"
-
+				"/assets/js/app.min.js",
 			]
-
-			about: """
-				2012-2013
-			"""
-			menu: []
 
 			# plugins
 

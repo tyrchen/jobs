@@ -1,3 +1,7 @@
+generate:
+	docpad generate
+	@cd raw; make; cd ..
+
 deploy:
-	wintersmith build
-	cd build; make; cd ../..
+	docpad generate
+	cd out; make; cd ../..
