@@ -1,0 +1,62 @@
+---
+layout: canvas
+theme: default
+title: hatch -  super fast static content management system
+date: 2013-10-30 08:18
+comments: true
+tags: []
+cover: /assets/files/canvases/hatch.jpg
+
+customer_segments:
+  - hackers
+  - startups (for their company site)
+  - bloggers / envanglists
+
+early_adopters:
+  - jykell/octopress/wintersmith/docpad users
+  - bloggers who have their own blogs
+
+problem:
+  - Make cheap, costless blogs, sites is not easy
+
+existing_alternatives:
+  - jykell/octopress/wintersmith/docpad
+  - wordpress
+  - github pages
+
+unique_value_proposition:
+  - clean and focused environment for writing
+  - content management is quite easy
+  - deploy is easy and many cheap/costless solutions
+
+high_level_concept:
+  - super fast static content management system
+
+solution:
+  - user install the hatch toolkit.
+  - then write their own templates and do proper customization.
+  - then write their documents, pages in languages like markdown.
+  - .
+  - useful admin pages help them manage the site.
+
+channels:
+  - hacker news
+  - weibo, twitter
+  - public praises
+
+revenue_stream:
+  - n/a. This is a open source project.
+
+cost_structure:
+  - n/a. No real money spent. Mostly my time cost.
+
+key_metrics:
+  - github stars/watches/forks
+  - social media mentions (weibo, twitter)
+
+unfair_advantage:
+  - super fast site generation, save lots of time for users.
+  - easy to use, easy to extend.
+---
+
+

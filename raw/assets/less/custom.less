@@ -37,7 +37,12 @@ a.navbar-brand {
   border-radius: 0px 0px 5px 5px;
   img {
     width: 100%;
+    
+    @media (max-width: @screen-sm-max) {
+      display: none;
+    }
   }
+
 }
 
 .portfolio-item figure img {
