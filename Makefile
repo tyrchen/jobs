@@ -1,5 +1,9 @@
-generate:
+.PHONY: generate raw deploy clean
+
+generate: raw
 	docpad generate
+
+raw:
 	@cd raw; make; cd ..
 
 deploy:

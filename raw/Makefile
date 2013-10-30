@@ -23,6 +23,7 @@ JS_TARGET=$(ROOT)/js/app.min.js
 
 SYNC_TARGET=../out
 
+.PHONY: sync clean
 
 sync: $(CSS_TARGET) $(JS_TARGET)
 	$(SYNC) -au --exclude $(CSS_PATH) --exclude $(JS_PATH) --exclude Makefile . $(SYNC_TARGET)

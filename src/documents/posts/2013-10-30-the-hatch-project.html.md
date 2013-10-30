@@ -147,6 +147,8 @@ Hello hatch!
 
 从构思的角度，基本的障碍已经消除，大致的设计也有了，剩下的就是如何实现。这个周末，争取能把最基本的功能实现出来，然后在讨论实现过程中遇到的问题，看看和我的构思/假设有什么明显的偏差。
 
+顺手做了个 Lean Canvas: [hatch project lean canvas](/canvases/2013-10-30-hatch.html)，感兴趣可以看看。
+
 这几天没怎么照相，还是送上之前照的一张照片：
 
 ![小宝快一岁了](/assets/files/photos/baby20131030.jpg)
