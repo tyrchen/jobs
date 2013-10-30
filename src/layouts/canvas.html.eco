@@ -20,7 +20,8 @@ layout: null
 
 <div class="container">
 	<h2><%= @document.title %></h2>
-	<table class="canvas">
+	<div class="table-responsive">
+	<table class="table table-bordered">
 		<tr>
 			<td rowspan="2">
 				<div>
@@ -49,7 +50,7 @@ layout: null
 					</ul>
 				</div>
 			</td>
-			<td class="small" rowspan="2" clospan="2">
+			<td class="small" rowspan="2" colspan="2">
 				<div>
 					<h4>UNIQUE VALUE PROPOSITION</h4>
 					<ul class="top">
@@ -133,6 +134,7 @@ layout: null
 			</td>			
 		</tr>		
 	</table>
+	</div>
 	<%- @partial('plugins/duoshuo') %>
 </div>
 
