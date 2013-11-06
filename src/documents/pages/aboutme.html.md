@@ -13,7 +13,7 @@ description: |
   I want to take the calculated risk, <br/>
   to dream and to build, <br/>
   to fail and to succeed. <br/>
-avatar: "/assets/images/tyr_sketch.png"
+avatar: "/assets/images/tyr_sketch.jpg"
 capabilities:
   - 
     icon: "icon-eye-open"
