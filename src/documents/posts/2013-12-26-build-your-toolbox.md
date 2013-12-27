@@ -7,3 +7,5 @@ tags: [thought]
 ignored: true
 cover: /assets/files/posts/toolbox.jpg
 ---
+
+最近因为工作的关系，稍微研究了一下 ``scala`` 和 ``lua``。
