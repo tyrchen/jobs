@@ -42,6 +42,15 @@
     });
   });
 
+  $('audio').animate({volume: 0}, 1);
+  $('audio').on('play', function() {
+      $(this).animate({volume: 1}, 1000);
+  });
+  $('audio').on('pause', function(e) {
+      var $this = $(this);
+      $this.animate({volume: 0}, 1000);
+  });
+
   hljs.tabReplace = '    ';
   hljs.initHighlightingOnLoad();  
 }).call(this);
