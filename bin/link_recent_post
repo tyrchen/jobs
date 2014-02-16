@@ -1,0 +1,45 @@
+#!/usr/bin/env python
+
+import os
+import feedparser
+from bs4 import BeautifulSoup
+
+HOST = 'http://tchen.me/'
+
+def get_post_url():
+    f = feedparser.parse('out/atom.xml')
+    return f['entries'][0]['link']
+
+def get_post_path(url):
+    return os.path.join('out', url.replace(HOST, ''))
+
+def get_image_path(filename):
+    content = open(filename).read()
+    soup = BeautifulSoup(content)
+    src = soup.findAll('div', {'class': 'header-image-wrapper'})[0].findAll('img')[0].attrs['src'][1:]
+    return os.path.join('out', src)
+
+def link(pathname, filename):
+    path = os.path.dirname(pathname)
+    oldname = os.path.basename(pathname) 
+    os.system('cd %s;rm -rf %s;ln -s %s %s' % (path, filename, oldname, filename))
+
+
+def link_latest_post(pathname):
+    link(pathname, 'latest.html')
+
+def link_latest_img(pathname):
+    link(pathname, 'latest.jpg')
+
+if __name__ == '__main__':
+    url = get_post_url()
+    post = get_post_path(url)
+    img = get_image_path(post)
+
+    print("post is %s, img is %s" % (post, img))
+
+    link_latest_post(post)
+    link_latest_img(img)
+
+
+

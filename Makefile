@@ -7,6 +7,7 @@ raw:
 	@cd raw; make; cd ..
 
 deploy:
+	bin/link_recent_post
 	cd out; make; cd ../..
 
 clean:
