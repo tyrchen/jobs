@@ -5,6 +5,7 @@
     <meta name="description" content="<%= @getPreparedDescription() %>" />
     <meta name="keywords" content="<%= @getPreparedKeywords() %>" />
     <meta name="author" content="<%= @site.author or '' %>" />
+	<meta property="wb:webmaster" content="5968ef7c5b42fefc" />
 
     <!-- Output DocPad produced meta elements -->
     <%- @dpBlock('meta') %>
