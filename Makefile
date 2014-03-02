@@ -1,7 +1,10 @@
-.PHONY: generate raw deploy clean
+.PHONY: generate raw deploy clean slides
 
-generate: raw
+generate: raw slides
 	docpad generate
+
+slides:
+	cd slides;make;cd ..
 
 raw:
 	@cd raw; make; cd ..
