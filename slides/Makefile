@@ -2,6 +2,7 @@ WINTERSMITH = wintersmith
 RSYNC = rsync
 CONTENT_PATH = contents
 BUILD_PATH = build
+IMAGE_PATH = images
 SRC_YML = $(shell find $(CONTENT_PATH) -type f -name '*.yml')
 SRC_MD = $(shell find $(CONTENT_PATH) -type f -name '*.markdown')
 SRC_JADE = $(shell find $(CONTENT_PATH) -type f -name '*.jade')
@@ -12,7 +13,8 @@ TARGET = $(patsubst $(CONTENT_PATH)/%.yml,$(BUILD_PATH)/%.html,$(SRC_YML)) $(pat
 
 build: $(TARGET)
 	rsync -au $(BUILD_PATH)/* ../out/slides
+	rsync -au $(IMAGE_PATH)/* ../out/assets/files/slides
 
-$(TARGET): $(SRC_YML) $(SRC_MD) $(SRC_JADE)
+$(TARGET): 
 	$(WINTERSMITH) build
 	
