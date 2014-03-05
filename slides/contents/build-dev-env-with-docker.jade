@@ -1,6 +1,6 @@
 ---
 template: slide2.jade
-title: Golang in two weeks
+title: Build Dev Env with Docker
 date: 2014-01-20 20:50
 theme: default
 ---
@@ -17,7 +17,8 @@ section
 	h2 Agenda
 	ul
 		li.fragment What is docker
-		li.fragment Docker in 20 minutes
+		li.fragment Docker in 15 minutes
+		li.fragment Dockerfile
 		li.fragment Build a dev env with docker
 		li.fragment Conclusion and summary
 		li.fragment What can I do with docker?
@@ -34,10 +35,14 @@ section
 
 section
 	section
-		h2 Docker in 20 minutes
+		h2 Docker in 15 minutes
+	section
+		div.well To try docker in a clean environment, I recommend you to use 
+			a(href="https://www.digitalocean.com/?refcode=b0e273c7d740") Digital Ocean 
+			| ($5 per month only)
 	section
 		h2 Install docker
-		p
+		p.fragment
 			a(href="https://www.docker.io/gettingstarted/#h_installation") Docker official installation guide
 		p.fragment Ubuntu 13.10 as following:
 		div.fragment
@@ -55,7 +60,7 @@ section
 			code docker run ubuntu echo hello world!
 			pre.main
 				code.
-					tchen@docker:~$ docker run ubuntu echo hello world!
+					$ docker run ubuntu echo hello world!
 					Unable to find image 'ubuntu' locally
 					Pulling repository ubuntu
 					9cd978db300e: Download complete
@@ -75,8 +80,8 @@ section
 
 	section
 		h2 Wait...what the fuck is this?
-	section
 		img(src="/assets/files/slides/docker/docker_pull.jpg")
+		div.fragment docker is fast, and smart.
 	section
 		h2 AUFS
 		img(src="/assets/files/slides/docker/aufs.jpg")
@@ -94,12 +99,15 @@ section
 	section
 		h2 Let's play with docker
 	section
+		div Disclaimer: the following live operations are highly interactive (subject to change during the demo), so please sharpen your docker environment and follow me!
+	section
 		h2 First of all, get a image
 		div.fragment
-			code docker search tchen
+			p
+				code docker search tchen
 			pre.main
 				code.
-					tchen@docker:~$ docker search tchen
+					$ docker search tchen
 					NAME                                       DESCRIPTION                                     STARS     OFFICIAL   TRUSTED
 					codingforce/gitlab-ci-runner-testkitchen   Runner for gitlab-ci with fully installed ...   1                    [OK]
 					tchen/gitlab                                                                               0
@@ -108,10 +116,11 @@ section
 	section
 		h2 Let's pull base-server
 		div.fragment
-			code docker pull tchen/base-server
+			p
+				code docker pull tchen/base-server
 			pre.main
 				code.
-					tchen@docker:~$ docker pull tchen/base-server
+					$ docker pull tchen/base-server
 					Pulling repository tchen/base-server
 					8552614f23cd: Download complete
 					e8f376b3c2c0: Download complete
@@ -133,10 +142,11 @@ section
 	section
 		h2 Show what we have
 		div.fragment
-			code docker images
+			p
+				code docker images
 			pre.main
 				code.
-					tchen@docker:~$ docker images
+					$ docker images
 					REPOSITORY               TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 					tchen/base-server        0.2                 e8f376b3c2c0        40 hours ago        1.049 GB
 					tchen/base-server        0.1                 8552614f23cd        41 hours ago        821.3 MB
@@ -159,9 +169,10 @@ section
 					phusion/passenger-full   0.9.3               2819727a3f88        3 weeks ago         619.4 MB
 	section
 		h2 Let's do something interesting
-		p Task: make a basic ipython environment
+		p.fragment Task: make a basic ipython environment
 		div.fragment
-			code docker run -i -t tchen/base-server bash
+			p
+				code docker run -i -t tchen/base-server bash
 			pre.main
 				code.
 					$ docker run -i -t tchen/base-server bash
@@ -173,21 +184,16 @@ section
 					root@d06327b20658:/# apt-get install -y ipython
 					root@d06327b20658:/# ipython
 					Python 2.7.3 (default, Sep 26 2013, 20:03:06)
-					Type "copyright", "credits" or "license" for more information.
-
-					IPython 0.12.1 -- An enhanced Interactive Python.
-					?         -> Introduction and overview of IPython's features.
-					%quickref -> Quick reference.
-					help      -> Python's own help system.
-					object?   -> Details about 'object', use 'object??' for extra details.
+					...
 
 					In [1]: exit
-		p.well.fragment Mission accomplished!
+		div.well.fragment Mission accomplished!
 	section
 		h2 Now share this to your coworkers
 		div.fragment
 			p step 1: quit and get container id
-			code docker ps -l
+			p
+				code docker ps -l
 			pre.main
 				code.
 					root@d06327b20658:/# exit
@@ -199,11 +205,13 @@ section
 		h2 Now share (Cont.)
 		div.fragment
 			p step 2: Commit and push
-			code docker commit d063 tchen/base-server:0.3
-			code docker push tchen/base-server
+			p
+				code docker commit d063 tchen/base-server:0.3
+			p
+				code docker push tchen/base-server
 			pre.main
 				code.
-					tchen@docker:~$ docker commit d063 tchen/base-server:0.3
+					$ docker commit d063 tchen/base-server:0.3
 					b9e6eefe596f9bdbc933926e2098165e83a78e49370d865867a591a314113da5
 					tchen@docker:~$ docker push tchen/base-server
 					The push refers to a repository [tchen/base-server] (len: 4)
@@ -235,9 +243,11 @@ section
 		h2 Now it's your 小伙伴's turn
 		div.fragment
 			p step 1: Get the image
-			code docker pull tchen/base-server
+			p
+				code docker pull tchen/base-server
 			pre.main
 				code.
+					~ vagrant up
 					vagrant@ubuntu-12:~$ docker pull tchen/base-server
 					Pulling repository tchen/base-server
 					e8f376b3c2c0: Download complete
@@ -262,50 +272,80 @@ section
 		div.fragment
 			h2 Now it's your 小伙伴's turn (Cont.)
 			p step 2: Run the container
-			code docker run -i -t tchen/base-server:0.3 bash
+			p
+				code docker run -i -t tchen/base-server:0.3 bash
 			pre.main
 				code.
 					vagrant@ubuntu-12:~$ docker run -i -t tchen/base-server:0.3 bash
 					root@f57d5d94933c:/# ipython
 					Python 2.7.3 (default, Sep 26 2013, 20:03:06)
-					Type "copyright", "credits" or "license" for more information.
-
-					IPython 0.12.1 -- An enhanced Interactive Python.
-					?         -> Introduction and overview of IPython's features.
-					%quickref -> Quick reference.
-					help      -> Python's own help system.
-					object?   -> Details about 'object', use 'object??' for extra details.
+					...
 
 					In [1]: exit
 	section
 		h2 How do you feel?
 	section
-		p.well.fragment it's fucking like git!!!!!!
-		p
-		p.well.fragment That's why it is called <b>"git for deployment"</b>
+		div.well.fragment it's fucking like git!!!!!!
+		br
+		div.well.fragment That's why it is called <b>"git for deployment"</b>
 	section
-		p.well Hats off and bow down to docker's creators!
+		h2 Retrospection
+		img(src="/assets/files/slides/docker/functions.jpg")
+	section
+		h2 Now you have basic ideas...
 		img(src="/assets/files/slides/docker/bowdown.jpg")
+		div.well.fragment Hats off and bow down to docker's creators!
 
 section
-	h2 Ready with some new challenges? Let's talk about building a development environment!
+	section 
+		h2 Dockerfile
+	section
+		div.fragment What you talked previous is good, BUT
+		br
+		br
+		div.well.fragment I'm a programmer, can you give me an automated approach?
+	section
+		h2 Dockerfile
+		img(src="/assets/files/slides/docker/dockerfile.jpg")
+	section
+		h2 docker build
+		div
+			pre
+				code.
+					docker build -t name path-to-docker-file
+	section
+		div Let's try it! (DEMO)
 
 section
-	h2 Dev Env - Requirements
+	h2 Ready with some new challenges? 
+	div Let's talk about building a development environment!
 
 section
 	section
-		h2 Build a dev env with docker (will add later)
+		h2 Build a dev env with docker
 	section
-		h2 Dev Env - Requirements
+		h2 Problem
+		p I have an application that consists of:
+		ul
+			li my application (django) + dependencies
+			li my database (mysql)
+			li my cache server (redis)
+		p We have 24 developers working on 3 different releases
+		div.fragment.well How should I build an efficient dev env?
 	section
-		h2
+		h2 Previous solution
+		ul
+			li.fragment each dev has their own separated dev env
+			li.fragment all dev shares several dev env
 	section
-		h2 Dev Env - Thoughts
+		h2 The docker way
+		ul
+			li build an image for your django app + dependencies
+			li build an image for mysql + dependencies
+			li build an image for redis + dependencies
+			li Each dev starts their own containers (and linked together)
 	section
-		h2 Dev Env - Implementations
-
-	h2 
+		h2 Let's do it! (DEMO)
 
 //- /assets/files/slides/docker/
 
@@ -322,6 +362,18 @@ section
 		h3 parallel continuous integration
 	section
 		h3 and a lot...use your imagination, luke!
+
+section
+	section
+		h2 What have you learned?
+	section
+		h2 How to operate with docker? no!
+	section
+		div
+			p.fragment To operate docker is easy, just practice. But don't be an op.
+			br
+			div.well.fragment Think wise. Treat docker as python.
+
 
 section
 	h2 Thanks, Q&A
