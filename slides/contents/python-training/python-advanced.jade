@@ -1,0 +1,601 @@
+---
+template: slide2.jade
+title: Python advanced
+date: 2014-04-16 20:50
+theme: default
+---
+
+section
+    h1 Python advanced
+    br
+    h3 Tyr Chen
+    br
+    div Stay hungry, stay foolish 
+    div 2014-03-23
+
+section
+    h2 Agenda
+    ul
+        li.fragment Data structure
+        li.fragment A little more about python
+        li.fragment Functional Programming
+        li.fragment Metaprogramming
+
+section
+    section
+        h3 Data structure
+    section
+        h3 Number
+        div.fragment
+            pre
+                code.   
+                    # basic
+                    In [1]: a = 123456789123456789123456789 # any big number
+
+                    In [287]: dir(a)
+                    Out[287]:
+                    ['__abs__',
+                     '__add__',
+                     '__and__',
+                     '__class__',
+                     '__cmp__',
+                     '__coerce__',
+                     '__delattr__',
+                     '__div__',
+                     '__divmod__',
+                     '__doc__',
+                     '__float__',
+                     '__floordiv__',
+                     '__format__',
+                     '__getattribute__',
+                     '__getnewargs__',
+                     '__hash__',
+                     '__hex__',
+                     '__index__',
+                     '__init__',
+                     '__int__',
+                     '__invert__',
+                     '__long__',
+                     '__lshift__',
+                     '__mod__',
+                     '__mul__',
+                     '__neg__',
+                     '__new__',
+                     '__nonzero__',
+                     '__oct__',
+                     '__or__',
+                     '__pos__',
+                     '__pow__',
+                     '__radd__',
+                     '__rand__',
+                     '__rdiv__',
+                     '__rdivmod__',
+                     '__reduce__',
+                     '__reduce_ex__',
+                     '__repr__',
+                     '__rfloordiv__',
+                     '__rlshift__',
+                     '__rmod__',
+                     '__rmul__',
+                     '__ror__',
+                     '__rpow__',
+                     '__rrshift__',
+                     '__rshift__',
+                     '__rsub__',
+                     '__rtruediv__',
+                     '__rxor__',
+                     '__setattr__',
+                     '__sizeof__',
+                     '__str__',
+                     '__sub__',
+                     '__subclasshook__',
+                     '__truediv__',
+                     '__trunc__',
+                     '__xor__',
+                     'bit_length',
+                     'conjugate',
+                     'denominator',
+                     'imag',
+                     'numerator',
+                     'real']
+
+                    In [2]: pi = 3.1415926
+    section
+        h3 list
+        div.fragment
+            pre
+                code.
+                    In [27]: l = [1,2,3,4,5]
+
+                    In [28]: l
+                    Out[28]: [1, 2, 3, 4, 5]
+
+                    In [273]: len(l)
+                    Out[273]: 5
+
+                    In [274]: l.append(6)
+
+                    In [275]: l
+                    Out[275]: [1, 2, 3, 4, 5, 6]
+
+                    In [276]: l[3]
+                    Out[276]: 4
+
+                    In [277]: map(lambda x: x*2, l)
+                    Out[277]: [2, 4, 6, 8, 10, 12]
+
+                    In [279]: reduce(lambda x,y: x+y, l)
+                    Out[279]: 21
+
+                    In [360]: ' '.join(['This', 'is', 'a', 'string'])
+                    Out[360]: 'This is a string'                    
+    section
+        h3 dict
+        div.fragment
+            pre     
+                code.
+                    In [29]: point = {"x": 10, "y": -20}
+
+                    In [30]: point["x"]
+                    Out[30]: 10
+
+                    In [31]: point["y"]
+                    Out[31]: -20
+
+                    In [281]: point.keys()
+                    Out[281]: ['y', 'x']
+
+                    In [282]: point.has_key('x')
+                    Out[282]: True
+
+                    In [283]: point.items()
+                    Out[283]: [('y', -20), ('x', 10)]
+
+    section
+        h3 tuple
+        div.fragment
+            pre
+                code.
+                    In [1]: s = (1,2,3)
+
+                    In [2]: s[0]
+                    Out[2]: 1
+
+                    In [3]: s[0] = 1
+                    ---------------------------------------------------------------------------
+                    TypeError                                 Traceback (most recent call last)
+                    <ipython-input-3-99b35ed5371c> in <module>()
+                    ----> 1 s[0] = 1
+
+                    TypeError: 'tuple' object does not support item assignment
+    section
+        h3 set
+        div.fragment
+            pre
+                code.
+                    In [4]: s1 = set([1,2,3,4,1])
+
+                    In [5]: s1
+                    Out[5]: set([1, 2, 3, 4])
+
+                    In [6]: s1.add(5)
+
+                    In [7]: s1
+                    Out[7]: set([1, 2, 3, 4, 5])
+
+                    In [8]: 3 in s1
+                    Out[8]: True
+
+                    In [9]: len(s1)
+                    Out[9]: 5
+
+                    In [10]: map(lambda x: x*2, s1)
+                    Out[10]: [2, 4, 6, 8, 10]               
+    
+section
+    section
+        h3 A little more about python    
+    section
+        h3 iterator
+        div.fragment
+            pre
+                code.
+                    In [10]: for i in range(1, 5):
+                       ....:     print i
+                       ....:
+                    1
+                    2
+                    3
+                    4
+                    5
+
+                    In [11]: d = ["hello", "world"]
+
+                    In [12]: for i, item in enumerate(d):
+                       ....:     print i, item
+                       ....:
+                    0 hello
+                    1 world
+    section
+        h3 generator
+        div.fragment
+            pre
+                code.
+                    In [40]: def fabonacci(): # generator
+                       ....:     a, b = 1, 2
+                       ....:     while True:
+                       ....:         a, b = b, a+b
+                       ....:         yield b
+                       ....:
+
+                    In [56]: f = fabonacci()
+
+                    In [57]: f.next()
+                    Out[57]: 3
+
+                    In [58]: f.next()
+                    Out[58]: 5
+
+                    In [59]: f.next()
+                    Out[59]: 8
+
+                    In [60]: f.next()
+                    Out[60]: 13
+
+                    In [61]: f.next()
+                    Out[61]: 21 
+    section
+        h3 Magic functions
+        p You have already seen them with "dir(a)" before!!
+        p
+            code __len__, __str(unicode)__, __getitem__, __setitem__, ...
+        p You can always use "dir()" and "help()" to explore more
+    section
+        h3 useless examples
+        div.fragment
+            pre
+                code.
+                    In [65]: class Iterable: # make object work like a list
+                       ....:     def __iter__(self):
+                       ....:         return self
+                       ....:     def next(self):
+                       ....:         if self.has_next():
+                       ....:             return self.next_value()
+                       ....:         else:
+                       ....:             raise StopIteration
+                       ....:     def __init__(self, items):
+                       ....:         self.items = items
+                       ....:         self.cur = 0
+                       ....:     def has_next(self):
+                       ....:         return self.cur < len(self.items)
+                       ....:     def next_value(self):
+                       ....:         value = self.items[self.cur]
+                       ....:         self.cur += 1
+                       ....:         return value
+                    
+                    In [67]: i = Iterable([1,2,3,4])
+
+                    In [68]: for item in i:
+                       ....:     print item
+                       ....:
+                    1
+                    2
+                    3
+                    4       
+
+                    In [69]: class Indexable:
+                       ....:     def __getitem__(self, index):
+                       ....:         return index * 2
+                       ....:
+
+                    In [70]: i = Indexable()
+
+                    In [71]: i[3]
+                    Out[71]: 6
+
+                    In [72]: i["Hello"]
+                    Out[72]: 'HelloHello'                
+    section
+        h3 dotdict example
+        div.fragment
+            pre
+                code.
+                    class dotdict(dict):
+                      def __getattr__(self, attr):
+                        return self.get(attr, None)
+
+                      __setattr__ = dict.__setitem__
+                      __delattr__ = dict.__delitem__
+        p.fragment Usage:
+        div.fragment
+            pre
+                code.
+                    In [6]: d = {'a': 'hello', 'b':'world'}
+
+                    In [7]: dd = dotdict(d)
+
+                    In [8]: dd.
+                    dd.clear       dd.fromkeys    dd.has_key     dd.iteritems   dd.itervalues  dd.pop         dd.setdefault  dd.values      dd.viewkeys
+                    dd.copy        dd.get         dd.items       dd.iterkeys    dd.keys        dd.popitem     dd.update      dd.viewitems   dd.viewvalues
+
+                    In [8]: dd.a
+                    Out[8]: 'hello'
+
+                    In [9]: dd.b
+                    Out[9]: 'world'
+    section
+        h3 Case time: implement a haskell list (head, tail, init, last, drop, and take)
+    section
+        h3 The implementation
+        div.fragment
+            pre
+                code.
+                    class FunctionalList:
+                        '''A class wrapping a list with some extra functional magic, like head,
+                        tail, init, last, drop, and take.'''
+
+                        def __init__(self, values=None):
+                            if values is None:
+                                self.values = []
+                            else:
+                                self.values = values
+
+                        def __len__(self):
+                            return len(self.values)
+
+                        def __getitem__(self, key):
+                            # if key is of invalid type or value, the list values will raise the error
+                            return self.values[key]
+
+                        def __setitem__(self, key, value):
+                            self.values[key] = value
+
+                        def __delitem__(self, key):
+                            del self.values[key]
+
+                        def __iter__(self):
+                            return iter(self.values)
+
+                        def __reversed__(self):
+                            return FunctionalList(reversed(self.values))
+
+                        def append(self, value):
+                            self.values.append(value)
+                        def head(self):
+                            # get the first element
+                            return self.values[0]
+                        def tail(self):
+                            # get all elements after the first
+                            return self.values[1:]
+                        def init(self):
+                            # get elements up to the last
+                            return self.values[:-1]
+                        def last(self):
+                            # get last element
+                            return self.values[-1]
+                        def drop(self, n):
+                            # get all elements except first n
+                            return self.values[n:]
+                        def take(self, n):
+                            # get first n elements
+                            return self.values[:n]
+    section
+        h3 Context manager
+    section
+        h3 The problem
+        div.fragment
+            pre
+                code.
+                    writer = open(filename, mode)
+                    try:
+                        writer.write('Hello ')
+                        writer.write('World')
+                    finally:
+                        writer.close()
+    section
+        h3 Quite ugly!
+    section
+        h3 The python way
+        div.fragment
+            pre
+                code.
+                    with open(filename, mode) as writer:
+                        writer.write('Hello ') 
+                        writer.write('World')                
+    section
+        h3 What is context manager?
+    section
+        h3 Magic functions again
+        div.fragment
+            pre
+                code.
+                    In [45]: class MyContext:
+                       ....:     def __enter__(self):
+                       ....:         print 'Entering the block'
+                       ....:     def __exit__(self, *unused):
+                       ....:         print 'Exiting the block'
+                       ....:
+
+                    In [46]: with MyContext():
+                       ....:     print 'Hello world!'
+                       ....:
+                    Entering the block
+                    Hello world!
+                    Exiting the block                
+    section
+        h3 How to write your own context manager
+        div.fragment
+            pre
+                code.
+                    In [56]: class MyOpen:
+                        def __init__(self, filename, mode):
+                            self.filename = filename
+                            self.mode = mode
+                        def __enter__(self):
+                            self.f = open(self.filename, self.mode)
+                            return self.f
+                        def __exit__(self, **unused):
+                            self.f.close()                
+    section
+        h3 contextlib
+        div.fragment
+            pre
+                code.
+                    In [62]: with contextlib.closing(sqlite3.connect("test.db")) as db:
+                       ....:     db.execute("create table log (id integer primary key, content varchar(255))") 
+                    In [64]: dir(contextlib)
+                    Out[64]:
+                    ['GeneratorContextManager',
+                     '__all__',
+                     '__builtins__',
+                     '__doc__',
+                     '__file__',
+                     '__name__',
+                     '__package__',
+                     'closing',
+                     'contextmanager',
+                     'nested',
+                     'sys',
+                     'warn',
+                     'wraps']
+
+                    In [66]: help(contextlib.nested)               
+    section
+        h3 contextlib.contextmanager
+        div.fragment
+            pre
+                code.
+                    In [67]: help(contextlib.contextmanager)
+
+                    @contextlib.contextmanager
+                    def myLock():
+                        print "Beging"
+                        lock.acquire()
+                        try:
+                            yield "hello world"
+                        finally:
+                            print "release lock"
+                            lock.release()
+                    In [74]: with myLock() as l:
+                        print "lock is locked: %s" % lock.locked()
+                        print l
+                       ....:
+                    Beging
+                    lock is locked: True
+                    hello world
+                    release lock
+    section
+        h3 a little more about decorator
+        p.fragment just a grammar sugar to make your code more elegant
+        p.well.fragment think about how to time a function?
+    section
+        h3 decorator example
+        div.fragment
+            pre
+                code.
+                    def timeit(func):
+                        def __decorator(*args, **kwargs):
+                            t1 = time.time()
+                            func(*args, **kwargs)
+                            t2 = time.time()
+                            print('TIMING:%s took %0.3f ms' % (func.__name__, (t2 - t1) * 1000.0))
+                        return __decorator                    
+                    @timeit
+                    def hello():
+                        print("hello world")
+                        time.sleep(1)
+                    In [87]: hello()
+                    hello world
+                    TIMING:hello took 1001.089 ms                        
+section
+    section
+        h3 Functional programming
+    section
+        h3 What is functional programming
+        p.fragment let's see a haskell example
+        div.fragment
+            pre
+                code.
+                    boomBangs xs = [if x < 10 then "BOOM!" else "BANG!" | x <- xs, odd x]
+
+                    length1 xs = sum [1|_ <- xs]
+
+                    removeUpperCase xs = [x|x <- xs, not (x `elem` ['A'..'Z'])]
+
+                    multList n [] = []
+                    multList n (x:xs) = n*x : multList n xs
+
+                    multList1 f [] = []
+                    multList1 f (x:xs) = f(x) : multList1 f xs
+
+                    doubleList = multList1 (2*)
+                    tripleList = multList 3
+    section
+        h3 Python implementation
+        div.fragment
+            pre
+                code.
+                    In [23]: boomBangs = lambda l: ["Boom" if x < 10 else "Bang" for x in l if x % 2 == 1]
+
+                    In [24]: boomBangs([6, 8,9,10,11,12])
+                    Out[24]: ['Boom', 'Boom', 'Bang']
+                    ...
+                    In [40]: def multList(x):
+                        def func(l):
+                            return [item * x for item in l]
+                        return func
+                       ....:
+
+                    In [41]: f = multList(2)
+
+                    In [42]: f([1,2,3,4])
+                    Out[42]: [2, 4, 6, 8]                    
+    section
+        h3 lambda
+    section
+        h3 High ordered function
+    section
+        h3 Tail recursive
+        div.fragment
+            pre
+                code.
+                    fac 0 = 1
+                    fac n = n * fac (n-1)        
+    section
+        h3 Lazy evaluation
+        div.fragment
+            pre
+                code.
+                    *Main> take 5 [1..]
+                    [1,2,3,4,5]
+        
+
+// --
+    Python advanced (Day 1)
+    Data structure advanced
+    Functional programming
+    Closure, high ordered functions and decorator
+    Iterator and generator
+    Itertools library
+    Metaprogramming
+    Concurrency (Day 1)
+    Threading
+    Coroutine (gevent)
+    Networking (Day 2)
+    Socket
+    TCP client / server
+    Web service
+    Email service
+    Other services
+    Build server side application (Day 2 & Day 3)
+    Web application architecture
+    Web server (nginx)
+    Application server (gunicorn / django)
+    Database server (mysql / mongodb)
+    Cache server (redis / memcached)
+    MQ server (RabbitMQ & Celery)
+    Other servers and services
+    Scale up and scale out
+    Case studies (Day 3)
+    how to build zhihu.com
+    build a static site generator
