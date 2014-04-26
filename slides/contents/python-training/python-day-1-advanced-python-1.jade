@@ -1,25 +1,34 @@
 ---
 template: slide2.jade
-title: Python advanced
+title: Python advanced - a little more about python
 date: 2014-04-16 20:50
 theme: default
 ---
 
 section
-    h1 Python advanced
+    h1 Python advanced 1
+    h2 a little more about python
     br
     h3 Tyr Chen
     br
     div Stay hungry, stay foolish 
-    div 2014-03-23
+    div 2014-04-16
 
 section
     h2 Agenda
     ul
         li.fragment Data structure
-        li.fragment A little more about python
-        li.fragment Functional Programming
-        li.fragment Metaprogramming
+        li.fragment Iterator
+        li.fragment Generator
+        li.fragment Magic functions
+        li.fragment Case study
+        li.fragment Context manager
+        li.fragment Decorator
+
+section
+    section
+        h3 before we start...
+        p "Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”."
 
 section
     section
@@ -192,11 +201,10 @@ section
                     In [10]: map(lambda x: x*2, s1)
                     Out[10]: [2, 4, 6, 8, 10]               
     
-section
-    section
-        h3 A little more about python    
+section  
     section
         h3 iterator
+    section
         div.fragment
             pre
                 code.
@@ -216,8 +224,11 @@ section
                        ....:
                     0 hello
                     1 world
+
+section
     section
         h3 generator
+    section
         div.fragment
             pre
                 code.
@@ -244,8 +255,11 @@ section
 
                     In [61]: f.next()
                     Out[61]: 21 
+
+section
     section
         h3 Magic functions
+    section
         p You have already seen them with "dir(a)" before!!
         p
             code __len__, __str(unicode)__, __getitem__, __setitem__, ...
@@ -323,8 +337,10 @@ section
 
                     In [9]: dd.b
                     Out[9]: 'world'
+section
     section
-        h3 Case time: implement a haskell list (head, tail, init, last, drop, and take)
+        h3 Case time!
+        p.well implement a haskell list (head, tail, init, last, drop, and take)
     section
         h3 The implementation
         div.fragment
@@ -379,6 +395,8 @@ section
                         def take(self, n):
                             # get first n elements
                             return self.values[:n]
+
+section
     section
         h3 Context manager
     section
@@ -484,8 +502,12 @@ section
                     lock is locked: True
                     hello world
                     release lock
+
+section
     section
         h3 a little more about decorator
+    section
+        h3 Decorator
         p.fragment just a grammar sugar to make your code more elegant
         p.well.fragment think about how to time a function?
     section
@@ -507,68 +529,7 @@ section
                     In [87]: hello()
                     hello world
                     TIMING:hello took 1001.089 ms                        
-section
-    section
-        h3 Functional programming
-    section
-        h3 What is functional programming
-        p.fragment let's see a haskell example
-        div.fragment
-            pre
-                code.
-                    boomBangs xs = [if x < 10 then "BOOM!" else "BANG!" | x <- xs, odd x]
 
-                    length1 xs = sum [1|_ <- xs]
-
-                    removeUpperCase xs = [x|x <- xs, not (x `elem` ['A'..'Z'])]
-
-                    multList n [] = []
-                    multList n (x:xs) = n*x : multList n xs
-
-                    multList1 f [] = []
-                    multList1 f (x:xs) = f(x) : multList1 f xs
-
-                    doubleList = multList1 (2*)
-                    tripleList = multList 3
-    section
-        h3 Python implementation
-        div.fragment
-            pre
-                code.
-                    In [23]: boomBangs = lambda l: ["Boom" if x < 10 else "Bang" for x in l if x % 2 == 1]
-
-                    In [24]: boomBangs([6, 8,9,10,11,12])
-                    Out[24]: ['Boom', 'Boom', 'Bang']
-                    ...
-                    In [40]: def multList(x):
-                        def func(l):
-                            return [item * x for item in l]
-                        return func
-                       ....:
-
-                    In [41]: f = multList(2)
-
-                    In [42]: f([1,2,3,4])
-                    Out[42]: [2, 4, 6, 8]                    
-    section
-        h3 lambda
-    section
-        h3 High ordered function
-    section
-        h3 Tail recursive
-        div.fragment
-            pre
-                code.
-                    fac 0 = 1
-                    fac n = n * fac (n-1)        
-    section
-        h3 Lazy evaluation
-        div.fragment
-            pre
-                code.
-                    *Main> take 5 [1..]
-                    [1,2,3,4,5]
-        
 
 // --
     Python advanced (Day 1)

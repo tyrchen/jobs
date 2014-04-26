@@ -4,7 +4,6 @@ theme: beige
 title: the tao of programming
 date: 2013-07-01 21:14
 comments: true
-transition: concave
 published: true
 tags: []
 ---
